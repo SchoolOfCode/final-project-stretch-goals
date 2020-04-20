@@ -4,7 +4,9 @@ export default function SearchTutors({setSearchBoolean,searchBoolean,subject,set
 
    async function handleSubmit() {
         if(subject) {
-           const res = await fetch("https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors")
+           const res = await fetch("https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors"){
+            headers:{"Content-Type": "application/json","Accept":"application/json"}
+           }
            const data = await res.json()
            setSearchResultsData(data)
            console.log(data)

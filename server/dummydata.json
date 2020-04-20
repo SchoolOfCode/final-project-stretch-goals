@@ -3,70 +3,109 @@
     "email": "",
     "firstName": "",
     "lastName": "",
-    "subject(s)": "[]",
-    "video": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
     "bio": "",
     "level": "",
     "price": "",
     "location": "",
-    "experince": "",
+    "experience": "",
     "rating": "",
-    "paymentsDetails:": ""
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
   },
   {
     "email": "",
     "firstName": "",
     "lastName": "",
-    "subject(s)": "[]",
-    "video": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
     "bio": "",
     "level": "",
     "price": "",
     "location": "",
-    "experince": "",
+    "experience": "",
     "rating": "",
-    "paymentsDetails:": ""
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
   },
   {
     "email": "",
     "firstName": "",
     "lastName": "",
-    "subject(s)": "[]",
-    "video": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
     "bio": "",
     "level": "",
     "price": "",
     "location": "",
-    "experince": "",
+    "experience": "",
     "rating": "",
-    "paymentsDetails:": ""
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
   },
   {
     "email": "",
     "firstName": "",
     "lastName": "",
-    "subject(s)": "[]",
-    "video": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
     "bio": "",
     "level": "",
     "price": "",
     "location": "",
-    "experince": "",
+    "experience": "",
     "rating": "",
-    "paymentsDetails:": ""
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
   },
   {
     "email": "",
     "firstName": "",
     "lastName": "",
-    "subject(s)": "[]",
-    "video": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
     "bio": "",
     "level": "",
     "price": "",
     "location": "",
-    "experince": "",
+    "experience": "",
     "rating": "",
-    "paymentsDetails:": ""
-  }
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
+  },
+  {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+    "imageURL": "",
+    "subjects": [],
+    "videoURL": "",
+    "bio": "",
+    "level": "",
+    "price": "",
+    "location": "",
+    "experience": "",
+    "rating": "",
+    "paymentsDetails": {
+      "accountNumber" : "",
+      "sortCode": ""
+    }
+  },
+  
 ]
