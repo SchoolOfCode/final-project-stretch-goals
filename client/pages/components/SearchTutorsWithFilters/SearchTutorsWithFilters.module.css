@@ -2,7 +2,6 @@
     grid-area: search;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height:80vh;
 }
@@ -15,8 +14,8 @@
     grid-template-areas: "subject" "price" "experience" "rating";
 }
 .searchInput{
-    margin: 3em;
-    width: 60%;
+    margin: 1em;
+
     height: 2em;
 }
 .subjectContainer{

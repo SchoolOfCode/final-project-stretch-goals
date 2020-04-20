@@ -7,11 +7,11 @@ import SearchTutorsWithFilters from './components/SearchTutorsWithFilters/Search
 
 
 export default function Home() {
-  const [searchBoolean, setSearchBoolean] = useState(false)
+  const [searchBoolean, setSearchBoolean] = useState(true)
   return (
     <div className={css.mainContainer}>
       <Head>
-        <title>TutorMate</title>
+        <title>Ducio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
