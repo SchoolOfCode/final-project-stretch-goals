@@ -30,41 +30,11 @@ ValueLabelComponent.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
-const PrettoSlider = withStyles({
-  root: {
-    color: 'red',
-    height: 8,
-  },
-  thumb: {
-    height: 24,
-    width: 24,
-    backgroundColor: '#fff',
-    border: '2px solid currentColor',
-    marginTop: -8,
-    marginLeft: -12,
-    '&:focus, &:hover, &$active': {
-      boxShadow: 'inherit',
-    },
-  },
-  active: {},
-  valueLabel: {
-    left: 'calc(-50% + 4px)',
-  },
-  track: {
-    height: 8,
-    borderRadius: 4,
-  },
-  rail: {
-    height: 8,
-    borderRadius: 4,
-  },
-})(Slider);
-
 const AirbnbSlider = withStyles({
   root: {
     color: '#3a8589',
     height: 3,
+    width:"20vw",
     padding: '13px 0',
   },
   thumb: {
@@ -97,7 +67,7 @@ const AirbnbSlider = withStyles({
   rail: {
     color: '#d8d8d8',
     opacity: 1,
-    height: 3,
+    height: 10,
   },
 })(Slider);
 
@@ -112,18 +82,23 @@ function AirbnbThumbComponent(props) {
   );
 }
 
-export default function SliderTemplate({defaultSliderValue}) {
+export default function ExperienceSlider({experience, setExperience}) {
   const classes = useStyles();
+  function handleChange(e, val){
+    setExperience(val)
+  }
   return (
     <div className={classes.root}>
       <AirbnbSlider
         ThumbComponent={AirbnbThumbComponent}
         getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
-        defaultValue={defaultSliderValue}
+        defaultValue={experience}
         valueLabelDisplay="on"
+        onChange={handleChange}
+        max={50}
       />
     
-        <h3>{defaultSliderValue}</h3>
+        <h3>{experience}</h3>
     </div>
   );
 }
