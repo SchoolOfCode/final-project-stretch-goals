@@ -1,0 +1,25 @@
+.mainContainer{
+    grid-area: search;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:80vh;
+}
+.filterContainer{
+    background-color: var(--theme-color-2);
+    grid-area: filter;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto repeat(3 1fr);
+    grid-template-areas: "subject" "price" "experience" "rating";
+}
+.searchInput{
+    margin: 1em;
+
+    height: 2em;
+}
+.subjectContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 10px;
+}
