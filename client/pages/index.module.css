@@ -1,7 +1,6 @@
-.gridContainer{
-display: grid;
-    grid-template-columns:20vw 1fr ;
-    grid-template-areas: "filter search";
-
-height: 90vh;
+.gridContainer {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-areas: "filter search";
+  height: 90vh;
 }

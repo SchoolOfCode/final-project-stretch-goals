@@ -1,0 +1,30 @@
+.subjectTitle {
+  grid-area: subject;
+}
+.subjectValue {
+  grid-area: subjectValue;
+  width: 15vw;
+  height: 1.5em;
+}
+.priceTitle {
+  grid-area: price;
+}
+.priceDisplay {
+  grid-area: priceDisplay;
+  display: flex;
+  justify-content: center;
+}
+.priceValue {
+  grid-area: priceValue;
+}
+.experienceTitle {
+  grid-area: experience;
+}
+.experienceDisplay {
+  grid-area: experienceDisplay;
+  display: flex;
+  justify-content: center;
+}
+.experienceValue {
+  grid-area: experienceValue;
+}
