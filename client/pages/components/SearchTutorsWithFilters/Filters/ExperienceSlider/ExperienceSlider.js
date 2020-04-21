@@ -34,7 +34,7 @@ const AirbnbSlider = withStyles({
   root: {
     color: "#3a8589",
     height: 3,
-    width: "20vw",
+    width: "18vw",
     padding: "13px 0",
   },
   thumb: {

@@ -7,13 +7,15 @@
   height: 80vh;
 }
 .filterContainer {
+  position: sticky;
   width: 20vw;
   background-color: var(--theme-color-2);
   grid-area: filter;
   height: 100%;
   display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  /* grid-template-rows: repeat(auto-fit,8, 20px); */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto repeat(6 10px);
   grid-template-areas:
     "title title"
     "subject subject"
@@ -21,10 +23,10 @@
     "price priceDisplay"
     "priceValue priceValue"
     "experience experienceDisplay"
-    "experienceValue experienceValue";
+    "experienceValue experienceValue"
+    "filtersButton filtersButton";
 }
 
 .filterTitle {
   grid-area: title;
-
 }

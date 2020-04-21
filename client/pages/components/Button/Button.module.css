@@ -1,0 +1,16 @@
+.buttonTemplate{
+    box-sizing: border-box;
+    width: 4vw;
+    background-color: rgba(118, 4, 184,0.2);
+    border: rgb(63, 63, 63) 1px solid;
+    text-align: center;
+    margin: 5px;
+    height: 2em;
+}
+.buttonTemplate:hover{
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(170, 230, 170, 0.144);
+    border: rgb(146, 29, 255) 1px solid;
+    height: 2em;
+}

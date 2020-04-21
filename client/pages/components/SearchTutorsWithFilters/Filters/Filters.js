@@ -16,15 +16,16 @@ export default function Filters({ subject, setSubject }) {
   return (
     <>
       <h3 className={css.subjectTitle}>Subjects</h3>
-      <h3 className={css.priceDisplay}>
-        £{priceMin} - £{priceMax}
-      </h3>
+     
       <input
         className={css.subjectValue}
         placeholder="Start typing a subject to begin"
         value={subject}
         onChange={handleChange}
       />
+       <h3 className={css.priceDisplay}>
+        £{priceMin} - £{priceMax}
+      </h3>
       <h3 className={css.priceTitle}> Price </h3>
       <div className={css.priceValue}>
         <PriceSlider
@@ -42,6 +43,7 @@ export default function Filters({ subject, setSubject }) {
           setExperience={setExperience}
         />
       </div>
+      <button className={css.filtersButton}>Apply Filters</button>
     </>
   );
 }
