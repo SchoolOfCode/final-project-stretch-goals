@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TutorProfileSettingsForm from "./TutorProfileSettingsForm/index";
 import TutorAccountSettingsForm from "./TutorAccountSettingsForm";
 import css from "./TutorSettings.module.css";
+import axios from "axios";
 
 const initialState = {
   firstName: "",
@@ -11,7 +12,15 @@ const initialState = {
   accNum: null,
   sortCode: null,
   textContact: false,
-  emailContact: false
+  emailContact: false,
+  subjects: [""],
+  bio: "",
+  teachingLevel: "",
+  location: "",
+  img_url: "",
+  vid_url: "",
+  price: null,
+  exp: ""
 };
 
 export default function TutorSettings() {
@@ -26,13 +35,28 @@ export default function TutorSettings() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(tutorSettings);
+    updateAccount();
   }
 
   function handlePageChange(e) {
     e.preventDefault();
     setToggleDisplay(!toggleDisplay);
   }
+
+  async function updateAccount() {
+    const fd = new FormData();
+    fd.append("first_name", tutorSettings.firstName);
+    JSON.stringify(fd);
+    axios
+      .post(
+        "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
+        fd
+      )
+      .then(res => {
+        console.log(res);
+      });
+  }
+
   return (
     <form className={css.form}>
       {!toggleDisplay ? (

@@ -25,18 +25,13 @@ export default function TutorProfileSettingsForm({
           Location:{" "}
           <input onChange={handleChange} name="location" type="text"></input>
         </label>
-        <div style={{ width: "70px", height: "70px", backgroundColor: "blue" }}>
+        <div>
           <p>upload image</p>
+          <input name="img_url" type="file" onChange={handleChange}></input>
         </div>
-        <div
-          style={{
-            width: "70px",
-            height: "70px",
-            backgroundColor: "blue",
-            marginTop: "5px"
-          }}
-        >
+        <div>
           <p>upload video url</p>
+          <input name="img_url" type="file" onChange={handleChange}></input>
         </div>
         <label>
           Price:{" "}
