@@ -1,6 +1,6 @@
 import React from "react";
-import TutorAccountSettingsForm from "./components/TutorAccountSettingsForm/index";
+import TutorSettings from "./components/TutorSettings/TutorSettings";
 
 export default function Tutorpage() {
-  return <TutorAccountSettingsForm />;
+  return <TutorSettings />;
 }
