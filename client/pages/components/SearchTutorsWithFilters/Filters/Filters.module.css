@@ -11,8 +11,8 @@
 }
 .priceDisplay {
   grid-area: priceDisplay;
-  display: flex;
-  justify-content: center;
+  text-align: end;
+ 
 }
 .priceValue {
   grid-area: priceValue;
@@ -22,8 +22,8 @@
 }
 .experienceDisplay {
   grid-area: experienceDisplay;
-  display: flex;
-  justify-content: center;
+  text-align: end;
+ 
 }
 .experienceValue {
   grid-area: experienceValue;
