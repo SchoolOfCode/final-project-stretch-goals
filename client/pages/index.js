@@ -7,23 +7,8 @@ import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/Search
 
 export default function Home() {
   const [subject, setSubject] = useState("");
-  const [searchBoolean, setSearchBoolean] = useState(true);
-  const [searchResultsData, setSearchResultsData] = useState([
-    {
-      email: "marksgillgan@gmail.com",
-      firstName: "Mark",
-      lastName: "Gilligan",
-      "subject(s)": "[english, maths,science]",
-      video: "n/a",
-      bio: "I like to teach new things",
-      level: "GCSE",
-      price: "12",
-      location: "Sutton Coldfield B76 1DS",
-      experince: "10",
-      rating: "4",
-      "paymentsDetails:": "bank of mark",
-    },
-  ]);
+  const [searchBoolean, setSearchBoolean] = useState(false);
+  const [searchResultsData, setSearchResultsData] = useState([]);
   return (
     <div className={css.mainContainer}>
       <Head>
