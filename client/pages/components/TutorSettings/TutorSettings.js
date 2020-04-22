@@ -36,7 +36,8 @@ export default function TutorSettings() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    updateAccount();
+    console.log(tutorSettings);
+    // updateAccount();
   }
 
   function handlePageChange(e) {
@@ -57,7 +58,7 @@ export default function TutorSettings() {
         })
       }
     );
-    // const data = await res.json()
+    const data = await res.json();
     // success - set up what we get back.
   }
 
@@ -75,12 +76,14 @@ export default function TutorSettings() {
           </>
         ) : (
           <>
-            <TutorProfileSettingsForm
-              tutorSettings={tutorSettings}
-              handleChange={handleChange}
-            />
-            <Button text="Back" handleClick={handlePageChange}></Button>
-            <Button text="Save" handleClick={handleSubmit}></Button>
+            <div className={css.page1}>
+              <TutorProfileSettingsForm
+                tutorSettings={tutorSettings}
+                handleChange={handleChange}
+              />
+              <Button text="Back" handleClick={handlePageChange}></Button>
+              <Button text="Save" handleClick={handleSubmit}></Button>
+            </div>
           </>
         )}
       </form>
