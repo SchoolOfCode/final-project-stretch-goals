@@ -1,0 +1,92 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: end;
+  align-content: center;
+  border: 1px solid black;
+  width: 50vw;
+  height: 70vh;
+}
+
+.loginContainer {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "email"
+    "password"
+    "forgot"
+    "button";
+  background-color: var(--theme-color-2);
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+.email {
+  grid-area: email;
+  display: flex;
+  justify-content: center;
+}
+.password {
+  grid-area: password;
+  display: flex;
+  justify-content: center;
+}
+.forgot {
+  grid-area: forgot;
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 0.8em;
+}
+
+.forgot:hover {
+  cursor: pointer;
+}
+
+.button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+
+.createAccountContainer {
+  display: grid;
+  grid-template-areas:
+    "create"
+    "student"
+    "studentText"
+    "tutor"
+    "tutorText";
+  background-color: var(--theme-color-2);
+}
+
+.create {
+  grid-area: create;
+  text-align: center;
+}
+
+.student {
+  grid-area: student;
+  display: flex;
+  justify-content: center;
+}
+
+.studentText {
+  grid-area: studentText;
+  display: flex;
+  justify-content: center;
+}
+
+.tutor {
+  grid-area: tutor;
+  display: flex;
+  justify-content: center;
+}
+
+.tutorText {
+  grid-area: tutorText;
+  display: flex;
+  justify-content: center;
+}

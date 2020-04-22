@@ -4,11 +4,18 @@ import css from "./index.module.css";
 import Navbar from "./components/NavBar/NavBar";
 import SearchTutors from "./components/SearchTutors/SearchTutors";
 import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/SearchTutorsWithFilters";
+import LoginWindow from "./components/LoginWindow/LoginWindow";
 
 export default function Home() {
   const [subject, setSubject] = useState("");
   const [searchBoolean, setSearchBoolean] = useState(false);
   const [searchResultsData, setSearchResultsData] = useState([]);
+  const [displayLogin, setDisplayLogin] = useState(false);
+
+  function toggleLogin() {
+    setDisplayLogin(!displayLogin);
+  }
+
   return (
     <div className={css.mainContainer}>
       <Head>
@@ -16,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar toggleLogin={toggleLogin} />
 
       <div className={css.gridContainer}>
         {searchBoolean ? (
@@ -34,6 +41,10 @@ export default function Home() {
             searchBoolean={searchBoolean}
           />
         )}
+        "
+        <div style={{ position: "absolute" }}>
+          {displayLogin ? <LoginWindow /> : null}
+        </div>
         {/* if search has been perform or advanced search button pressed then display this version of the search thing instead!  */}
       </div>
     </div>
