@@ -42,7 +42,13 @@ export default function Home() {
           />
         )}
         "
-        <div style={{ position: "absolute" }}>
+        <div
+          style={{
+            position: "absolute",
+            "padding-left": "25vw",
+            "padding-top": "20vh"
+          }}
+        >
           {displayLogin ? <LoginWindow /> : null}
         </div>
         {/* if search has been perform or advanced search button pressed then display this version of the search thing instead!  */}

@@ -10,16 +10,10 @@ export default function LoginWindow() {
       <div className={css.createAccountContainer}>
         <h2 className={css.create}>Create Account</h2>
         <div className={css.student}>
-          <CreateAccountButton
-            title="Student"
-            text="this will be some stingy string"
-          />
+          <CreateAccountButton title="Student" text="Start learning today" />
         </div>
         <div className={css.tutor}>
-          <CreateAccountButton
-            title="Tutor"
-            text="this will be some tuty tut tut"
-          />
+          <CreateAccountButton title="Tutor" text="Teach with us" />
         </div>
       </div>
       <div>
