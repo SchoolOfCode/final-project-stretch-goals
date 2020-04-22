@@ -34,8 +34,8 @@ const AirbnbSlider = withStyles({
   root: {
     color: "#3a8589",
     height: 3,
-    width: "18vw",
     padding: "13px 0",
+    width: "18vw",
   },
   thumb: {
     height: 27,
@@ -63,6 +63,7 @@ const AirbnbSlider = withStyles({
   },
   track: {
     height: 3,
+    width: 20,
   },
   rail: {
     color: "#d8d8d8",
@@ -81,11 +82,11 @@ function AirbnbThumbComponent(props) {
   );
 }
 
-export default function ExperienceSlider({ experience, setExperience }) {
+export default function SliderComponent({
+  values,
+  onChange,
+}) {
   const classes = useStyles();
-  function handleChange(e, val) {
-    setExperience(val);
-  }
   return (
     <div className={classes.root}>
       <AirbnbSlider
@@ -93,10 +94,9 @@ export default function ExperienceSlider({ experience, setExperience }) {
         getAriaLabel={(index) =>
           index === 0 ? "Minimum price" : "Maximum price"
         }
-        defaultValue={experience}
+        defaultValue={values}
         valueLabelDisplay="on"
-        onChange={handleChange}
-        max={50}
+        onChange={onChange}
       />
     </div>
   );
