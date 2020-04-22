@@ -1,6 +1,5 @@
 import css from "./Filters.module.css";
-import PriceSlider from "./PriceSlider/PriceSlider";
-import ExperienceSlider from "./ExperienceSlider/ExperienceSlider";
+import SliderComponent from "./Slider/Slider";
 import { useState } from "react";
 
 export default function Filters({ subject, setSubject }) {
@@ -28,19 +27,20 @@ export default function Filters({ subject, setSubject }) {
       </h3>
       <h3 className={css.priceTitle}> Price </h3>
       <div className={css.priceValue}>
-        <PriceSlider
-          priceMin={priceMin}
-          priceMax={priceMax}
-          setPriceMax={setPriceMax}
-          setPriceMin={setPriceMin}
+        <SliderComponent
+        values={[priceMin, priceMax]}
+        onChange={ function (e, val) {
+    setPriceMin(val[0]);
+    setPriceMax(val[1]);
+  }}
         />
       </div>
       <h3 className={css.experienceTitle}> Experience </h3>
       <h3 className={css.experienceDisplay}>{experience}years</h3>
       <div className={css.experienceValue}>
-        <ExperienceSlider
-          experience={experience}
-          setExperience={setExperience}
+        <SliderComponent
+          values={experience}
+          onChange={(e,val)=>{setExperience(val)}}
         />
       </div>
       <button className={css.filtersButton}>Apply Filters</button>
