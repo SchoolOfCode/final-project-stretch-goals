@@ -3,6 +3,7 @@ import TutorProfileSettingsForm from "./TutorProfileSettingsForm/index";
 import TutorAccountSettingsForm from "./TutorAccountSettingsForm";
 import css from "./TutorSettings.module.css";
 import axios from "axios";
+import Button from "../Button/Button";
 
 const initialState = {
   firstName: "",
@@ -43,10 +44,10 @@ export default function TutorSettings() {
     setToggleDisplay(!toggleDisplay);
   }
 
+  //stringify the data???
   async function updateAccount() {
     const fd = new FormData();
     fd.append("first_name", tutorSettings.firstName);
-    JSON.stringify(fd);
     axios
       .post(
         "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
@@ -65,8 +66,8 @@ export default function TutorSettings() {
             tutorSettings={tutorSettings}
             handleChange={handleChange}
           />
-          <button onClick={handleSubmit}>Save Changes</button>
-          <button onClick={handlePageChange}>Profile Settings</button>
+          <Button text="Save" onClick={handleSubmit}></Button>
+          <Button text="Next" onClick={handlePageChange}></Button>
         </>
       ) : (
         <>
@@ -74,8 +75,8 @@ export default function TutorSettings() {
             tutorSettings={tutorSettings}
             handleChange={handleChange}
           />
-          <button onClick={handlePageChange}>Back</button>
-          <button onClick={handleSubmit}>Submit Changes</button>
+          <Button text="Back" onClick={handlePageChange}></Button>
+          <Button text="Save" onClick={handleSubmit}></Button>
         </>
       )}
     </form>
