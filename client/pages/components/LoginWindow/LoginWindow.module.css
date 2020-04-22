@@ -5,7 +5,8 @@
   align-content: center;
   border: 1px solid black;
   width: 50vw;
-  height: 70vh;
+  height: 40vh;
+  background-color: var(--theme-color-2);
 }
 
 .loginContainer {
@@ -17,6 +18,12 @@
     "forgot"
     "button";
   background-color: var(--theme-color-2);
+}
+
+.loginContainer > input {
+  padding: 0;
+  margin: 0;
+  background-color: white;
 }
 
 .title {
