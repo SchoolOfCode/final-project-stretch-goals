@@ -1,7 +1,7 @@
 import css from "./TutorAcountSettingsForm.module.css";
 import InputField from "../../InputField/InputField";
 
-export default function TutorAccountSettingsForm({ handleChange }) {
+export default function TutorAccountSettingsForm({ onChange }) {
   return (
     <>
       <div className={css.page1}>
@@ -10,49 +10,38 @@ export default function TutorAccountSettingsForm({ handleChange }) {
           <h3> Your details</h3>
           <InputField
             className={css.first}
+            name="firstName"
             label="First Name"
-            onChange={handleChange}
+            onChange={onChange}
           />
           <InputField
             className={css.last}
             label="Last Name"
-            onChange={handleChange}
+            onChange={onChange}
           />
-          <InputField
-            className={css.email}
-            label="email"
-            onChange={handleChange}
-          />
-          <InputField
-            className={css.phone}
-            label="phone"
-            onChange={handleChange}
-          />
+          <InputField className={css.email} label="email" onChange={onChange} />
+          <InputField className={css.phone} label="phone" onChange={onChange} />
         </div>
         <h3 className={css.payment}></h3> Payment Details:
         <InputField
           className={css.acc}
           label="Account Number"
-          onChange={handleChange}
+          onChange={onChange}
         />
         <InputField
           className={css.sortcode}
           label="Sort-Code"
-          onChange={handleChange}
+          onChange={onChange}
         />
         <h3 className={css.contact}>Preffered methods of contact:</h3>
         <label>
           Text
-          <input
-            onChange={handleChange}
-            name="textContact"
-            type="checkbox"
-          ></input>
+          <input onChange={onChange} name="textContact" type="checkbox"></input>
         </label>
         <label>
           Email
           <input
-            onChange={handleChange}
+            onChange={onChange}
             name="emailContact"
             type="checkbox"
           ></input>

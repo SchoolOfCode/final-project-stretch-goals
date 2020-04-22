@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function InputField({ label, type, className, handleChange }) {
+export default function InputField({ label, type, className, onChange, name }) {
   const classes = useStyles();
 
   return (
@@ -23,7 +23,8 @@ export default function InputField({ label, type, className, handleChange }) {
           label={label}
           variant="outlined"
           type={type}
-          onChange={handleChange}
+          onChange={onChange}
+          name={name}
         />
       </div>
     </div>
