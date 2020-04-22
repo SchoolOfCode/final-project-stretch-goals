@@ -44,41 +44,46 @@ export default function TutorSettings() {
     setToggleDisplay(!toggleDisplay);
   }
 
-  //stringify the data???
   async function updateAccount() {
-    const fd = new FormData();
-    fd.append("first_name", tutorSettings.firstName);
-    axios
-      .post(
-        "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
-        fd
-      )
-      .then(res => {
-        console.log(res);
-      });
+    const res = await fetch(
+      "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          tutorSettings
+        })
+      }
+    );
+    // const data = await res.json()
+    // success - set up what we get back.
   }
 
   return (
-    <form className={css.form}>
-      {!toggleDisplay ? (
-        <>
-          <TutorAccountSettingsForm
-            tutorSettings={tutorSettings}
-            handleChange={handleChange}
-          />
-          <Button text="Save" onClick={handleSubmit}></Button>
-          <Button text="Next" onClick={handlePageChange}></Button>
-        </>
-      ) : (
-        <>
-          <TutorProfileSettingsForm
-            tutorSettings={tutorSettings}
-            handleChange={handleChange}
-          />
-          <Button text="Back" onClick={handlePageChange}></Button>
-          <Button text="Save" onClick={handleSubmit}></Button>
-        </>
-      )}
-    </form>
+    <div className={css.form}>
+      <form>
+        {!toggleDisplay ? (
+          <>
+            <TutorAccountSettingsForm
+              tutorSettings={tutorSettings}
+              handleChange={handleChange}
+            />
+            <Button text="Save" handleClick={handleSubmit}></Button>
+            <Button text="Next" handleClick={handlePageChange}></Button>
+          </>
+        ) : (
+          <>
+            <TutorProfileSettingsForm
+              tutorSettings={tutorSettings}
+              handleChange={handleChange}
+            />
+            <Button text="Back" handleClick={handlePageChange}></Button>
+            <Button text="Save" handleClick={handleSubmit}></Button>
+          </>
+        )}
+      </form>
+    </div>
   );
 }
