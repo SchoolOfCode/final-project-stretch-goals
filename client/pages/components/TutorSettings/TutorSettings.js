@@ -28,14 +28,17 @@ export default function TutorSettings() {
   const [tutorSettings, setTutorSettings] = useState(initialState);
   const [toggleDisplay, setToggleDisplay] = useState(false);
 
-  function handleChange(e) {
+  function onChange(e) {
+    e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setTutorSettings({ ...tutorSettings, [name]: newState });
+    //setTutotSetting has an argument which is a function or anything else, containing old state
+    setTutorSettings(oldState => ({ ...oldState, [name]: newState }));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(tutorSettings);
     updateAccount();
   }
 
@@ -53,12 +56,13 @@ export default function TutorSettings() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          tutorSettings
+          ...tutorSettings
         })
       }
     );
-    // const data = await res.json()
+    const data = await res.json();
     // success - set up what we get back.
+    // think about navigation after they have finished.
   }
 
   return (
@@ -68,19 +72,21 @@ export default function TutorSettings() {
           <>
             <TutorAccountSettingsForm
               tutorSettings={tutorSettings}
-              handleChange={handleChange}
+              onChange={onChange}
             />
             <Button text="Save" handleClick={handleSubmit}></Button>
             <Button text="Next" handleClick={handlePageChange}></Button>
           </>
         ) : (
           <>
-            <TutorProfileSettingsForm
-              tutorSettings={tutorSettings}
-              handleChange={handleChange}
-            />
-            <Button text="Back" handleClick={handlePageChange}></Button>
-            <Button text="Save" handleClick={handleSubmit}></Button>
+            <div className={css.page1}>
+              <TutorProfileSettingsForm
+                tutorSettings={tutorSettings}
+                onChange={onChange}
+              />
+              <Button text="Back" handleClick={handlePageChange}></Button>
+              <Button text="Save" handleClick={handleSubmit}></Button>
+            </div>
           </>
         )}
       </form>

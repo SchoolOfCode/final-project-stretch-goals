@@ -1,0 +1,65 @@
+.accountForm {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "first"
+    "last"
+    "email"
+    "phone"
+    "payment"
+    "acc"
+    "sortcode"
+    "contact";
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+
+.first {
+  grid-area: first;
+  display: flex;
+  justify-content: center;
+}
+
+.last {
+  grid-area: last;
+  display: flex;
+  justify-content: center;
+}
+
+.email {
+  grid-area: email;
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  grid-area: phone;
+  display: flex;
+  justify-content: center;
+}
+
+.payment {
+  grid-area: payment;
+  text-align: center;
+}
+
+.acc {
+  grid-area: acc;
+  display: flex;
+  justify-content: center;
+}
+
+.sortcode {
+  grid-area: sortcode;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+}

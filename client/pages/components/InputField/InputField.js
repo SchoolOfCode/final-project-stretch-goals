@@ -12,19 +12,25 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function InputField({ label, type, className }) {
+export default function InputField({ label, type, className, onChange, name }) {
   const classes = useStyles();
 
   return (
     <div className={className}>
-      <form className={classes.root} noValidate autoComplete="off">
+      <div className={classes.root} noValidate autoComplete="off">
         <TextField
           id="outlined-basic"
           label={label}
           variant="outlined"
           type={type}
+          onChange={onChange}
+          name={name}
         />
-      </form>
+      </div>
     </div>
   );
 }
+
+// changed input field to a div, no longer a form and can be used as part of the other form
+// onChange is not working
+// need to figure that out
