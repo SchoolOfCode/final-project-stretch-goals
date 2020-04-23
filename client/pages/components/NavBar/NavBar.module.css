@@ -2,7 +2,7 @@
   background-color: var(--theme-color-1);
   height: 10vh;
   width: 100vw;
-  position: sticky;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas: "login title search";
@@ -18,6 +18,7 @@
 .title {
   color: var(--font-color-1);
   display: flex;
+  font-size: 1.5em;
   justify-content: center;
   align-items: center;
   grid-area: title;

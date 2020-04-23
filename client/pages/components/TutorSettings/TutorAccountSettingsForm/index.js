@@ -1,6 +1,8 @@
 import css from "./TutorAcountSettingsForm.module.css";
 import InputField from "../../InputField/InputField";
 
+// refactor using a map over the stuff.
+
 export default function TutorAccountSettingsForm({ onChange }) {
   return (
     <>

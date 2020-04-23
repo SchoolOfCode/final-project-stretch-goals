@@ -22,7 +22,6 @@ export default function Home() {
         <title>Doceo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Navbar toggleLogin={toggleLogin} />
 
       <div className={css.gridContainer}>

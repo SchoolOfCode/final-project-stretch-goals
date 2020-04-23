@@ -7,9 +7,11 @@
   height: 80vh;
 }
 .filterContainer {
+  margin-top: 2vh;
   position: sticky;
   width: 20vw;
-  background-color: var(--theme-color-2);
+  background-color: var(--theme-color-3);
+  color: var(--font-color-3);
   grid-area: filter;
   height: 100%;
   display: grid;
@@ -29,4 +31,6 @@
 
 .filterTitle {
   grid-area: title;
+  background-color: var(--theme-color-2);
+  text-align: center;
 }

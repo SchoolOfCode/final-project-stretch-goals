@@ -5,16 +5,16 @@ import SearchResults from "./SearchResults/SearchResults";
 export default function SearchTutorsWithFilters({
   searchResultsData,
   subject,
-  setSubject,
+  setSubject
 }) {
   return (
     <>
       <div className={css.mainContainer}>
-        <h1>Results</h1>
+        <h1 style={{ color: "var(--font-color-2)" }}>Results</h1>
         <SearchResults searchResultsData={searchResultsData} />
       </div>
       <div className={css.filterContainer}>
-        <h1 className={css.filterTitle}>Advanced Search</h1>
+        <h1 className={css.filterTitle}>Filters</h1>
         <Filters subject={subject} setSubject={setSubject} />
       </div>
     </>

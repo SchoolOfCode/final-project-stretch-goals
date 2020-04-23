@@ -1,15 +1,15 @@
 import css from "./SearchTutors.module.css";
-import Button from "../Button/Button"
+import Button from "../Button/Button";
 export default function SearchTutors({
   setSearchBoolean,
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData,
+  setSearchResultsData
 }) {
   async function handleSubmit() {
     const res = await fetch(
-      "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors"
+      "https://wsibkd4d97.execute-api.eu-west-1.amazonaws.com/dev/tutors"
     );
     const data = await res.json();
     setSearchResultsData(data);
@@ -32,7 +32,7 @@ export default function SearchTutors({
 
   return (
     <div className={css.mainContainer}>
-      <h1 style={{ "margin-bottom": "3em" }}>Search for a Tutor Here</h1>
+      <h1 className={css.searchTitle}>Search for a Tutor Here</h1>
       <div className={css.inputContainer}>
         <input
           onKeyPress={handleKeyDown}
@@ -41,7 +41,7 @@ export default function SearchTutors({
           className={css.searchInput}
           placeholder="Start typing a subject to begin"
         />
-        <Button text="  Search  " handleClick={handleSubmit}/>
+        <Button text="  Search  " handleClick={handleSubmit} />
         {/* <button className={css.searchButton} onClick={handleSubmit}>
           SEARCH
         </button> */}

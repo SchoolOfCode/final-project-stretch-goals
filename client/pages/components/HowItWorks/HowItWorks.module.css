@@ -1,0 +1,50 @@
+.mainContainer {
+  display: grid;
+  background-color: var(--theme-color-3);
+  height: 90vh;
+  width: 100vw;
+  grid-template-areas:
+    "how how how how"
+    "one two three four";
+}
+
+.how {
+  grid-area: how;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.one {
+  grid-area: one;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.two {
+  grid-area: two;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.three {
+  grid-area: three;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.four {
+  grid-area: four;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
