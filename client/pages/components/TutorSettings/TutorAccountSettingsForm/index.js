@@ -6,7 +6,7 @@ import { Input } from "@material-ui/core";
 
 export default function TutorAccountSettingsForm({ onChange, formData }) {
   const keys = Object.keys(formData);
-  const newKeys = keys.slice(1, 6);
+  const newKeys = keys.slice(0, 6);
 
   return (
     <>

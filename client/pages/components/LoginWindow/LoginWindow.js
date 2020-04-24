@@ -2,6 +2,7 @@ import css from "./LoginWindow.module.css";
 import Button from "../Button/Button";
 import CreateAccountButton from "./CreateAccountButton/CreateAccountButton";
 import InputField from "../InputField/InputField";
+import Link from "next/link";
 
 //make links from CreateAccount to student / tutor reg forms.
 export default function LoginWindow() {
@@ -12,9 +13,11 @@ export default function LoginWindow() {
         <div className={css.student}>
           <CreateAccountButton title="Student" text="Start learning today" />
         </div>
-        <div className={css.tutor}>
-          <CreateAccountButton title="Tutor" text="Teach with us" />
-        </div>
+        <Link href="/createAccountPage">
+          <div className={css.tutor}>
+            <CreateAccountButton title="Tutor" text="Teach with us" />
+          </div>
+        </Link>
       </div>
       <div>
         <div className={css.loginContainer}>

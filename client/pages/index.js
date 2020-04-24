@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar/NavBar";
 import SearchTutors from "./components/SearchTutors/SearchTutors";
 import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/SearchTutorsWithFilters";
 import LoginWindow from "./components/LoginWindow/LoginWindow";
+import Link from "next/link";
 
 export default function Home() {
   const [subject, setSubject] = useState("");
