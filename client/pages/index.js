@@ -44,8 +44,8 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            "padding-left": "25vw",
-            "padding-top": "20vh"
+            paddingLeft: "25vw",
+            paddingTop: "20vh"
           }}
         >
           {displayLogin ? <LoginWindow /> : null}
