@@ -1,0 +1,41 @@
+.mainContainer {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  align-items: left;
+  grid-template-areas:
+    "topLeft topRight"
+    "bottomLeft bottomRight";
+}
+
+.topLeft {
+  grid-area: topLeft;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.topRight {
+  grid-area: topRight;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.bottomLeft {
+  grid-area: bottomLeft;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.bottomRight {
+  grid-area: bottomRight;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 25%;
+}

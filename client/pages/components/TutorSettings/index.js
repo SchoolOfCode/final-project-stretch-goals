@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TutorProfileSettingsForm from "./TutorProfileSettingsForm/index";
 import TutorAccountSettingsForm from "./TutorAccountSettingsForm";
 import css from "./TutorSettings.module.css";
@@ -18,14 +18,14 @@ const initialState = {
   bio: "",
   teachingLevel: "",
   location: "",
-  img_url: "",
-  vid_url: "",
   price: null,
-  exp: ""
+  exp: "",
+  img_url: "",
+  vid_url: ""
 };
 
 export default function TutorSettings() {
-  const [tutorSettings, setTutorSettings] = useState(initialState);
+  const [formData, setFormData] = useState(initialState);
   const [toggleDisplay, setToggleDisplay] = useState(false);
 
   function onChange(e) {
@@ -33,12 +33,12 @@ export default function TutorSettings() {
     const newState = e.target.value;
     const name = e.target.name;
     //setTutotSetting has an argument which is a function or anything else, containing old state
-    setTutorSettings(oldState => ({ ...oldState, [name]: newState }));
+    setFormData(oldState => ({ ...oldState, [name]: newState }));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(tutorSettings);
+    console.log(formData);
     updateAccount();
   }
 
@@ -47,16 +47,29 @@ export default function TutorSettings() {
     setToggleDisplay(!toggleDisplay);
   }
 
+  // Function will run on page render so that we can populate our input fields with the data from our fetch request.
+  // need params to get correct users data.
+  // useEffect(() => {
+  //   async function getAccountDetails() {
+  //     const res = await fetch(
+  //       `https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors/${id}`
+  //     );
+  //     const data = await res.json();
+  //     setFormData(data);
+  //   }
+  // }, []);
+
+  // Send a PUT request to update the backend
   async function updateAccount() {
     const res = await fetch(
       "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
       {
-        method: "POST",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          ...tutorSettings
+          ...formData
         })
       }
     );
@@ -71,8 +84,9 @@ export default function TutorSettings() {
         {!toggleDisplay ? (
           <>
             <TutorAccountSettingsForm
-              tutorSettings={tutorSettings}
+              tutorSettings={formData}
               onChange={onChange}
+              formData={formData}
             />
             <Button text="Save" handleClick={handleSubmit}></Button>
             <Button text="Next" handleClick={handlePageChange}></Button>
@@ -81,8 +95,9 @@ export default function TutorSettings() {
           <>
             <div className={css.page1}>
               <TutorProfileSettingsForm
-                tutorSettings={tutorSettings}
+                tutorSettings={formData}
                 onChange={onChange}
+                formData={formData}
               />
               <Button text="Back" handleClick={handlePageChange}></Button>
               <Button text="Save" handleClick={handleSubmit}></Button>

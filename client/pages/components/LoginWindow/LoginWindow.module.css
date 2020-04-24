@@ -30,16 +30,19 @@
   grid-area: title;
   text-align: center;
 }
+
 .email {
   grid-area: email;
   display: flex;
   justify-content: center;
 }
+
 .password {
   grid-area: password;
   display: flex;
   justify-content: center;
 }
+
 .forgot {
   grid-area: forgot;
   display: flex;
@@ -50,6 +53,7 @@
 
 .forgot:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .button {

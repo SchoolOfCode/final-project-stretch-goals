@@ -1,0 +1,59 @@
+.mainContainer {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "header"
+    "image"
+    "stars"
+    "text";
+}
+
+.header {
+  margin-top: 10vh;
+  grid-area: header;
+  text-align: center;
+}
+
+.imageContainer {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageCircle {
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+}
+
+.stars {
+  grid-area: stars;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars > div {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+
+.text {
+  grid-area: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}

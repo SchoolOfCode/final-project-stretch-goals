@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar/NavBar";
 import SearchTutors from "./components/SearchTutors/SearchTutors";
 import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/SearchTutorsWithFilters";
 import LoginWindow from "./components/LoginWindow/LoginWindow";
+import Link from "next/link";
 
 export default function Home() {
   const [subject, setSubject] = useState("");
@@ -22,7 +23,6 @@ export default function Home() {
         <title>Doceo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Navbar toggleLogin={toggleLogin} />
 
       <div className={css.gridContainer}>
@@ -45,8 +45,8 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            "padding-left": "25vw",
-            "padding-top": "20vh"
+            paddingLeft: "25vw",
+            paddingTop: "20vh"
           }}
         >
           {displayLogin ? <LoginWindow /> : null}
