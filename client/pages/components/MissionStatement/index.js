@@ -10,15 +10,20 @@ import css from "./MissionStatement.module.css";
 
 export default function MissionStatement() {
   const statements = [
-    { classTitle: "topLeft", text: "top left", imageUrl: "image" },
-    { classTitle: "topRight", text: "top right", imageUrl: "image" },
+    {
+      classTitle: "topLeft",
+      text:
+        "We offer a myriad of subjects taught at different levels by over 2,000 tutors. Whether you want to learn GCSE Maths or Grade 8 ukelele, it is easy to find a tutor who can help you based on your learning goals and interests.",
+      imageUrl: "image",
+    },
+    { classTitle: "topRight", text: "At Doceo, we ", imageUrl: "image" },
     { classTitle: "bottomLeft", text: "bottom left", imageUrl: "image" },
-    { classTitle: "bottomRight", text: "bottom right", imageUrl: "image" }
+    { classTitle: "bottomRight", text: "bottom right", imageUrl: "image" },
   ];
 
   return (
     <div className={css.mainContainer}>
-      {statements.map(item => {
+      {statements.map((item) => {
         const { classTitle } = item;
         return (
           <div className={css[classTitle]}>
