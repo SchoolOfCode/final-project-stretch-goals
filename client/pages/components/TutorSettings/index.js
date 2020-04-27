@@ -80,7 +80,7 @@ export default function TutorSettings() {
 
   return (
     <div className={css.form}>
-      <form>
+      <form style={{ marginTop: "20vh" }}>
         {!toggleDisplay ? (
           <>
             <TutorAccountSettingsForm
