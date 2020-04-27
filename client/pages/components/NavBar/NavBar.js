@@ -15,7 +15,7 @@ export default function NavBar({ toggleLogin }) {
         <Button
           className={css.actualButton}
           text="Login"
-          onClick={toggleLogin}
+          handleClick={toggleLogin}
         />
       </div>
       <div className={css.searchField}>

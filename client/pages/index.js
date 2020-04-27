@@ -5,6 +5,9 @@ import Navbar from "./components/NavBar/NavBar";
 import SearchTutors from "./components/SearchTutors/SearchTutors";
 import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/SearchTutorsWithFilters";
 import LoginWindow from "./components/LoginWindow/LoginWindow";
+import MissionStatement from "./components/MissionStatement";
+import HowItWorks from "./components/HowItWorks";
+import Testimonial from "./components/Testimonial/index";
 import Link from "next/link";
 
 export default function Home() {
@@ -51,7 +54,11 @@ export default function Home() {
         >
           {displayLogin ? <LoginWindow /> : null}
         </div>
-        {/* if search has been perform or advanced search button pressed then display this version of the search thing instead!  */}
+        <div>
+          <MissionStatement />
+          <HowItWorks />
+          <Testimonial />
+        </div>
       </div>
     </div>
   );

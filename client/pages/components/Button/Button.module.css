@@ -1,6 +1,5 @@
 .buttonTemplate {
   box-sizing: border-box;
-  width: 4vw;
   background-color: rgba(118, 4, 184, 0.2);
   border: rgb(63, 63, 63) 1px solid;
   text-align: center;
