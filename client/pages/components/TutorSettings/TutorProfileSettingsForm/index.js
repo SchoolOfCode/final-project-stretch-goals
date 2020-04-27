@@ -5,12 +5,30 @@ export default function TutorProfileSettingsForm({
   formData,
   onChange
 }) {
-  const keys = Object.keys(formData);
+  const keys = Object.keys({
+    firstName: "",
+    lastName: "",
+    tel: null,
+    email: "",
+    accNum: null,
+    sortCode: null,
+    textContact: false,
+    emailContact: false,
+    subjects: [""],
+    bio: "",
+    teachingLevel: "",
+    location: "",
+    price: null,
+    exp: "",
+    img_url: "",
+    vid_url: ""
+  });
   const newKeys = keys.slice(8, 14);
   // if fetch request sends the data in the correct order we should be able to map through from a certain index
   return (
     <>
       <h2>Profile Settings</h2>
+
       {newKeys.map(item => {
         return (
           <InputField

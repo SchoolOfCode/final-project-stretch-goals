@@ -2,15 +2,34 @@ import css from "./TutorAcountSettingsForm.module.css";
 import InputField from "../../InputField/InputField";
 import { Input } from "@material-ui/core";
 
+
 // refactor using a map over the stuff.
 
 export default function TutorAccountSettingsForm({ onChange, formData }) {
-  const keys = Object.keys(formData);
+  const keys = Object.keys({
+    firstName: "",
+    lastName: "",
+    tel: null,
+    email: "",
+    accNum: null,
+    sortCode: null,
+    textContact: false,
+    emailContact: false,
+    subjects: [""],
+    bio: "",
+    teachingLevel: "",
+    location: "",
+    price: null,
+    exp: "",
+    img_url: "",
+    vid_url: ""
+  });;
   const newKeys = keys.slice(0, 6);
 
   return (
     <>
       <h3>Account Settings</h3>
+   
       {newKeys.map(item => {
         return (
           <InputField
