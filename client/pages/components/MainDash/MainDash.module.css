@@ -1,0 +1,21 @@
+.mainContainer {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "links";
+  justify-items: center;
+  padding-top: 20vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  text-align: center;
+}
+
+.links {
+  grid-area: links;
+  margin: 5%;
+  top: 20vh;
+  left: 50vw;
+}

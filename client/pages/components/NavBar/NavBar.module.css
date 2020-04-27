@@ -24,9 +24,17 @@
   grid-area: title;
 }
 
+.doceo:hover {
+  cursor: pointer;
+}
+
 .searchField {
   display: flex;
   justify-content: center;
   align-items: center;
   grid-area: search;
+}
+
+.actualButton {
+  background-color: var(--theme-color-1);
 }
