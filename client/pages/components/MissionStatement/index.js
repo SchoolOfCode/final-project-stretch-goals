@@ -16,7 +16,12 @@ export default function MissionStatement() {
         "We offer a myriad of subjects taught at different levels by over 2,000 tutors. Whether you want to learn GCSE Maths or Grade 8 ukelele, it is easy to find a tutor who can help you based on your learning goals and interests.",
       imageUrl: "image",
     },
-    { classTitle: "topRight", text: "At Doceo, we ", imageUrl: "image" },
+    {
+      classTitle: "topRight",
+      text:
+        "At Doceo, we believe you shouldn't have to pay more than you can afford for a lesson. On Doceo you only pay for each lesson you book, at a price that is within your budget",
+      imageUrl: "image",
+    },
     { classTitle: "bottomLeft", text: "bottom left", imageUrl: "image" },
     { classTitle: "bottomRight", text: "bottom right", imageUrl: "image" },
   ];
