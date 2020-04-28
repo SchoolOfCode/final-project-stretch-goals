@@ -49,15 +49,10 @@ export default function Home() {
           style={{
             position: "absolute",
             paddingLeft: "25vw",
-            paddingTop: "20vh"
+            paddingTop: "20vh",
           }}
         >
           {displayLogin ? <LoginWindow /> : null}
-        </div>
-        <div>
-          <MissionStatement />
-          <HowItWorks />
-          <Testimonial />
         </div>
       </div>
     </div>

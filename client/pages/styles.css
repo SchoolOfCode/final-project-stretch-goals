@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
 :root {
-  --theme-color-1: #1f3a3a;
-  --theme-color-2: #2a837e;
-  --theme-color-3: #129490;
-  --theme-color-4: #c9efe1;
-  --font-color-1: #b53389;
-  --font-color-2: #1f3a3a;
-  --font-color-3: #c9efe1;
+  --theme-color-1: #546e8f;
+  --theme-color-2: #ff9d9d;
+  --theme-color-3: #f1f1f1;
+  --theme-color-4: #fff;
+  --background-color: #e5e5e5;
+  --font-color-1: #fff;
+  --font-color-2: #fff;
+  --font-color-3: #ff9d9d;
+  --font-color-4: #546e8f;
+  --font-color-5: #5c5c5c;
 
   font-family: "Baloo Bhaina 2", cursive;
 }
@@ -16,5 +19,5 @@
 }
 
 body {
-  background-color: var(--theme-color-4);
+  background-color: var(--background-color);
 }

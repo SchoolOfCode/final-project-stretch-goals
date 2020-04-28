@@ -1,11 +1,14 @@
 import css from "./SearchTutors.module.css";
 import Button from "../Button/Button";
+import InputField from "../InputField/InputField";
+import CustomizedInputBase from "../MainSearchInput";
+
 export default function SearchTutors({
   setSearchBoolean,
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData
+  setSearchResultsData,
 }) {
   async function handleSubmit() {
     const res = await fetch(
@@ -34,17 +37,16 @@ export default function SearchTutors({
     <div className={css.mainContainer}>
       <h1 className={css.searchTitle}>Search for a Tutor Here</h1>
       <div className={css.inputContainer}>
-        <input
-          onKeyPress={handleKeyDown}
+        <CustomizedInputBase />
+        {/* <InputField
+          label="Enter Subject"
+          type="text"
+          className="searchInput"
           onChange={handleChange}
-          value={subject}
-          className={css.searchInput}
-          placeholder="Start typing a subject to begin"
-        />
-        <Button text="  Search  " handleClick={handleSubmit} />
-        {/* <button className={css.searchButton} onClick={handleSubmit}>
-          SEARCH
-        </button> */}
+          onKeyPress={handleKeyDown}
+          width="60ch"
+        /> */}
+        {/* <Button text="Search" handleClick={handleSubmit} /> */}
       </div>
       <span
         className={css.advancedSearch}

@@ -6,7 +6,7 @@
   border: 1px solid black;
   width: 50vw;
   height: 40vh;
-  background-color: var(--theme-color-2);
+  background-color: var(--theme-color-1);
 }
 
 .loginContainer {
@@ -17,7 +17,7 @@
     "password"
     "forgot"
     "button";
-  background-color: var(--theme-color-2);
+  background-color: var(--theme-color-1);
 }
 
 .loginContainer > {
