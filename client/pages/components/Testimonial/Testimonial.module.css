@@ -37,18 +37,6 @@
   justify-content: center;
 }
 
-.stars > div {
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 30px;
-  height: 30px;
-  background-color: yellow;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-left: 0.5em;
-}
-
 .text {
   grid-area: text;
   display: flex;
