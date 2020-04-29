@@ -1,14 +1,14 @@
 .mainContainer {
-display: grid;
-grid-template-areas: "nav content";
-grid-template-columns: 20vw 1fr;
+  display: grid;
+  grid-template-areas: "nav content";
+  grid-template-columns: 20vw 1fr;
   padding-top: 20vh;
 }
 
-.navContainer{
+.navContainer {
   grid-area: nav;
 }
 
-.contentContainer{
+.contentContainer {
   grid-area: content;
 }
