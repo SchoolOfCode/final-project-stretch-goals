@@ -18,7 +18,6 @@
   grid-area: priceDisplay;
   padding-right: 1em;
   text-align: end;
- 
 }
 .priceValue {
   grid-area: priceValue;
@@ -40,6 +39,8 @@
   grid-area: experienceValue;
 }
 
-.filtersButton{
+.filtersButton {
+  padding-left: 2em;
+  padding-right: 2em;
   grid-area: filtersButton;
 }

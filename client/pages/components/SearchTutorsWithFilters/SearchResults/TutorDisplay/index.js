@@ -1,4 +1,5 @@
 import css from "./TutorDisplay.module.css";
+import StarRating from "../../../StarRating/StarRating";
 export default function TutorDisplay({ item }) {
   return (
     <>
@@ -9,9 +10,9 @@ export default function TutorDisplay({ item }) {
         className={`${css.tutorImage} ${css.itemAlign}`}
         src={item.imageURL}
       />
-      <p className={`${css.tutorRating} ${css.itemAlign}`}>
-        Rating: {item.rating}
-      </p>
+      <div className={`${css.tutorRating} ${css.itemAlign}`}>
+        <StarRating size="large" />
+      </div>
     </>
   );
 }

@@ -11,15 +11,11 @@ export default function SearchResults({ searchResultsData }) {
         return (
           <li key={i}>
             <div className={css.tutorContainer}>
-              <div className={css.tutorProfile}>
-                <TutorDisplay item={item} />
-              </div>
-              <div className={css.tutorAbout}>
-                <TutorAbout item={item} />
-              </div>
-              <div className={css.tutorDetails}>
-                <TutorDetails item={item} />
-              </div>
+              <TutorDisplay item={item} />
+
+              <TutorAbout item={item} />
+
+              <TutorDetails item={item} />
             </div>
           </li>
         );
