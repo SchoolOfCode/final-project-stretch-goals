@@ -1,0 +1,20 @@
+.tutorTitle {
+  grid-area: name;
+  color: var(--font-color-3);
+}
+.tutorImage {
+  padding-top: 10px;
+  grid-area: image;
+  width: 200px;
+  height: 200px;
+}
+.tutorRating {
+  grid-area: rating;
+}
+
+.itemAlign {
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}

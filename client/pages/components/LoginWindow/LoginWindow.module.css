@@ -1,15 +1,17 @@
 .mainContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 1vw;
   justify-content: end;
   align-content: center;
-  border: 1px solid black;
   width: 50vw;
-  height: 40vh;
   background-color: var(--theme-color-1);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--shadow-color);
 }
 
 .loginContainer {
+  margin: 1vw;
   display: grid;
   grid-template-areas:
     "title"
@@ -17,7 +19,9 @@
     "password"
     "forgot"
     "button";
-  background-color: var(--theme-color-1);
+  background-color: var(--theme-color-3);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
 }
 
 .loginContainer > {
@@ -70,7 +74,10 @@
     "studentText"
     "tutor"
     "tutorText";
-  background-color: var(--theme-color-1);
+  margin: 1vw;
+  background-color: var(--theme-color-3);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
 }
 
 .create {

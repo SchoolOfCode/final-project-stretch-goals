@@ -4,75 +4,34 @@
 
 .tutorContainer {
   margin: 3em;
-  background-color: cornflowerblue;
+  padding: 1em;
+  background-color: var(--theme-color-4);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "profile about details";
+  column-gap: 1vw;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+}
+
+.tutorProfile {
+  grid-area: profile;
+  display: grid;
+  grid-template-areas: "name" "image" "rating";
 }
 
 .tutorAbout {
   grid-area: about;
   display: grid;
   grid-template-areas: "title" "image" "rating";
-}
-.tutorTitle {
-  grid-area: title;
-}
-.tutorImage {
-  grid-area: image;
-}
-.tutorRating {
-  grid-area: rating;
-}
 
+  border-radius: 20px;
+}
 .tutorDetails {
   grid-area: details;
-}
-
-.detailsContainer {
-  grid-area: details;
-  grid-template-areas:
-    "location"
-    "subject"
-    "level"
-    "experience"
-    "price";
-}
-.tutotLocation {
-  grid-area: location;
-}
-.tutorSubject {
-  grid-area: subject;
-}
-.tutorLevel {
-  grid-area: level;
-}
-.tutorExperience {
-  grid-area: experience;
-}
-.tutorPrice {
-  grid-area: price;
-}
-
-.tutorBioContainer {
-  grid-area: bio;
   display: grid;
-  grid-template-areas:
-    "aboutme education"
-    "text text";
-}
-.tutorBioTitle {
-  grid-area: aboutme;
-}
-.tutorEducationTitle {
-  grid-area: education;
-}
-.tutorBio {
-  grid-area: text;
-}
-.viewButton {
-  grid-area: buttons;
-}
-.bookButton {
-  grid-area: buttons;
+  grid-template-areas: "detailTitle" "details" "book";
+  row-gap: 1vw;
+  padding: 1em;
+  border-radius: 20px;
 }
