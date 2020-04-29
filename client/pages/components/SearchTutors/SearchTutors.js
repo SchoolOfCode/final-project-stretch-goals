@@ -23,21 +23,33 @@ export default function SearchTutors({
   }
 
   function handleKeyDown(e) {
+    console.log("keydown");
     if (e.key === "Enter") {
+      console.log("enter");
       handleSubmit();
       setSearchBoolean(!searchBoolean);
     }
   }
 
   function handleChange(e) {
+    console.log(e.target.value);
     setSubject(e.target.value);
+  }
+
+  function handleClick() {
+    console.log("click");
+    handleSubmit();
   }
 
   return (
     <div className={css.mainContainer}>
       <h1 className={css.searchTitle}>Search for a Tutor Here</h1>
       <div className={css.inputContainer}>
-        <CustomizedInputBase />
+        <CustomizedInputBase
+          handleClick={handleClick}
+          handleKeyDown={handleKeyDown}
+          handleChange={handleChange}
+        />
         {/* <InputField
           label="Enter Subject"
           type="text"

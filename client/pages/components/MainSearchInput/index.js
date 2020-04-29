@@ -28,7 +28,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomizedInputBase() {
+export default function CustomizedInputBase({
+  handleClick,
+  handleKeyDown,
+  handleChange,
+}) {
   const classes = useStyles();
 
   return (
@@ -37,12 +41,14 @@ export default function CustomizedInputBase() {
         className={classes.input}
         placeholder="Enter Subject to Begin Search"
         inputProps={{ "aria-label": "search google maps" }}
+        onKeyDown={handleKeyDown}
+        onChange={handleChange}
       />
       <Divider className={classes.divider} orientation="vertical" />
       <IconButton
-        type="submit"
         className={classes.iconButton}
         aria-label="search"
+        onClick={handleClick}
       >
         <SearchIcon />
       </IconButton>
