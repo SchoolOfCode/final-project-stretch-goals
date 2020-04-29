@@ -1,0 +1,28 @@
+.title {
+  font-size: 2em;
+  text-align: center;
+  grid-area: detailTitle;
+}
+
+.detailsContainer {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  padding: 0.5em;
+}
+
+.book {
+  background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  grid-area: book;
+  display: grid;
+  grid-template-areas: "price button";
+}
+.price {
+  grid-area: "price";
+}
+.bookButton {
+  grid-area: button;
+}

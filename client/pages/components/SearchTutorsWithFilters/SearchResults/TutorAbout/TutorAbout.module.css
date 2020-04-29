@@ -1,0 +1,49 @@
+.titleContainer {
+  grid-template-columns: repeat(3, 1fr);
+  grid-area: title;
+  display: grid;
+  grid-template-areas: "video test about";
+}
+
+.itemAlign {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.videoTitle {
+  grid-area: video;
+}
+.videoTitle:hover {
+  cursor: pointer;
+}
+.video {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+.aboutTitle {
+  grid-area: about;
+}
+.aboutTitle:hover {
+  cursor: pointer;
+}
+.testTitle {
+  grid-area: test;
+}
+.testTitle:hover {
+  cursor: pointer;
+}
+
+.selectedTitle {
+  color: var(--font-color-3);
+}
+.aboutContent {
+  padding-top: 10px;
+  background-color: var(--theme-color-3);
+
+  box-shadow: 0 5px 5px var(--shadow-color);
+}
