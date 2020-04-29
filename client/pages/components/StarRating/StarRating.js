@@ -12,7 +12,7 @@ function IconContainer(props) {
 }
 
 IconContainer.propTypes = {
-  value: PropTypes.number.isRequired
+  value: PropTypes.number.isRequired,
 };
 
 export default function StarRating({ size }) {
@@ -29,14 +29,13 @@ export default function StarRating({ size }) {
           <Rating
             name="stars"
             size={size}
-            defaultValue={defaultValue}
+            defaultValue={0}
             precision={0.5}
             onChange={handleClick}
             emptyIcon={<StarBorderIcon fontSize="inherit" />}
           />
         </Box>
       </div>
-      {starValue}
     </>
   );
 }

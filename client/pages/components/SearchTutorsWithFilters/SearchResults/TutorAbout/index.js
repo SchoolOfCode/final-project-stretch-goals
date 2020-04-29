@@ -9,7 +9,7 @@ export default function TutorAbout({ item }) {
   const [showContent, setShowContent] = useState(1);
 
   function handleContentClick(e) {
-    if (e.target.innerText === "Video") {
+    if (e.target.innerText === "Video Intro") {
       setShowContent(1);
       setVideoClass(`${css.videoTitle} ${css.selectedTitle}`);
       setAboutClass(css.aboutTitle);
@@ -34,7 +34,7 @@ export default function TutorAbout({ item }) {
           onClick={handleContentClick}
           className={`${videoClass} ${css.itemAlign}`}
         >
-          Video
+          Video Intro
         </h3>
         <h3
           onClick={handleContentClick}
@@ -51,11 +51,11 @@ export default function TutorAbout({ item }) {
       </div>
       <div className={css.aboutContent}>
         {showContent === 1 ? (
-          <div className={css.video}>
+          <div className={css.videoContainer}>
             <iframe
               width="280"
               height="200"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             ></iframe>
           </div>
         ) : null}

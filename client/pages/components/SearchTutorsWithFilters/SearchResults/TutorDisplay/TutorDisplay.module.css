@@ -1,9 +1,8 @@
 .tutorTitle {
-  grid-area: name;
+  grid-area: displayTitle;
   color: var(--font-color-3);
 }
 .tutorImage {
-  padding-top: 10px;
   grid-area: image;
   width: 200px;
   height: 200px;

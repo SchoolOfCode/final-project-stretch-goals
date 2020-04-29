@@ -1,6 +1,8 @@
 import css from "./Filters.module.css";
 import SliderComponent from "./Slider/Slider";
+import Button from "../../Button/Button";
 import { useState } from "react";
+import InputField from "../../InputField/InputField";
 
 export default function Filters({ subject, setSubject }) {
   const [priceMin, setPriceMin] = useState(10);
@@ -14,25 +16,29 @@ export default function Filters({ subject, setSubject }) {
 
   return (
     <>
-      <h3 className={css.subjectTitle}>Subjects</h3>
-     
-      <input
+      <h3 className={css.subjectTitle}>Subject</h3>
+      <InputField
+        value={subject}
+        handleChange={handleChange}
+        label="Enter Subject to Begin Search"
+      />
+      {/* <input
         className={css.subjectValue}
         placeholder="Start typing a subject to begin"
         value={subject}
         onChange={handleChange}
-      />
-       <h3 className={css.priceDisplay}>
+      /> */}
+      <h3 className={css.priceDisplay}>
         £{priceMin} - £{priceMax}
       </h3>
       <h3 className={css.priceTitle}> Price </h3>
       <div className={css.priceValue}>
         <SliderComponent
-        values={[priceMin, priceMax]}
-        onChange={ function (e, val) {
-    setPriceMin(val[0]);
-    setPriceMax(val[1]);
-  }}
+          values={[priceMin, priceMax]}
+          onChange={function (e, val) {
+            setPriceMin(val[0]);
+            setPriceMax(val[1]);
+          }}
         />
       </div>
       <h3 className={css.experienceTitle}> Experience </h3>
@@ -40,10 +46,14 @@ export default function Filters({ subject, setSubject }) {
       <div className={css.experienceValue}>
         <SliderComponent
           values={experience}
-          onChange={(e,val)=>{setExperience(val)}}
+          onChange={(e, val) => {
+            setExperience(val);
+          }}
         />
       </div>
-      <button className={css.filtersButton}>Apply Filters</button>
+      <div className={css.filtersButton}>
+        <Button text="Apply Filters" />
+      </div>
     </>
   );
 }

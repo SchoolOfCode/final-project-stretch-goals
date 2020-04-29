@@ -45,15 +45,17 @@ export default function Home() {
           />
         )}
         "
-        <div
-          style={{
-            position: "absolute",
-            paddingLeft: "25vw",
-            paddingTop: "20vh",
-          }}
-        >
-          {displayLogin ? <LoginWindow /> : null}
-        </div>
+        {displayLogin ? (
+          <div
+            style={{
+              position: "absolute",
+              paddingLeft: "25vw",
+              paddingTop: "20vh",
+            }}
+          >
+            <LoginWindow />{" "}
+          </div>
+        ) : null}
       </div>
     </div>
   );
