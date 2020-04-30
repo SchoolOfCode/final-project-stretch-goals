@@ -5,6 +5,7 @@ import TutorNav from "./TutorNav/TutorNav";
 import LessonManager from "./LessonManager";
 import TutorAccountSettingsForm from "../TutorSettings/TutorAccountSettingsForm";
 import TutorProfileSettingsForm from "../TutorSettings/TutorProfileSettingsForm";
+import Calendar from "./Calendar";
 
 export default function TutorDash() {
   const [contentShown, setContentShown] = useState(1);
@@ -20,6 +21,7 @@ export default function TutorDash() {
           {contentShown == 1 && <LessonManager />}
           {contentShown == 2 && <TutorAccountSettingsForm />}
           {contentShown == 3 && <TutorProfileSettingsForm />}
+          {contentShown == 4 && <Calendar />}
         </div>
       </div>
     </>
