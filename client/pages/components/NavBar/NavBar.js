@@ -19,7 +19,7 @@ export default function NavBar({ toggleLogin }) {
         />
       </div>
       <div className={css.searchField}>
-        <input />
+        <Button text="Search Tutors" />
       </div>
     </div>
   );

@@ -22,6 +22,9 @@ export default function TutorNav({ setContentShown }) {
           text="Profile Settings"
         />
       </li>
+      <li>
+        <Button handleClick={() => setContentShown(4)} text="Calendar" />
+      </li>
     </ul>
   );
 }
