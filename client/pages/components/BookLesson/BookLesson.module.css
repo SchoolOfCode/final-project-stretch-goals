@@ -1,10 +1,19 @@
 .bookingCard {
-  height: 40vh;
+  position: absolute;
+  top: 25vh;
+  height: 60vh;
   width: 50vw;
+  z-index: 10;
+  background-color: var(--theme-color-3);
+  color: var(--theme-color-1);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--shadow-color);
+  row-gap: 1vh;
   display: grid;
   grid-template-areas:
     "header"
-    "picker";
+    "picker"
+    "confirmation";
 }
 
 .header {
@@ -14,4 +23,9 @@
 
 .picker {
   grid-area: picker;
+}
+
+.confirmation {
+  grid-area: confirmation;
+  text-align: center;
 }
