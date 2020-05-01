@@ -34,6 +34,7 @@ export default function LessonManager() {
 
   function deleteBooking(i) {
     setBookings([...bookings.slice(0, i), ...bookings.slice(i + 1)]);
+    backendBookingDelete();
   }
 
   // //function to fetch data from BOOKINGS table. To be displayed in UI
@@ -41,6 +42,14 @@ export default function LessonManager() {
   //   const res = await fetch(/*"url for our bookings database/id"*/);
   //   const data = await res.json();
   //   // setbookings(data)
+  // }
+
+  // function to make a DELETE to BOOKINGS table in backend. Will need to delete booking by ID
+  // async function backendBookingDelete() {
+  //   const res = await fetch("/*URL for bookings table */", {
+  //     method: "delete"
+  //   });
+  //   const data = await res.json();
   // }
 
   return (
