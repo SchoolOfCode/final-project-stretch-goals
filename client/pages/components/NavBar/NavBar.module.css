@@ -1,6 +1,6 @@
 .navBarContainer {
   background-color: var(--theme-color-1);
-  height: 10vh;
+  height: 70px;
   width: 100vw;
   position: fixed;
   display: grid;

@@ -8,7 +8,7 @@ import LoginWindow from "./components/LoginWindow/LoginWindow";
 import Link from "next/link";
 
 export default function Home() {
-  const [subject, setSubject] = useState("");
+  const [subject, setSubject] = useState("English");
   const [searchBoolean, setSearchBoolean] = useState(false);
   const [searchResultsData, setSearchResultsData] = useState([]);
   const [displayLogin, setDisplayLogin] = useState(false);
@@ -29,6 +29,7 @@ export default function Home() {
         {searchBoolean ? (
           <SearchTutorsWithFilters
             searchResultsData={searchResultsData}
+            setSearchResultsData={setSearchResultsData}
             subject={subject}
             setSubject={setSubject}
           />
