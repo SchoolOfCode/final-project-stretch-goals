@@ -1,29 +1,41 @@
 .mainContainer {
   display: grid;
   align-items: center;
+  justify-content: center;
   height: 70%;
-  width: 90%;
+  width: 100%;
+}
+
+.h1 {
+  text-align: center;
 }
 
 .bookingCard {
   background-color: var(--theme-color-4);
   border-radius: 20px;
   height: 20%;
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-areas:
     "date"
     "name"
-    "subject"
     "notes"
     "buttons";
   align-items: center;
   justify-items: center;
+  padding: 1em;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 5px var(--shadow-color);
 }
 
 .date {
-  display: flex;
+  display: flexbox;
+  flex-direction: column;
   grid-area: date;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
 }
 
 .name {
@@ -31,14 +43,10 @@
   display: flex;
 }
 
-.subject {
-  display: flex;
-  grid-area: subject;
-}
-
 .notes {
   display: flex;
   grid-area: notes;
+  align-items: flex-start;
 }
 
 .buttons {

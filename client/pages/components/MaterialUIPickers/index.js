@@ -29,9 +29,9 @@ export default function MaterialUIPickers({
         <Grid container justify="space-around">
           <KeyboardDatePicker
             margin="normal"
-            id="date-picker-dialog"
+            id="date-picker"
             label="Date"
-            format="yyyy/MM/dd hh:mm a"
+            format="dd/MM/yyyy"
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
@@ -43,11 +43,13 @@ export default function MaterialUIPickers({
             margin="normal"
             id="time-picker"
             label="Time"
+            minutesStep={15}
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
               "aria-label": "change time"
             }}
+            selectedDateProp={selectedDate}
           />
         </Grid>
       </MuiPickersUtilsProvider>

@@ -6,9 +6,7 @@ import Button from "../Button/Button";
 export default function BookLesson() {
   const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
   const [notes, setNotes] = useState("");
-  const [selectedDate, setSelectedDate] = useState(
-    new Date("2020-04-30 14:49:54")
-  );
+  const [selectedDate, setSelectedDate] = useState(new Date("2020-04-30"));
 
   function handleChange(e) {
     setNotes(e.target.value);
@@ -37,7 +35,6 @@ export default function BookLesson() {
           Please select your preferred date and time for your lesson
         </h2>
         <div className={css.picker}>
-          {console.log(typeof selectedDate)}
           <MaterialUIPickers
             confirmationDisplayed={confirmationDisplayed}
             setConfirmationDisplayed={setConfirmationDisplayed}
@@ -47,10 +44,17 @@ export default function BookLesson() {
         </div>
         {confirmationDisplayed && (
           <p className={css.confirmation}>
-            You have selected an appointment with tutorName at
-            {JSON.stringify(selectedDate)
-              .split("")
-              .slice(0, 11)}
+            You have selected an appointment with tutorName on
+            {` ` +
+              JSON.stringify(selectedDate)
+                .split("")
+                .slice(1, 11)
+                .join("") +
+              ` at ` +
+              JSON.stringify(selectedDate)
+                .split("")
+                .slice(12, 21)
+                .join("")}
           </p>
         )}
         <div className={css.notes}>
