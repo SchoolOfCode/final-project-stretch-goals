@@ -1,5 +1,5 @@
 .bookingCard {
-  position: absolute;
+  position: fixed;
   top: 25vh;
   height: 65vh;
   width: 55vw;
@@ -21,6 +21,11 @@
 .header {
   grid-area: header;
   text-align: center;
+  justify-content: center;
+  background-color: var(--theme-color-1);
+  color: var(--font-color-1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .picker {
@@ -41,7 +46,7 @@
   height: 150px;
   width: 300px;
   background-color: var(--theme-color-4);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .button {

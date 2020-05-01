@@ -1,0 +1,48 @@
+.mainContainer {
+  display: grid;
+  align-items: center;
+  height: 70%;
+  width: 90%;
+}
+
+.bookingCard {
+  background-color: var(--theme-color-4);
+  border-radius: 20px;
+  height: 20%;
+  width: 80%;
+  display: grid;
+  grid-template-areas:
+    "date"
+    "name"
+    "subject"
+    "notes"
+    "buttons";
+  align-items: center;
+  justify-items: center;
+}
+
+.date {
+  display: flex;
+  grid-area: date;
+}
+
+.name {
+  grid-area: name;
+  display: flex;
+}
+
+.subject {
+  display: flex;
+  grid-area: subject;
+}
+
+.notes {
+  display: flex;
+  grid-area: notes;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  grid-area: buttons;
+}

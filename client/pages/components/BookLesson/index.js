@@ -33,9 +33,9 @@ export default function BookLesson() {
   return (
     <>
       <div className={css.bookingCard}>
-        <h3 className={css.header}>
+        <h2 className={css.header}>
           Please select your preferred date and time for your lesson
-        </h3>
+        </h2>
         <div className={css.picker}>
           {console.log(typeof selectedDate)}
           <MaterialUIPickers
@@ -48,7 +48,9 @@ export default function BookLesson() {
         {confirmationDisplayed && (
           <p className={css.confirmation}>
             You have selected an appointment with tutorName at
-            {JSON.stringify(selectedDate)}
+            {JSON.stringify(selectedDate)
+              .split("")
+              .slice(0, 11)}
           </p>
         )}
         <div className={css.notes}>
@@ -61,11 +63,7 @@ export default function BookLesson() {
           ></textarea>
         </div>
         <div className={css.button}>
-          <Button
-            text="Confirm Booking"
-            handleClick={postBooking}
-            width="35%"
-          />
+          <Button text="Confirm Booking" width="35%" />
         </div>
       </div>
     </>

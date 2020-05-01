@@ -12,14 +12,15 @@ export default function MaterialUIPickers({
   selectedDate,
   setSelectedDate,
   setConfirmationDisplayed,
-  confirmationDisplayed
+  confirmationDisplayed,
+  formatDate
 }) {
   // The first commit of Material-UI
 
   const handleDateChange = date => {
     setSelectedDate(date);
     setConfirmationDisplayed(true);
-    console.log(selectedDate);
+    console.log(JSON.stringify(selectedDate));
   };
 
   return (
@@ -29,8 +30,8 @@ export default function MaterialUIPickers({
           <KeyboardDatePicker
             margin="normal"
             id="date-picker-dialog"
-            label="Date picker dialog"
-            format="MM/dd/yyyy"
+            label="Date"
+            format="yyyy/MM/dd hh:mm a"
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
@@ -41,7 +42,7 @@ export default function MaterialUIPickers({
           <KeyboardTimePicker
             margin="normal"
             id="time-picker"
-            label="Time picker"
+            label="Time"
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
