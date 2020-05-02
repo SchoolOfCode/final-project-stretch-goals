@@ -8,11 +8,11 @@ export default function SearchTutors({
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData,
+  setSearchResultsData
 }) {
   async function handleSubmit() {
     const res = await fetch(
-      "https://wsibkd4d97.execute-api.eu-west-1.amazonaws.com/dev/tutors"
+      "https://ugujwwfn00.execute-api.eu-west-1.amazonaws.com/dev/tutors"
     );
     const data = await res.json();
     setSearchResultsData(data);

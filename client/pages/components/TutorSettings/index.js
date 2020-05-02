@@ -60,20 +60,20 @@ export default function TutorSettings() {
   // }, []);
 
   // Send a PUT request to update the backend
-  async function updateAccount() {
-    const res = await fetch(
-      "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          ...formData
-        })
-      }
-    );
-    const data = await res.json();
+  // async function updateAccount() {
+  //   const res = await fetch(
+  //     "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
+  //     {
+  //       method: "PUT",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({
+  //         ...formData
+  //       })
+  //     }
+  //   );
+  //   const data = await res.json();
     // success - set up what we get back.
     // think about navigation after they have finished.
   }

@@ -12,14 +12,15 @@ export default function MaterialUIPickers({
   selectedDate,
   setSelectedDate,
   setConfirmationDisplayed,
-  confirmationDisplayed
+  confirmationDisplayed,
+  formatDate
 }) {
   // The first commit of Material-UI
 
   const handleDateChange = date => {
     setSelectedDate(date);
     setConfirmationDisplayed(true);
-    console.log(selectedDate);
+    console.log(JSON.stringify(selectedDate));
   };
 
   return (
@@ -28,9 +29,9 @@ export default function MaterialUIPickers({
         <Grid container justify="space-around">
           <KeyboardDatePicker
             margin="normal"
-            id="date-picker-dialog"
-            label="Date picker dialog"
-            format="MM/dd/yyyy"
+            id="date-picker"
+            label="Date"
+            format="dd/MM/yyyy"
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
@@ -41,12 +42,14 @@ export default function MaterialUIPickers({
           <KeyboardTimePicker
             margin="normal"
             id="time-picker"
-            label="Time picker"
+            label="Time"
+            minutesStep={15}
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
               "aria-label": "change time"
             }}
+            selectedDateProp={selectedDate}
           />
         </Grid>
       </MuiPickersUtilsProvider>

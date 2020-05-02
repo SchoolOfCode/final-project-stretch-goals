@@ -1,9 +1,15 @@
 import css from "./Button.module.css";
 
-export default function Button({ text, handleClick, className, height }) {
+export default function Button({
+  text,
+  handleClick,
+  className,
+  height,
+  width
+}) {
   return (
     <div
-      style={{ height: height }}
+      style={{ height: height, width: width }}
       className={(className, css.buttonTemplate)}
       onClick={handleClick}
     >
