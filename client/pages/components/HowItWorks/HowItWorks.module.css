@@ -1,7 +1,7 @@
 .mainContainer {
   display: grid;
-  background-color: var(--theme-color-3);
-  height: 90vh;
+  background-color: lightgrey;
+  height: 91vh;
   width: 100vw;
   grid-template-areas:
     "how how how how"
@@ -15,6 +15,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  height: 100px;
 }
 
 .one {
@@ -23,6 +24,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .two {
@@ -31,6 +33,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .three {
@@ -39,6 +42,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .four {
@@ -47,4 +51,5 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  margin-bottom: 100px;
 }

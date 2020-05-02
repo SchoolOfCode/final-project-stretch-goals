@@ -11,11 +11,6 @@ export default function Home() {
   const [subject, setSubject] = useState("English");
   const [searchBoolean, setSearchBoolean] = useState(false);
   const [searchResultsData, setSearchResultsData] = useState([]);
-  const [displayLogin, setDisplayLogin] = useState(false);
-
-  function toggleLogin() {
-    setDisplayLogin(true);
-  }
 
   return (
     <div className={css.mainContainer}>
@@ -23,7 +18,7 @@ export default function Home() {
         <title>Doceo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar toggleLogin={toggleLogin} />
+      <Navbar />
 
       <div className={css.gridContainer}>
         {searchBoolean ? (
@@ -42,18 +37,6 @@ export default function Home() {
             searchBoolean={searchBoolean}
           />
         )}
-        "
-        {displayLogin ? (
-          <div
-            style={{
-              position: "absolute",
-              paddingLeft: "25vw",
-              paddingTop: "20vh",
-            }}
-          >
-            <LoginWindow setDisplayLogin={setDisplayLogin} />{" "}
-          </div>
-        ) : null}
       </div>
     </div>
   );
