@@ -2,8 +2,8 @@
   display: grid;
   height: 100vh;
   width: 100vw;
-  background-color: var(--theme-color-1);
-  color: var(--font-color-3);
+  background-color: var(--theme-color-3);
+  color: var(--font-color-4);
   align-items: left;
   grid-template-areas:
     "topLeft topRight"

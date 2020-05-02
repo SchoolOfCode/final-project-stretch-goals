@@ -1,8 +1,16 @@
 import css from "./NavBar.module.css";
 import Button from "../Button/Button";
 import Link from "next/link";
+import { useState } from "react";
+import LoginWindow from "../LoginWindow/LoginWindow";
 
 export default function NavBar({ toggleLogin }) {
+  const [displayLogin, setDisplayLogin] = useState(false);
+
+  function toggleLogin() {
+    setDisplayLogin(!displayLogin);
+  }
+
   return (
     <div className={css.navBarContainer}>
       <div className={css.title}>
@@ -18,9 +26,22 @@ export default function NavBar({ toggleLogin }) {
           handleClick={toggleLogin}
         />
       </div>
-      <div className={css.searchField}>
-        <Button text="Search Tutors" />
-      </div>
+      <Link href="/search">
+        <div className={css.searchField}>
+          <Button text="Search Tutors" />
+        </div>
+      </Link>
+      {displayLogin && (
+        <div
+          style={{
+            position: "absolute",
+            paddingLeft: "25vw",
+            paddingTop: "20vh"
+          }}
+        >
+          <LoginWindow setDisplayLogin={setDisplayLogin} />
+        </div>
+      )}
     </div>
   );
 }
