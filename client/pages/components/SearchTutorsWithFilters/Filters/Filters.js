@@ -1,17 +1,22 @@
 import css from "./Filters.module.css";
 import SliderComponent from "./Slider/Slider";
 import Button from "../../Button/Button";
-import { useState } from "react";
 import InputField from "../../InputField/InputField";
 
-export default function Filters({ subject, setSubject }) {
-  const [priceMin, setPriceMin] = useState(10);
-  const [priceMax, setPriceMax] = useState(40);
-  const [experience, setExperience] = useState(5);
-
+export default function Filters({
+  subject,
+  setSubject,
+  setPriceMin,
+  priceMax,
+  setPriceMax,
+  priceMin,
+  experience,
+  setExperience,
+  handleSubmit
+}) {
   function handleChange(e) {
     setSubject(e.target.value);
-    console.log(subject);
+    console.log(subject, "yoyoyoyoyo");
   }
 
   return (
@@ -19,7 +24,7 @@ export default function Filters({ subject, setSubject }) {
       <h3 className={css.subjectTitle}>Subject</h3>
       <InputField
         value={subject}
-        handleChange={handleChange}
+        onChange={handleChange}
         label="Enter Subject to Begin Search"
       />
       {/* <input
@@ -31,11 +36,11 @@ export default function Filters({ subject, setSubject }) {
       <h3 className={css.priceDisplay}>
         £{priceMin} - £{priceMax}
       </h3>
-      <h3 className={css.priceTitle}> Price </h3>
+      <h3 className={css.priceTitle}>Price </h3>
       <div className={css.priceValue}>
         <SliderComponent
           values={[priceMin, priceMax]}
-          onChange={function (e, val) {
+          onChange={function(e, val) {
             setPriceMin(val[0]);
             setPriceMax(val[1]);
           }}
@@ -52,7 +57,7 @@ export default function Filters({ subject, setSubject }) {
         />
       </div>
       <div className={css.filtersButton}>
-        <Button text="Apply Filters" />
+        <Button handleClick={handleSubmit} text="Apply Filters" width="120px" />
       </div>
     </>
   );

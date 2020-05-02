@@ -1,4 +1,5 @@
 import InputField from "../../InputField/InputField";
+import css from "./TutorProfileSettingsForm.module.css";
 
 export default function TutorProfileSettingsForm({
   handleChange,
@@ -27,22 +28,23 @@ export default function TutorProfileSettingsForm({
   // if fetch request sends the data in the correct order we should be able to map through from a certain index
   return (
     <>
-      <h2>Profile Settings</h2>
-
-      {newKeys.map(item => {
-        return (
-          <InputField
-            label={item}
-            onChange={handleChange}
-            type="text"
-            name={item}
-          />
-        );
-      })}
-      <p>upload image</p>
-      <input name="img_url" type="file" onChange={handleChange}></input>
-      <p>upload video url</p>
-      <input name="img_url" type="file" onChange={handleChange}></input>
+      <div className={css.accountForm}>
+        <h2 className={css.title}>Profile Settings</h2>
+        {newKeys.map(item => {
+          return (
+            <InputField
+              label={item}
+              onChange={handleChange}
+              type="text"
+              name={item}
+            />
+          );
+        })}
+        <p>upload image</p>
+        <input name="img_url" type="file" onChange={handleChange}></input>
+        <p>upload video url</p>
+        <input name="img_url" type="file" onChange={handleChange}></input>
+      </div>
     </>
   );
 }

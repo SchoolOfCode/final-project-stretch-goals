@@ -37,10 +37,12 @@
 }
 .experienceValue {
   grid-area: experienceValue;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .filtersButton {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 0;
+  padding-right: 0;
   grid-area: filtersButton;
 }

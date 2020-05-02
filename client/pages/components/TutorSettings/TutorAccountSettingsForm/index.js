@@ -2,7 +2,6 @@ import css from "./TutorAcountSettingsForm.module.css";
 import InputField from "../../InputField/InputField";
 import { Input } from "@material-ui/core";
 
-
 // refactor using a map over the stuff.
 
 export default function TutorAccountSettingsForm({ onChange, formData }) {
@@ -23,32 +22,38 @@ export default function TutorAccountSettingsForm({ onChange, formData }) {
     exp: "",
     img_url: "",
     vid_url: ""
-  });;
+  });
   const newKeys = keys.slice(0, 6);
 
   return (
     <>
-      <h3>Account Settings</h3>
-   
-      {newKeys.map(item => {
-        return (
-          <InputField
-            label={item}
+      <div className={css.accountForm}>
+        <h3 className={css.title}>Account Settings</h3>
+
+        {newKeys.map(item => {
+          return (
+            <InputField
+              label={item}
+              onChange={onChange}
+              type="text"
+              name={item}
+            />
+          );
+        })}
+        <h3 className={css.contact}>Preferred methods of contact:</h3>
+        <label>
+          Text
+          <input onChange={onChange} name="textContact" type="checkbox"></input>
+        </label>
+        <label>
+          Email
+          <input
             onChange={onChange}
-            type="text"
-            name={item}
-          />
-        );
-      })}
-      <h3 className={css.contact}>Preffered methods of contact:</h3>
-      <label>
-        Text
-        <input onChange={onChange} name="textContact" type="checkbox"></input>
-      </label>
-      <label>
-        Email
-        <input onChange={onChange} name="emailContact" type="checkbox"></input>
-      </label>
+            name="emailContact"
+            type="checkbox"
+          ></input>
+        </label>
+      </div>
     </>
   );
 }

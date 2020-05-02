@@ -13,6 +13,7 @@ export default function SearchResults({ searchResultsData }) {
         <BookLesson searchResultsData={searchResultsData} />
       )}
       <ul className={css.resultsListContainer}>
+        {console.log(searchResultsData, "safe")}
         {searchResultsData.map((item, i) => {
           return (
             <li key={i}>
