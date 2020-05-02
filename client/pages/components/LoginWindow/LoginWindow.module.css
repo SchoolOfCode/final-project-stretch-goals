@@ -108,3 +108,18 @@
   display: flex;
   justify-content: center;
 }
+
+.closeWindow {
+  background-color: var(--theme-color-5);
+  color: var(--font-color-1);
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 1.8;
+  float: right;
+  transform: translateY(-20px);
+}
+.closeWindow:hover {
+  cursor: pointer;
+}
