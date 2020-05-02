@@ -17,7 +17,6 @@ export default function SearchTutors({
     console.log(data);
     setSearchResultsData(data);
     setSearchBoolean(!searchBoolean);
-    setSubject("");
   }
 
   function handleKeyDown(e) {

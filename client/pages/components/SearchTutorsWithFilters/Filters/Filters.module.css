@@ -4,9 +4,7 @@
 }
 .subjectValue {
   grid-area: subjectValue;
-  width: 75%;
-  margin-left: 12.5%;
-  height: 1.5em;
+  margin-left: 10px;
 }
 .priceTitle {
   padding-top: 3.5vh;

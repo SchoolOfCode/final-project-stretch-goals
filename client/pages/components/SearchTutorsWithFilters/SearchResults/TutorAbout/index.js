@@ -52,14 +52,10 @@ export default function TutorAbout({ item }) {
       <div className={css.aboutContent}>
         {showContent === 1 ? (
           <div className={css.videoContainer}>
-            <iframe
-              width="280"
-              height="200"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            ></iframe>
+            <iframe width="280" height="200" src={item.videoURL}></iframe>
           </div>
         ) : null}
-        {showContent === 2 ? <p>{item.bio}ABOUT ME</p> : null}
+        {showContent === 2 ? <p>{item.biography}ABOUT ME</p> : null}
         {showContent === 3 ? <p>IM A TESTOMONIAL</p> : null}
       </div>
     </>

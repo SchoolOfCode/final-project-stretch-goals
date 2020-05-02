@@ -4,19 +4,18 @@ import Button from "../../../Button/Button";
 export default function TutorDetails({
   item,
   setBookLessonDisplay,
-  bookLessonDisplay
+  bookLessonDisplay,
 }) {
   function handleClick() {
     setBookLessonDisplay(!bookLessonDisplay);
-    console.log("yes");
   }
 
   return (
     <>
       <div className={css.detailsContainer}>
-        <p>Location: {item.location}</p>
+        <p>Location: {item.tutorLocation}</p>
         <p>Subject: {item.subjects}</p>
-        <p>Level: {item.level}</p>
+        <p>Level: {item.teachingLevel}</p>
         <p>Experience: {item.experience}</p>
       </div>
 

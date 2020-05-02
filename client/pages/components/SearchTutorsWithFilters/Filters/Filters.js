@@ -12,7 +12,7 @@ export default function Filters({
   priceMin,
   experience,
   setExperience,
-  handleSubmit
+  handleSubmit,
 }) {
   function handleChange(e) {
     setSubject(e.target.value);
@@ -22,17 +22,14 @@ export default function Filters({
   return (
     <>
       <h3 className={css.subjectTitle}>Subject</h3>
-      <InputField
-        value={subject}
-        onChange={handleChange}
-        label="Enter Subject to Begin Search"
-      />
-      {/* <input
-        className={css.subjectValue}
-        placeholder="Start typing a subject to begin"
-        value={subject}
-        onChange={handleChange}
-      /> */}
+      <div className={css.subjectValue}>
+        <InputField
+          width={"90%"}
+          value={subject}
+          onChange={handleChange}
+          label="Enter Subject to Begin Search"
+        />
+      </div>
       <h3 className={css.priceDisplay}>
         £{priceMin} - £{priceMax}
       </h3>
@@ -40,7 +37,7 @@ export default function Filters({
       <div className={css.priceValue}>
         <SliderComponent
           values={[priceMin, priceMax]}
-          onChange={function(e, val) {
+          onChange={function (e, val) {
             setPriceMin(val[0]);
             setPriceMax(val[1]);
           }}
