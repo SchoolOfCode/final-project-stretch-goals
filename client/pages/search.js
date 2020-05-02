@@ -14,7 +14,7 @@ export default function Home() {
   const [displayLogin, setDisplayLogin] = useState(false);
 
   function toggleLogin() {
-    setDisplayLogin(!displayLogin);
+    setDisplayLogin(true);
   }
 
   return (
@@ -48,10 +48,10 @@ export default function Home() {
             style={{
               position: "absolute",
               paddingLeft: "25vw",
-              paddingTop: "20vh"
+              paddingTop: "20vh",
             }}
           >
-            <LoginWindow />{" "}
+            <LoginWindow setDisplayLogin={setDisplayLogin} />{" "}
           </div>
         ) : null}
       </div>

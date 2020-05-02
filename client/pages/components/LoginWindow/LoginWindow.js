@@ -5,7 +5,7 @@ import InputField from "../InputField/InputField";
 import Link from "next/link";
 
 //make links from CreateAccount to student / tutor reg forms.
-export default function LoginWindow() {
+export default function LoginWindow({ setDisplayLogin }) {
   return (
     <>
       <div
