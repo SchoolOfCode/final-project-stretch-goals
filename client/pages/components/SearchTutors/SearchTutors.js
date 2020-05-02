@@ -1,6 +1,5 @@
 import css from "./SearchTutors.module.css";
-import Button from "../Button/Button";
-import InputField from "../InputField/InputField";
+
 import CustomizedInputBase from "../MainSearchInput";
 
 export default function SearchTutors({
@@ -8,17 +7,16 @@ export default function SearchTutors({
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData
+  setSearchResultsData,
 }) {
   async function handleSubmit() {
     const res = await fetch(
-      `https://ugujwwfn00.execute-api.eu-west-1.amazonaws.com/dev/tutors/search/${subject}`
+      `https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors/search/${subject}`
     );
     const data = await res.json();
-    setSearchResultsData(data);
     console.log(data);
+    setSearchResultsData(data);
     setSearchBoolean(!searchBoolean);
-
     setSubject("");
   }
 
@@ -50,15 +48,6 @@ export default function SearchTutors({
           handleKeyDown={handleKeyDown}
           handleChange={handleChange}
         />
-        {/* <InputField
-          label="Enter Subject"
-          type="text"
-          className="searchInput"
-          onChange={handleChange}
-          onKeyPress={handleKeyDown}
-          width="60ch"
-        /> */}
-        {/* <Button text="Search" handleClick={handleSubmit} /> */}
       </div>
       <span
         className={css.advancedSearch}

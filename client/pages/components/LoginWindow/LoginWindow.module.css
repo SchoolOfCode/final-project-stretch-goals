@@ -118,7 +118,9 @@
   line-height: 1.8;
   float: right;
   transform: translateY(-20px);
+  border: white 2px solid;
 }
 .closeWindow:hover {
   cursor: pointer;
+  border: var(--theme-color-1) 2px solid;
 }
