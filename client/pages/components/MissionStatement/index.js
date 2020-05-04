@@ -19,11 +19,21 @@ export default function MissionStatement() {
     {
       classTitle: "topRight",
       text:
-        "At Doceo, we believe you shouldn't have to pay more than you can afford for a lesson. On Doceo you only pay for each lesson you book, at a price that is within your budget",
+        "At Doceo, we believe you shouldn't have to pay more than you can afford for a lesson. On Doceo you only pay for each lesson you book at a price that is within your budget, so you can focus on learning.",
       imageUrl: "image",
     },
-    { classTitle: "bottomLeft", text: "bottom left", imageUrl: "image" },
-    { classTitle: "bottomRight", text: "bottom right", imageUrl: "image" },
+    {
+      classTitle: "bottomLeft",
+      text:
+        "Book classes that fit around your schedule. As our lessons are all online, you don't need to worry about travelling to meet a tutor.",
+      imageUrl: "image",
+    },
+    {
+      classTitle: "bottomRight",
+      text:
+        "Our lessons sync with Google calendar, so you don't need to worry about forgetting that you have a lesson next Tuesday. We've got your back.",
+      imageUrl: "image",
+    },
   ];
 
   return (
