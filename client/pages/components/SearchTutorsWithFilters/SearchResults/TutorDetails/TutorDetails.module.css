@@ -10,7 +10,7 @@
 
 .book {
   margin-top: 10px;
-  background-color: var(--theme-color-2);
+  background-color: var(--theme-color-3);
   box-shadow: 0 5px 5px var(--shadow-color);
   grid-area: book;
   display: grid;
@@ -18,8 +18,11 @@
 }
 .price {
   grid-area: price;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   color: var(--font-color-4);
+  padding-top: 8px;
+}
+
+.buttonContainer {
+  grid-area: button;
 }

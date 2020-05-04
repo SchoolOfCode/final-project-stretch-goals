@@ -10,7 +10,10 @@ export default function SearchResults({ searchResultsData }) {
   return (
     <>
       {bookLessonDisplay && (
-        <BookLesson searchResultsData={searchResultsData} />
+        <BookLesson
+          setBookLessonDisplay={setBookLessonDisplay}
+          searchResultsData={searchResultsData}
+        />
       )}
       <ul className={css.resultsListContainer}>
         {console.log(searchResultsData, "safe")}

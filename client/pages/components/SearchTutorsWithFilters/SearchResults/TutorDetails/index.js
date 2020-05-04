@@ -1,4 +1,3 @@
-import { useState } from "react";
 import css from "./TutorDetails.module.css";
 import Button from "../../../Button/Button";
 export default function TutorDetails({
@@ -7,7 +6,7 @@ export default function TutorDetails({
   bookLessonDisplay,
 }) {
   function handleClick() {
-    setBookLessonDisplay(!bookLessonDisplay);
+    setBookLessonDisplay(true);
   }
 
   return (
@@ -21,7 +20,9 @@ export default function TutorDetails({
 
       <div className={css.book}>
         <h3 className={css.price}>Price: £{item.price}p/h</h3>
-        <Button text="Book Now" height="30px" handleClick={handleClick} />
+        <div className={css.buttonContainer}>
+          <Button text="Book Now" handleClick={handleClick} />
+        </div>
       </div>
     </>
   );

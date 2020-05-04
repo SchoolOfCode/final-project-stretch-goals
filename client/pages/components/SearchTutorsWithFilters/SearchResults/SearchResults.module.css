@@ -8,7 +8,7 @@
   background-color: var(--theme-color-4);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 20px 200px 50px;
+  grid-template-rows: 20px 200px 57px;
   grid-template-areas:
     "displayTitle aboutTitle details"
     "image aboutContent details"
@@ -35,7 +35,5 @@
   grid-area: details;
   display: grid;
   grid-template-areas: "detailTitle" "details" "book";
-
-  padding: 1em;
   border-radius: 20px;
 }

@@ -1,4 +1,3 @@
-//import { css } from "@material-ui/system";
 import css from "./StepDisplay.module.css";
 
 export default function StepDisplay({ text, image, head }) {
@@ -7,7 +6,7 @@ export default function StepDisplay({ text, image, head }) {
       <div className={css.head}>
         <h3>{head}</h3>
       </div>
-      <div className={css[image]}></div>
+      <img src={image} className={css.imageContainer} />
       <div className={css.textDiv}>{text}</div>
     </div>
   );
