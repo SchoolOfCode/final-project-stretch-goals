@@ -9,7 +9,6 @@ export default function StepDisplay({ text, image, head }) {
       <div className={css.textDiv}>
         {head} {text}
       </div>
-      <div className={css.arrow}></div>
     </div>
   );
 }

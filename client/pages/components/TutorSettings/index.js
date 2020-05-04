@@ -32,7 +32,7 @@ export default function TutorSettings() {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    //setTutotSetting has an argument which is a function or anything else, containing old state
+    //setTutorSetting has an argument which is a function or anything else, containing old state
     setFormData(oldState => ({ ...oldState, [name]: newState }));
   }
 
@@ -46,36 +46,6 @@ export default function TutorSettings() {
     e.preventDefault();
     setToggleDisplay(!toggleDisplay);
   }
-
-  // Function will run on page render so that we can populate our input fields with the data from our fetch request.
-  // need params to get correct users data.
-  // useEffect(() => {
-  //   async function getAccountDetails() {
-  //     const res = await fetch(
-  //       `https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors/${id}`
-  //     );
-  //     const data = await res.json();
-  //     setFormData(data);
-  //   }
-  // }, []);
-
-  // Send a PUT request to update the backend
-  // async function updateAccount() {
-  //   const res = await fetch(
-  //     "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
-  //     {
-  //       method: "PUT",
-  //       headers: {
-  //         "Content-Type": "application/json"
-  //       },
-  //       body: JSON.stringify({
-  //         ...formData
-  //       })
-  //     }
-  //   );
-  //   const data = await res.json();
-    // success - set up what we get back.
-    // think about navigation after they have finished.
   }
 
   return (

@@ -3,7 +3,8 @@ import Navbar from "../pages/components/NavBar/NavBar";
 import MissionStatement from "./components/MissionStatement";
 import HowItWorks from "./components/HowItWorks";
 import Testimonial from "./components/Testimonial/index";
-import LoginWindow from "./components/LoginWindow/LoginWindow";
+//import LoginWindow from "./components/LoginWindow/LoginWindow";
+//import Carousel from "./components/Carousel";
 //import TutorDash from "./components/TutorDash";
 
 export default function Homepage() {
@@ -13,6 +14,7 @@ export default function Homepage() {
       <MissionStatement />
       <HowItWorks />
       <Testimonial />
+      {/* <Carousel /> */}
     </>
   );
 }

@@ -3,8 +3,7 @@ import MaterialUIPickers from "../../MaterialUIPickers";
 export default function Calendar() {
   return (
     <>
-      <h1>I'm a booking system, manage me senpai</h1>
-      <MaterialUIPickers />
+      <h1 style={{ textAlign: "center" }}>One day i will be a real calendar</h1>
     </>
   );
 }

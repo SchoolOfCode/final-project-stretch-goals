@@ -25,7 +25,7 @@ export default function TutorProfileSettingsForm({
     vid_url: ""
   });
   const newKeys = keys.slice(8, 14);
-  // if fetch request sends the data in the correct order we should be able to map through from a certain index
+
   return (
     <>
       <div className={css.accountForm}>
@@ -49,40 +49,32 @@ export default function TutorProfileSettingsForm({
   );
 }
 
-{
-  /* <label>
-Subjects:{" "}
-<input onChange={handleChange} name="subjects" type="text"></input>
-</label>
-<label>
-Bio: <input onChange={handleChange} name="bio" type="text"></input>
-</label>
-<label>
-Level:{" "}
-<input
-  onChange={handleChange}
-  name="teachingLevel"
-  type="text"
-></input>
-</label>
-<label>
-Location:{" "}
-<input onChange={handleChange} name="location" type="text"></input>
-</label>
-<div>
-<p>upload image</p>
-<input name="img_url" type="file" onChange={handleChange}></input>
-</div>
-<div>
-<p>upload video url</p>
-<input name="img_url" type="file" onChange={handleChange}></input>
-</div>
-<label>
-Price:{" "}
-<input onChange={handleChange} name="price" type="text"></input>
-</label>
-<label>
-Years Experience:{" "}
-<input onChange={handleChange} name="exp" type="text"></input>
-</label> */
-}
+// Function will run on page render so that we can populate our input fields with the data from our fetch request.
+// need params to get correct users data.
+// useEffect(() => {
+//   async function getAccountDetails() {
+//     const res = await fetch(
+//       `https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors/${id}`
+//     );
+//     const data = await res.json();
+//     setFormData(data);
+//   }
+// }, []);
+
+// Send a PUT request to update the backend, so we can populate table input fields with existing data
+// async function updateAccount() {
+//   const res = await fetch(
+//     "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
+//     {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         ...formData
+//       })
+//     }
+//   );
+//   const data = await res.json();
+// success - set up what we get back.
+// think about navigation after they have finished.
