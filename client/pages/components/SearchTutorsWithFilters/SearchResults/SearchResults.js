@@ -1,41 +1,37 @@
-import {useState} from "react"
+import { useState } from "react";
+import TutorDisplay from "./TutorDisplay";
+import TutorAbout from "./TutorAbout";
 import css from "./SearchResults.module.css";
-
+import TutorDetails from "./TutorDetails";
+import BookLesson from "../../BookLesson";
 
 export default function SearchResults({ searchResultsData }) {
-  const [showEducation, setShowEducation] = useState(false)
-
-  function handleBioClick(){
-    setShowEducation(!showEducation)
-  }
+  const [bookLessonDisplay, setBookLessonDisplay] = useState(false);
   return (
-    <ul className={css.resultsListContainer}>
-      {searchResultsData.map((x, i) => {
-        return (
-          <li key={i}>
-          <div className={css.tutorContainer}>
-            <h1 className={css.tutorTitle}>{x.firstName} {x.lastName}</h1>
-            <img className={css.tutorImage} src={x.imageURL}/>
-            <p className={css.tutorRating}>Rating: {x.rating}</p>
-<div className={css.detailsContainer}>
-            <p className={css.tutorLocation}>Location: {x.location}</p>
-            <p className={css.tutorSubject}>Subject: {x.subjects}</p>
-            <p className={css.tutorLevel}>Level: {x.level}</p>
-            <p className={css.tutorExperience}>Experience: {x.experience}</p>
-            <p className={css.tutorPrice}>Price: £{x.price}p/h</p>
-</div>
-<div className={css.tutorBioContainer}>
-            <h3 onClick={handleBioClick} className={css.tutorBioTitle}>About Me</h3>
-            <h3 onClick={handleBioClick} className={css.tutorEducationTitle}>Education</h3>
-            {!showEducation ? <p className={css.tutorBio}>{x.biography}</p>:
-            <p className={css.tutorEducation}>Might have a section here to show what my educational background is, where ive studied etc...</p>}
-</div>
-            <button className={css.bookButton}> Book Now </button>
-            <button className={css.viewButton}> View Profile </button>
-          </div>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      {bookLessonDisplay && (
+        <BookLesson searchResultsData={searchResultsData} />
+      )}
+      <ul className={css.resultsListContainer}>
+        {console.log(searchResultsData, "safe")}
+        {searchResultsData.map((item, i) => {
+          return (
+            <li key={i}>
+              <div className={css.tutorContainer}>
+                <TutorDisplay item={item} />
+
+                <TutorAbout item={item} />
+
+                <TutorDetails
+                  setBookLessonDisplay={setBookLessonDisplay}
+                  bookLessonDisplay={bookLessonDisplay}
+                  item={item}
+                />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }

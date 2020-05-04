@@ -4,9 +4,7 @@
 }
 .subjectValue {
   grid-area: subjectValue;
-  width: 75%;
-  margin-left: 12.5%;
-  height: 1.5em;
+  margin-left: 10px;
 }
 .priceTitle {
   padding-top: 3.5vh;
@@ -18,7 +16,6 @@
   grid-area: priceDisplay;
   padding-right: 1em;
   text-align: end;
- 
 }
 .priceValue {
   grid-area: priceValue;
@@ -38,8 +35,12 @@
 }
 .experienceValue {
   grid-area: experienceValue;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.filtersButton{
+.filtersButton {
+  padding-left: 0;
+  padding-right: 0;
   grid-area: filtersButton;
 }

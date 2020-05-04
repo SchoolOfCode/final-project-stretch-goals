@@ -9,7 +9,7 @@ export default function CreateAccount() {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    //setTutotSetting has an argument which is a function or anything else, containing old state
+    //setTutorSetting has an argument which is a function or anything else, containing old state
     setDetails(oldState => ({ ...oldState, [name]: newState }));
   }
 
@@ -43,7 +43,6 @@ export default function CreateAccount() {
 
   return (
     <>
-      <NavBar />
       <div className={css.mainContainer}>
         <div className={css.formContainer}>
           <h1>Create an account</h1>
@@ -54,7 +53,7 @@ export default function CreateAccount() {
             className={css.password}
           />
           <div className={css.buttons}>
-            <Button handleClick={() => createAccount} text="Create Account" />
+            <Button handleClick={() => createAccount} text=" Create Account " />
           </div>
         </div>
       </div>

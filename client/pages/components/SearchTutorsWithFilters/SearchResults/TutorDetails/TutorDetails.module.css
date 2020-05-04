@@ -1,0 +1,29 @@
+.detailsContainer {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  padding: 0.5em;
+}
+
+.book {
+  margin-top: 10px;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  grid-area: book;
+  display: grid;
+  grid-template-areas: "price button";
+}
+.price {
+  grid-area: price;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color-3);
+}
+.bookButton {
+  background-color: darkgreen;
+  grid-area: button;
+}

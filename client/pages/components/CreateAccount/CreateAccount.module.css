@@ -10,9 +10,8 @@
 }
 
 .formContainer {
-  margin-top: 20vh;
+  padding-top: 20vh;
   display: grid;
-  position: fixed;
 }
 
 .buttons {

@@ -1,4 +1,5 @@
 import css from "../Testimonial/Testimonial.module.css";
+import StarRating from "../starRating/starRating";
 
 export default function Testimonials() {
   return (
@@ -8,11 +9,7 @@ export default function Testimonials() {
         <div className={css.imageCircle}></div>
       </div>
       <div className={css.stars}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <StarRating />
       </div>
 
       <div className={css.text}>

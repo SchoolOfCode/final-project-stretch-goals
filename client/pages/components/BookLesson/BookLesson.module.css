@@ -1,0 +1,58 @@
+.bookingCard {
+  position: fixed;
+  top: 25vh;
+  height: 65vh;
+  width: 55vw;
+  z-index: 10;
+  background-color: var(--theme-color-3);
+  color: var(--theme-color-1);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--shadow-color);
+  row-gap: 1vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "picker"
+    "confirmation"
+    "notes"
+    "button";
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--theme-color-1);
+  color: var(--font-color-1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.picker {
+  grid-area: picker;
+}
+
+.confirmation {
+  grid-area: confirmation;
+  text-align: center;
+}
+
+.notes {
+  grid-area: notes;
+  text-align: center;
+}
+
+.inputField {
+  height: 150px;
+  width: 300px;
+  background-color: var(--theme-color-4);
+  border-radius: 5px;
+}
+
+.button {
+  grid-area: button;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}

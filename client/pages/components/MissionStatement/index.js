@@ -13,8 +13,8 @@ export default function MissionStatement() {
     {
       classTitle: "topLeft",
       text:
-        "We offer a myriad of subjects taught at different levels by over 2,000 tutors. Whether you want to learn GCSE Maths or Grade 8 ukelele, it is easy to find a tutor who can help you based on your learning goals and interests.",
-      imageUrl: "image",
+        "We started this project with the aim of making a space for Tutors and Students to be able to connect. We believe that in these trying times, students should access to private tutoring, and it should be available to anyone, anywhere.",
+      imageUrl: "image"
     },
     {
       classTitle: "topRight",
@@ -38,7 +38,7 @@ export default function MissionStatement() {
 
   return (
     <div className={css.mainContainer}>
-      {statements.map((item) => {
+      {statements.map(item => {
         const { classTitle } = item;
         return (
           <div className={css[classTitle]}>

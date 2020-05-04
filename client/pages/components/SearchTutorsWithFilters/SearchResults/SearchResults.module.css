@@ -1,72 +1,41 @@
-.resultsListContainer{
-    list-style: none;
+.resultsListContainer {
+  list-style: none;
 }
 
-.tutorContainer{
-margin:3em;
-background-color: cornflowerblue;
-display:grid;
-grid-template-columns: 2fr 1fr 2fr;
-grid-template-areas:
-"title details bio"
-"image details bio"
-"rating details buttons"
+.tutorContainer {
+  margin: 2em;
+  padding: 1em;
+  background-color: var(--theme-color-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20px 200px 50px;
+  grid-template-areas:
+    "displayTitle aboutTitle details"
+    "image aboutContent details"
+    "rating aboutContent book";
+  row-gap: 15px;
+  column-gap: 1vw;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
 }
 
-.tutorTitle{
-    grid-area: title;
-}
-.tutorImage{
-    grid-area: image;
-}
-.tutorRating{
-    grid-area: rating;
+.tutorProfile {
+  grid-area: profile;
+  display: grid;
+  grid-template-areas: "name" "image" "rating";
 }
 
+.tutorAbout {
+  grid-area: about;
+  display: grid;
+  grid-template-areas: "title" "image" "rating";
+  border-radius: 20px;
+}
+.tutorDetails {
+  grid-area: details;
+  display: grid;
+  grid-template-areas: "detailTitle" "details" "book";
 
-.detailsContainer{
-    grid-area: details;
-    grid-template-areas: 
-    "location"
-    "subject"
-    "level"
-    "experience"
-    "price";
-}
-.tutotLocation{
-    grid-area: location;
-}
-.tutorSubject{
-    grid-area: subject;
-}
-.tutorLevel{
-    grid-area: level;
-}
-.tutorExperience{
-    grid-area: experience;
-}
-.tutorPrice{
-    grid-area: price;
-}
-
-.tutorBioContainer{
-    grid-area: bio;
-    display: grid;
-    grid-template-areas: "aboutme education"
-    "text text";
-}
-.tutorBioTitle{
-    grid-area: aboutme;
-}
-.tutorEducationTitle{
-    grid-area: education;
-}
-.tutorBio{
-    grid-area: text;
-}
-.viewButton{
-    grid-area: buttons;
-}
-.bookButton{
-    grid-area: buttons;
+  padding: 1em;
+  border-radius: 20px;
 }

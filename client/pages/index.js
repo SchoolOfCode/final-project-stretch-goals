@@ -1,58 +1,20 @@
-import Head from "next/head";
-import { useState } from "react";
-import css from "./index.module.css";
-import Navbar from "./components/NavBar/NavBar";
-import SearchTutors from "./components/SearchTutors/SearchTutors";
-import SearchTutorsWithFilters from "./components/SearchTutorsWithFilters/SearchTutorsWithFilters";
-import LoginWindow from "./components/LoginWindow/LoginWindow";
-import Link from "next/link";
+import React, { useState } from "react";
+import Navbar from "../pages/components/NavBar/NavBar";
+import MissionStatement from "./components/MissionStatement";
+import HowItWorks from "./components/HowItWorks";
+import Testimonial from "./components/Testimonial/index";
+//import LoginWindow from "./components/LoginWindow/LoginWindow";
+//import Carousel from "./components/Carousel";
+//import TutorDash from "./components/TutorDash";
 
-export default function Home() {
-  const [subject, setSubject] = useState("");
-  const [searchBoolean, setSearchBoolean] = useState(false);
-  const [searchResultsData, setSearchResultsData] = useState([]);
-  const [displayLogin, setDisplayLogin] = useState(false);
-
-  function toggleLogin() {
-    setDisplayLogin(!displayLogin);
-  }
-
+export default function Homepage() {
   return (
-    <div className={css.mainContainer}>
-      <Head>
-        <title>Doceo</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar toggleLogin={toggleLogin} />
-
-      <div className={css.gridContainer}>
-        {searchBoolean ? (
-          <SearchTutorsWithFilters
-            searchResultsData={searchResultsData}
-            subject={subject}
-            setSubject={setSubject}
-          />
-        ) : (
-          <SearchTutors
-            setSearchResultsData={setSearchResultsData}
-            subject={subject}
-            setSubject={setSubject}
-            setSearchBoolean={setSearchBoolean}
-            searchBoolean={searchBoolean}
-          />
-        )}
-        "
-        <div
-          style={{
-            position: "absolute",
-            paddingLeft: "25vw",
-            paddingTop: "20vh"
-          }}
-        >
-          {displayLogin ? <LoginWindow /> : null}
-        </div>
-        {/* if search has been perform or advanced search button pressed then display this version of the search thing instead!  */}
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <MissionStatement />
+      <HowItWorks />
+      <Testimonial />
+      {/* <Carousel /> */}
+    </>
   );
 }
