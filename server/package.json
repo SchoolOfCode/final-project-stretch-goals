@@ -1,11 +1,17 @@
 {
-  "name": "server",
+  "name": "example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "core-util-is": "^1.0.2",
+    "dynamodb": "^1.2.1",
+    "uuid": "^7.0.3"
+  }
 }
