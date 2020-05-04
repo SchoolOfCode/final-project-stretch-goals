@@ -22,7 +22,7 @@ export default function NavBar({ toggleLogin }) {
       <div className={css.loginButton}>
         <Button
           className={css.actualButton}
-          text="Login"
+          text="Login / Create Account"
           handleClick={toggleLogin}
         />
       </div>

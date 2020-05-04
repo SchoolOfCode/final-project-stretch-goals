@@ -1,6 +1,6 @@
 .navBarContainer {
   background-color: var(--theme-color-1);
-  height: 70px;
+  height: 100px;
   width: 100vw;
   position: fixed;
   display: grid;
@@ -20,7 +20,6 @@
   display: flex;
   font-size: 1.5em;
   justify-content: center;
-  align-items: center;
   grid-area: title;
 }
 

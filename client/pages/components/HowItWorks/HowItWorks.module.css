@@ -1,62 +1,77 @@
 .mainContainer {
   display: grid;
   background-color: lightgrey;
-  height: 91vh;
-  width: 100vw;
+  height: auto;
+  width: auto;
+  grid-template-rows: 200px;
+  grid-template-columns: 2fr 0.7fr 2fr 0.7fr 2fr 0.7fr 2fr;
   grid-template-areas:
-    "how how how how"
-    "one two three four";
+    "how how how how how how how"
+    "one arrowone two arrowtwo three arrowthree four";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.arrowOne {
+  grid-area: arrowone;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+}
+.arrowTwo {
+  grid-area: arrowtwo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+}
+.arrowThree {
+  grid-area: arrowthree;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
 }
 
 .how {
+  margin-top: 20px;
+  font-size: 3em;
   grid-area: how;
   display: flex;
   text-align: center;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  height: 100px;
 }
 
 .one {
   grid-area: one;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
 .two {
   grid-area: two;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
 .three {
   grid-area: three;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
 .four {
   grid-area: four;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
 .img {
   height: 70px;
-  position: absolute;
-  top: 123%;
-  padding-left: 316px;
 }

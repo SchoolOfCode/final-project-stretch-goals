@@ -1,7 +1,7 @@
 .mainContainer {
   display: grid;
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: 100%;
   grid-template-areas:
     "header"
     "image"
@@ -13,6 +13,7 @@
   margin-top: 10vh;
   grid-area: header;
   text-align: center;
+  font-size: 3em;
 }
 
 .imageContainer {

@@ -3,13 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 270px;
   width: 80vw;
   height: 80vh;
 }
 .filterContainer {
   margin-left: 10px;
   border-radius: 20px;
-  margin-top: 2vh;
+  margin-top: 50px;
   position: fixed;
   background-color: var(--theme-color-4);
   color: var(--font-color-5);
@@ -35,4 +36,9 @@
 .filterTitle {
   grid-area: title;
   text-align: center;
+}
+
+.resultsTitle {
+  color: var(--font-color-5);
+  padding-top: 50px;
 }
