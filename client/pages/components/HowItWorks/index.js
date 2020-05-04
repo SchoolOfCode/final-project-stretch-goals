@@ -1,10 +1,12 @@
 import css from "./HowItWorks.module.css";
+import arrow from "./StepDisplay/right-arrow.svg";
 import StepDisplay from "./StepDisplay/index";
 
 export default function HowItWorks() {
   const steps = [
     {
       classTitle: "one",
+      arrowIcon: arrow,
       image: "image",
       head: "1) Choose a tutor",
       text:
@@ -12,6 +14,7 @@ export default function HowItWorks() {
     },
     {
       classTitle: "two",
+      arrowIcon: arrow,
       image: "image",
       head: "2) Book your lesson",
       text:
@@ -19,6 +22,7 @@ export default function HowItWorks() {
     },
     {
       classTitle: "three",
+      arrowIcon: arrow,
       image: "image",
       head: "3) Learn with us",
       text:
@@ -26,6 +30,7 @@ export default function HowItWorks() {
     },
     {
       classTitle: "four",
+      arrowIcon: null,
       image: "image",
       head: "4) Leave a review",
       text:
@@ -38,9 +43,18 @@ export default function HowItWorks() {
       <h1 className={css.how}></h1>
       {steps.map(item => {
         return (
-          <div className={css[item.classTitle]}>
-            <StepDisplay image={item.image} head={item.head} text={item.text} />
-          </div>
+          <>
+            <div className={css[item.classTitle]}>
+              <StepDisplay
+                image={item.image}
+                head={item.head}
+                text={item.text}
+              />
+            </div>
+            <div className={css.arrow}>
+              <img className={css.img} src={item.arrowIcon} />
+            </div>
+          </>
         );
       })}
     </div>

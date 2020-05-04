@@ -53,3 +53,10 @@
   justify-content: center;
   margin-bottom: 100px;
 }
+
+.img {
+  height: 70px;
+  position: absolute;
+  top: 123%;
+  padding-left: 316px;
+}
