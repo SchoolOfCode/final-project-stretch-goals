@@ -9,3 +9,9 @@ module.exports = withImages({});
 //     url: false
 //   }
 // });
+
+// module.exports = {
+//   typescript: {
+//     ignoreDevErrors: true
+//   }
+// };

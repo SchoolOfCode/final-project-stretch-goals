@@ -1,49 +1,78 @@
 import InputField from "../../InputField/InputField";
 import css from "./TutorProfileSettingsForm.module.css";
+import { useState } from "react";
+import Button from "../../Button/Button";
 
-export default function TutorProfileSettingsForm({
-  handleChange,
-  formData,
-  onChange
-}) {
-  const keys = Object.keys({
-    firstName: "",
-    lastName: "",
-    tel: null,
-    email: "",
-    accNum: null,
-    sortCode: null,
-    textContact: false,
-    emailContact: false,
-    subjects: [""],
-    bio: "",
-    teachingLevel: "",
-    location: "",
-    price: null,
-    exp: "",
-    img_url: "",
-    vid_url: ""
-  });
-  const newKeys = keys.slice(8, 14);
+const keys = Object.keys({
+  firstName: "",
+  lastName: "",
+  tel: null,
+  email: "",
+  accNum: null,
+  sortCode: null,
+  textContact: false,
+  emailContact: false,
+  subjects: [""],
+  bio: "",
+  teachingLevel: "",
+  location: "",
+  price: null,
+  exp: "",
+  img_url: "",
+  vid_url: ""
+});
+
+const initialState = {
+  subjects: [""],
+  bio: "",
+  teachingLevel: "",
+  location: "",
+  price: null,
+  exp: "",
+  img_url: "",
+  vid_url: ""
+};
+
+const newKeys = keys.slice(8, 14);
+
+export default function TutorProfileSettingsForm() {
+  const [formData, setFormData] = useState(initialState);
+
+  function onChange(e) {
+    e.persist();
+    const newState = e.target.value;
+    const name = e.target.name;
+    //setTutorSetting has an argument which is a function or anything else, containing old state
+    setFormData(oldState => ({ ...oldState, [name]: newState }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+    updateAccount();
+  }
 
   return (
     <>
       <div className={css.accountForm}>
         <h2 className={css.title}>Profile Settings</h2>
-        {newKeys.map(item => {
-          return (
-            <InputField
-              label={item}
-              onChange={handleChange}
-              type="text"
-              name={item}
-            />
-          );
-        })}
-        <p>upload image</p>
-        <input name="img_url" type="file" onChange={handleChange}></input>
-        <p>upload video url</p>
-        <input name="img_url" type="file" onChange={handleChange}></input>
+        <form>
+          {newKeys.map(item => {
+            return (
+              <InputField
+                label={item}
+                onChange={onChange}
+                type="text"
+                name={item}
+              />
+            );
+          })}
+          <p>upload image</p>
+          <input name="img_url" type="file" onChange={onChange}></input>
+          <p>upload video url</p>
+          <input name="vid_url" type="file" onChange={onChange}></input>
+          <Button text="Submit" onClick={handleSubmit} />
+        </form>
       </div>
     </>
   );
