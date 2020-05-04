@@ -1,29 +1,52 @@
 import css from "./TutorAcountSettingsForm.module.css";
 import InputField from "../../InputField/InputField";
-import { Input, Checkbox } from "@material-ui/core";
+//import { Input, Checkbox } from "@material-ui/core";
+import { useState } from "react";
+import Button from "../../Button/Button";
+import CheckboxSelector from "../../Checkbox/Checkbox";
 
 // refactor using a map over the stuff.
 
-export default function TutorAccountSettingsForm({ onChange, formData }) {
-  const keys = Object.keys({
-    firstName: "",
-    lastName: "",
-    tel: null,
-    email: "",
-    accNum: null,
-    sortCode: null,
-    textContact: false,
-    emailContact: false,
-    subjects: [""],
-    bio: "",
-    teachingLevel: "",
-    location: "",
-    price: null,
-    exp: "",
-    img_url: "",
-    vid_url: ""
-  });
-  const newKeys = keys.slice(0, 6);
+const keys = Object.keys({
+  firstName: "",
+  lastName: "",
+  tel: null,
+  email: "",
+  accNum: null,
+  sortCode: null,
+  textContact: false,
+  emailContact: false
+});
+
+const initialState = {
+  firstName: "",
+  lastName: "",
+  tel: null,
+  email: "",
+  accNum: null,
+  sortCode: null,
+  textContact: false,
+  emailContact: false
+};
+
+const newKeys = keys.slice(0, 6);
+
+export default function TutorAccountSettingsForm() {
+  const [accountData, setAccountData] = useState(initialState);
+
+  function onChange(e) {
+    e.persist();
+    const newState = e.target.value;
+    const name = e.target.name;
+    //setTutorSetting has an argument which is a function or anything else, containing old state
+    setAccountData(oldState => ({ ...oldState, [name]: newState }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+    updateAccount();
+  }
 
   // Function will run on page render so that we can populate our input fields with the data from our fetch request.
   // need params to get correct users data.
@@ -72,9 +95,10 @@ export default function TutorAccountSettingsForm({ onChange, formData }) {
         })}
         <div>
           <h3 className={css.contact}>Preferred method of contact:</h3>
-          <Checkbox label="Email" /> Email
-          <Checkbox label="Phone" /> Phone
+          <CheckboxSelector label="Email" /> Email
+          <CheckboxSelector label="Phone" /> Phone
         </div>
+        <Button text="Submit" onClick={handleSubmit} />
       </div>
     </>
   );

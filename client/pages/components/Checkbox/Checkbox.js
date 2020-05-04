@@ -15,9 +15,9 @@ const GreenCheckbox = withStyles({
     }
   },
   checked: {}
-})((props: CheckboxProps) => <Checkbox color="default" {...props} />);
+})(props => <Checkbox color="default" {...props} />);
 
-export default function Checkbox({ label }) {
+export default function CheckboxSelector({ label }) {
   const [state, setState] = React.useState({
     checkedA: true,
     checkedB: true,
@@ -25,7 +25,7 @@ export default function Checkbox({ label }) {
     checkedG: true
   });
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = event => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
