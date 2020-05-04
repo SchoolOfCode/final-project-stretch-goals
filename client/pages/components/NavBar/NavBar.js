@@ -36,7 +36,7 @@ export default function NavBar({ toggleLogin }) {
           style={{
             position: "absolute",
             paddingLeft: "25vw",
-            paddingTop: "20vh"
+            paddingTop: "20vh",
           }}
         >
           <LoginWindow setDisplayLogin={setDisplayLogin} />
