@@ -1,4 +1,4 @@
-import TutorDash from "../pages/components/TutorDash";
+import TutorDash from "../components/TutorDash";
 
 export default function TutorDashPage() {
   return <TutorDash />;
