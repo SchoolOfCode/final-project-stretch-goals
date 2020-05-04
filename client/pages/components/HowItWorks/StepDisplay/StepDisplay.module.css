@@ -8,10 +8,17 @@
 }
 
 .textDiv {
-  width: 200px;
+  width: 100%;
   height: 260px;
 }
 
 .head {
-  font-weight: 900;
+  text-align: center;
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

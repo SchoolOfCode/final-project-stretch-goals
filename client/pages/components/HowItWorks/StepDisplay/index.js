@@ -3,12 +3,12 @@ import css from "./StepDisplay.module.css";
 
 export default function StepDisplay({ text, image, head }) {
   return (
-    <div>
-      <div className={css[image]}></div>
-      <div className={css[head]}></div>
-      <div className={css.textDiv}>
-        {head} {text}
+    <div className={css.container}>
+      <div className={css.head}>
+        <h3>{head}</h3>
       </div>
+      <div className={css[image]}></div>
+      <div className={css.textDiv}>{text}</div>
     </div>
   );
 }

@@ -2,16 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
-import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: 300 + theme.spacing(3) * 2
+    width: 300 + theme.spacing(3) * 2,
   },
   margin: {
-    height: theme.spacing(3)
-  }
+    height: theme.spacing(3),
+  },
 }));
 
 function ValueLabelComponent(props) {
@@ -27,7 +26,7 @@ function ValueLabelComponent(props) {
 ValueLabelComponent.propTypes = {
   children: PropTypes.element.isRequired,
   open: PropTypes.bool.isRequired,
-  value: PropTypes.number.isRequired
+  value: PropTypes.number.isRequired,
 };
 
 const AirbnbSlider = withStyles({
@@ -35,7 +34,7 @@ const AirbnbSlider = withStyles({
     color: "#3a8589",
     height: 3,
     padding: "13px 0",
-    width: "18vw"
+    width: "18vw",
   },
   thumb: {
     height: 27,
@@ -46,7 +45,7 @@ const AirbnbSlider = withStyles({
     marginLeft: -13,
     boxShadow: "#ebebeb 0px 2px 2px",
     "&:focus, &:hover, &$active": {
-      boxShadow: "#ccc 0px 2px 3px 1px"
+      boxShadow: "#ccc 0px 2px 3px 1px",
     },
     "& .bar": {
       // display: inline-block !important;
@@ -54,22 +53,22 @@ const AirbnbSlider = withStyles({
       width: 1,
       backgroundColor: "currentColor",
       marginLeft: 2,
-      marginRight: 1
-    }
+      marginRight: 1,
+    },
   },
   active: {},
   valueLabel: {
-    left: "calc(-50% + 4px)"
+    left: "calc(-50% + 4px)",
   },
   track: {
     height: 3,
-    width: 20
+    width: 20,
   },
   rail: {
     color: "#d8d8d8",
     opacity: 1,
-    height: 10
-  }
+    height: 10,
+  },
 })(Slider);
 
 function AirbnbThumbComponent(props) {
@@ -88,7 +87,7 @@ export default function SliderComponent({ values, onChange }) {
     <div className={classes.root}>
       <AirbnbSlider
         ThumbComponent={AirbnbThumbComponent}
-        getAriaLabel={index =>
+        getAriaLabel={(index) =>
           index === 0 ? "Minimum price" : "Maximum price"
         }
         defaultValue={values}
