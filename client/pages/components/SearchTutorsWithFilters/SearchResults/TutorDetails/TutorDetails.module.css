@@ -10,7 +10,7 @@
 
 .book {
   margin-top: 10px;
-  background-color: var(--theme-color-3);
+  background-color: var(--theme-color-2);
   box-shadow: 0 5px 5px var(--shadow-color);
   grid-area: book;
   display: grid;
@@ -21,9 +21,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--font-color-3);
-}
-.bookButton {
-  background-color: darkgreen;
-  grid-area: button;
+  color: var(--font-color-4);
 }
