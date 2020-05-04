@@ -26,6 +26,8 @@
   color: var(--font-color-1);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .picker {
@@ -43,6 +45,8 @@
 }
 
 .inputField {
+  max-width: 500px;
+  max-height: 200px;
   height: 150px;
   width: 300px;
   background-color: var(--theme-color-4);
@@ -55,4 +59,24 @@
   justify-items: center;
   align-items: center;
   align-content: center;
+}
+
+.closeWindow {
+  position: absolute;
+  grid-area: header;
+  background-color: var(--theme-color-5);
+  color: var(--font-color-1);
+  border-radius: 50px;
+  transform: translate(55vw, -20px);
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  float: right;
+  line-height: 1.8;
+  border: white 2px solid;
+}
+
+.closeWindow:hover {
+  cursor: pointer;
+  border: var(--theme-color-1) 2px solid;
 }
