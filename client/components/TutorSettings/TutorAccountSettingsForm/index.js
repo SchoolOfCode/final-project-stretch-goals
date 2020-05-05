@@ -8,12 +8,12 @@ import CheckboxSelector from "../../Checkbox/Checkbox";
 // refactor using a map over the stuff.
 
 const keys = Object.keys({
-  firstName: "",
-  lastName: "",
-  tel: null,
-  email: "",
-  accNum: null,
-  sortCode: null,
+  "First Name": "",
+  "Last Name": "",
+  Tel: null,
+  Email: "",
+  "Account Number": null,
+  "Sort Code": null,
   textContact: false,
   emailContact: false
 });
@@ -44,8 +44,8 @@ export default function TutorAccountSettingsForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
-    updateAccount();
+    console.log(accountData);
+    // updateAccount();
   }
 
   // Function will run on page render so that we can populate our input fields with the data from our fetch request.
@@ -82,23 +82,24 @@ export default function TutorAccountSettingsForm() {
     <>
       <div className={css.accountForm}>
         <h3 className={css.title}>Account Settings</h3>
-
-        {newKeys.map(item => {
-          return (
-            <InputField
-              label={item}
-              onChange={onChange}
-              type="text"
-              name={item}
-            />
-          );
-        })}
-        <div>
-          <h3 className={css.contact}>Preferred method of contact:</h3>
-          <CheckboxSelector label="Email" /> Email
-          <CheckboxSelector label="Phone" /> Phone
-        </div>
-        <Button text="Submit" onClick={handleSubmit} />
+        <form>
+          {newKeys.map(item => {
+            return (
+              <InputField
+                label={item}
+                onChange={onChange}
+                type="text"
+                name={item}
+              />
+            );
+          })}
+          <div>
+            <h3 className={css.contact}>Preferred method of contact:</h3>
+            <CheckboxSelector label="Email" />
+            <CheckboxSelector label="Phone" />
+          </div>
+          <Button text="Submit" handleClick={handleSubmit} />
+        </form>
       </div>
     </>
   );

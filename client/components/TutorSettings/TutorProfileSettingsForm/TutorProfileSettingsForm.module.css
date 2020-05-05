@@ -1,5 +1,8 @@
 .accountForm {
   display: grid;
+  grid-template-areas:
+    "title"
+    "form";
   position: absolute;
   left: 50vw;
   align-content: center;
@@ -21,4 +24,11 @@
   align-content: center;
   justify-content: center;
   font-size: 2em;
+}
+
+.form {
+  grid-area: form;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
 }

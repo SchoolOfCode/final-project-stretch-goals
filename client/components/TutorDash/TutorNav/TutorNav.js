@@ -33,6 +33,13 @@ export default function TutorNav({ setContentShown }) {
           text="Calendar"
         />
       </li>
+      <li className={css.li}>
+        <Button
+          height="50px"
+          handleClick={() => setContentShown(5)}
+          text="Learning Resources"
+        />
+      </li>
     </ul>
   );
 }
