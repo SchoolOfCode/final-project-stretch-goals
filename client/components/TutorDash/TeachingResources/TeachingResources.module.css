@@ -1,0 +1,15 @@
+.mainContainer {
+  display: grid;
+  grid-template-areas: none;
+  position: absolute;
+  left: 850px;
+  transform: translateX(-50%);
+  padding-top: 20px;
+  margin-left: 21px;
+  width: 1000px;
+  height: 500px;
+  background-color: var(--theme-color-4);
+  color: var(--font-color-5);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  border-radius: 20px;
+}

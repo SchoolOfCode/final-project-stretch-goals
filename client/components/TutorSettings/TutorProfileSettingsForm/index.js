@@ -12,12 +12,12 @@ const keys = Object.keys({
   sortCode: null,
   textContact: false,
   emailContact: false,
-  subjects: [""],
-  bio: "",
-  teachingLevel: "",
-  location: "",
-  price: null,
-  exp: "",
+  Subjects: [""],
+  Bio: "",
+  "Teaching Level": "",
+  Location: "",
+  Price: null,
+  "Years Experince": "",
   img_url: "",
   vid_url: ""
 });
@@ -33,7 +33,7 @@ const initialState = {
   vid_url: ""
 };
 
-const newKeys = keys.slice(8, 14);
+// const newKeys = keys.slice(8, 14);
 
 export default function TutorProfileSettingsForm() {
   const [formData, setFormData] = useState(initialState);
@@ -49,29 +49,47 @@ export default function TutorProfileSettingsForm() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formData);
-    updateAccount();
+    //updateAccount();
   }
 
   return (
     <>
       <div className={css.accountForm}>
-        <h2 className={css.title}>Profile Settings</h2>
-        <form>
-          {newKeys.map(item => {
-            return (
-              <InputField
-                label={item}
-                onChange={onChange}
-                type="text"
-                name={item}
-              />
-            );
-          })}
+        <h3 className={css.title}>Profile Settings</h3>
+        <form className={css.form}>
+          <InputField
+            label="Subject"
+            onChange={onChange}
+            type="text"
+            name="Subject"
+          />
+          <InputField
+            label="Teaching Level"
+            onChange={onChange}
+            type="text"
+            name="teachLevel"
+          />
+          <InputField
+            label="Years Experince"
+            onChange={onChange}
+            type="text"
+            name="exp"
+          />
+          <InputField
+            label="Location"
+            onChange={onChange}
+            type="text"
+            name="location"
+          />
+          <textarea
+            style={{ height: "100px", width: "350px", marginTop: "15px" }}
+            placeholder="Please write a short bio here, hilighting your specialist subjects and your approach to tutoring"
+          ></textarea>
           <p>upload image</p>
           <input name="img_url" type="file" onChange={onChange}></input>
           <p>upload video url</p>
           <input name="vid_url" type="file" onChange={onChange}></input>
-          <Button text="Submit" onClick={handleSubmit} />
+          <Button text="Submit" handleClick={handleSubmit} />
         </form>
       </div>
     </>
@@ -107,3 +125,14 @@ export default function TutorProfileSettingsForm() {
 //   const data = await res.json();
 // success - set up what we get back.
 // think about navigation after they have finished.
+
+// {newKeys.map(item => {
+//   return (
+//     <InputField
+//       label={item}
+//       onChange={onChange}
+//       type="text"
+//       name={item}
+//     />
+//   );
+// })}
