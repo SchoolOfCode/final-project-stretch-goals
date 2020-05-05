@@ -18,22 +18,9 @@ const keys = Object.keys({
   emailContact: false
 });
 
-const initialState = {
-  firstName: "",
-  lastName: "",
-  tel: null,
-  email: "",
-  accNum: null,
-  sortCode: null,
-  textContact: false,
-  emailContact: false
-};
-
 const newKeys = keys.slice(0, 6);
 
 export default function TutorAccountSettingsForm() {
-  const [accountData, setAccountData] = useState(initialState);
-
   function onChange(e) {
     e.persist();
     const newState = e.target.value;
@@ -81,7 +68,7 @@ export default function TutorAccountSettingsForm() {
   return (
     <>
       <div className={css.accountForm}>
-        <h3 className={css.title}>Account Settings</h3>
+        <h3 className={css.title}>Change your account settings here</h3>
         <form>
           {newKeys.map(item => {
             return (

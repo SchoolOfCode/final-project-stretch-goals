@@ -6,7 +6,7 @@ import SearchTutors from "../components/SearchTutors/SearchTutors";
 import SearchTutorsWithFilters from "../components/SearchTutorsWithFilters/SearchTutorsWithFilters";
 
 export default function Home() {
-  const [subject, setSubject] = useState("English");
+  const [subject, setSubject] = useState(false);
   const [searchBoolean, setSearchBoolean] = useState(false);
   const [searchResultsData, setSearchResultsData] = useState([]);
 

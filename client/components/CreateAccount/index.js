@@ -3,6 +3,7 @@ import InputField from "../InputField/InputField";
 import Button from "../Button/Button";
 import css from "./CreateAccount.module.css";
 import NavBar from "../NavBar/NavBar";
+import Link from "next/link";
 
 export default function CreateAccount() {
   function onChange(e) {
@@ -52,9 +53,14 @@ export default function CreateAccount() {
             type="password"
             className={css.password}
           />
-          <div className={css.buttons}>
-            <Button handleClick={() => createAccount} text=" Create Account " />
-          </div>
+          <Link href="/register">
+            <div className={css.buttons}>
+              <Button
+                handleClick={() => createAccount}
+                text=" Create Account "
+              />
+            </div>
+          </Link>
         </div>
       </div>
     </>

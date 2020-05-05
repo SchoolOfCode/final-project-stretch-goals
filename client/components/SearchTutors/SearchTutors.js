@@ -7,7 +7,7 @@ export default function SearchTutors({
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData,
+  setSearchResultsData
 }) {
   async function handleSubmit() {
     const res = await fetch(

@@ -55,7 +55,7 @@ export default function TutorProfileSettingsForm() {
   return (
     <>
       <div className={css.accountForm}>
-        <h3 className={css.title}>Profile Settings</h3>
+        <h3 className={css.title}>Edit your profile here</h3>
         <form className={css.form}>
           <InputField
             label="Subject"

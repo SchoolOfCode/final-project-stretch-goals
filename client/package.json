@@ -6,15 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export",
+    "pems:prepare": "prepare-pems --region $USER_POOL_REGION --userPoolId $USER_POOL_ID"
   },
   "dependencies": {
+    "@aws-amplify/auth": "^3.2.6",
+    "@aws-amplify/core": "^3.2.6",
     "@date-io/core": "^2.6.0",
     "@date-io/date-fns": "^1.3.13",
     "@material-ui/core": "^4.9.12",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.51",
     "@material-ui/pickers": "^3.2.10",
+    "aws-cognito-next": "^3.0.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "card": "^2.4.0",
@@ -29,7 +33,11 @@
     "react-dom": "16.13.1",
     "react-router-dom": "^5.1.2",
     "sass": "^1.26.5",
+    "typescript": "^3.8.3",
     "url-loader": "^4.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@types/react": "^16.9.34"
+  }
 }
