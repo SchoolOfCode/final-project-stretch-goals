@@ -1,5 +1,5 @@
 import css from "../Testimonial/Testimonial.module.css";
-import StarRating from "../starRating/starRating";
+import StarRating from "../StarRating/StarRating";
 
 export default function Testimonials() {
   return (
