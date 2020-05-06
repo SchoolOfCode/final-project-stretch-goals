@@ -6,7 +6,7 @@ export default function StepDisplay({ text, image, head }) {
       <div className={css.head}>
         <h3>{head}</h3>
       </div>
-      <img src={image} className={css.imageContainer} />
+      <img src={require(image)} className={css.imageContainer} />
       <div className={css.textDiv}>{text}</div>
     </div>
   );
