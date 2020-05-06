@@ -4,7 +4,7 @@ import StepDisplay from "./StepDisplay/index";
 import image1 from "../../images/step1.png";
 import image2 from "../../images/step2.JPG";
 import image3 from "../../images/step3.JPG";
-import image4 from "../../images/step4.JPG";
+//import image4 from "../../images/step4.JPG";
 
 export default function HowItWorks() {
   const steps = [
@@ -31,7 +31,7 @@ export default function HowItWorks() {
     },
     {
       classTitle: "four",
-      image: image4,
+      image: "image4",
       head: "Leave a review",
       text:
         "After each lesson, both student and tutor can leave a rating and review of the lesson. This keeps our community standards high."
