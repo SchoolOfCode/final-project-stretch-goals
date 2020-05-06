@@ -2,9 +2,9 @@ import css from "./HowItWorks.module.css";
 import arrow from "./StepDisplay/right-arrow.svg";
 import StepDisplay from "./StepDisplay/index";
 import image1 from "../../images/step1.png";
-import image2 from "../../images/step2.jpg";
-import image3 from "../../images/step3.jpg";
-import image4 from "../../images/step4.jpg";
+import image2 from "../../images/step2.JPG";
+import image3 from "../../images/step3.JPG";
+import image4 from "../../images/step4.JPG";
 
 export default function HowItWorks() {
   const steps = [
