@@ -12,15 +12,15 @@ const initialState = {
   firstName: "Mark",
   lastName: "Young",
   subjects: "Science",
-  imageURL: "12345",
+  imageURL: "../../images/step1.png",
   videoURL: "12345",
   biography: "it's nice to be nice",
   price: 100,
   teachingLevel: "University",
-  tutorLocation: "Lchfield",
+  tutorLocation: "Lichfield",
   experience: 10,
   rating: 0,
-  student: false
+  student: false,
 };
 
 const keys = Object.keys({
@@ -31,7 +31,7 @@ const keys = Object.keys({
   "Account Number": null,
   "Sort Code": null,
   textContact: false,
-  emailContact: false
+  emailContact: false,
 });
 
 const newKeys = keys.slice(0, 6);
@@ -44,7 +44,7 @@ export default function RegistrationForm() {
     const newState = e.target.value;
     const name = e.target.name;
     //setTutorSetting has an argument which is a function or anything else, containing old state
-    setFormData(oldState => ({ ...oldState, [name]: newState }));
+    setFormData((oldState) => ({ ...oldState, [name]: newState }));
   }
 
   function handleSubmit(e) {
@@ -53,9 +53,9 @@ export default function RegistrationForm() {
     fetch(`${url}/dev/tutors`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     });
   }
 
@@ -65,7 +65,7 @@ export default function RegistrationForm() {
         style={{
           display: "grid",
           justifyContent: "center",
-          justifyItems: "center"
+          justifyItems: "center",
         }}
       >
         <h1>Please provide the following details to create your account</h1>
@@ -92,6 +92,7 @@ export default function RegistrationForm() {
         <p>upload video url</p>
         <input name="vid_url" type="file" onChange={onChange}></input> */}
         <textarea
+          name="biography"
           onChange={onChange}
           style={{ height: "100px", width: "350px", marginTop: "15px" }}
           placeholder="Please write a short bio here, hilighting your specialist subjects and your approach to tutoring"
