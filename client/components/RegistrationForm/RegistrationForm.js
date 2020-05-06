@@ -6,6 +6,7 @@ import InputField from "../InputField/InputField";
 import { useState } from "react";
 import { css } from "@material-ui/system";
 import Link from "next/link";
+import { url } from "../../config";
 
 const initialState = {
   firstName: "Mark",
@@ -49,7 +50,7 @@ export default function RegistrationForm() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formData);
-    fetch("https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors", {
+    fetch(`${url}/dev/tutors`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

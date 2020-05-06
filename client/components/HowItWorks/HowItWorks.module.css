@@ -74,4 +74,5 @@
 
 .img {
   height: 70px;
+  background-image: src("./StepDisplay/right-arrow.svg");
 }

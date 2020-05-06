@@ -2,12 +2,13 @@ import css from "./SearchTutorsWithFilters.module.css";
 import Filters from "./Filters/Filters";
 import SearchResults from "./SearchResults/SearchResults";
 import { useState } from "react";
+import { url } from "../../config";
 
 export default function SearchTutorsWithFilters({
   searchResultsData,
   subject,
   setSubject,
-  setSearchResultsData,
+  setSearchResultsData
 }) {
   const [priceMin, setPriceMin] = useState(0);
   const [priceMax, setPriceMax] = useState(8);
@@ -15,7 +16,7 @@ export default function SearchTutorsWithFilters({
   async function handleSubmit() {
     console.log(`${priceMin}/${priceMax}/${experience}/${subject}`);
     const res = await fetch(
-      `https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors/masterSearch/${priceMin}/${priceMax}/${experience}/${subject}`
+      `${url}/dev/tutors/masterSearch/${priceMin}/${priceMax}/${experience}/${subject}`
     );
     const data = await res.json();
     console.log(data);

@@ -1,4 +1,5 @@
 import css from "./SearchTutors.module.css";
+import { url } from "../../config";
 
 import CustomizedInputBase from "../MainSearchInput";
 
@@ -10,9 +11,7 @@ export default function SearchTutors({
   setSearchResultsData
 }) {
   async function handleSubmit() {
-    const res = await fetch(
-      `https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors/search/${subject}`
-    );
+    const res = await fetch(`${url}/dev/tutors/search/${subject}`);
     const data = await res.json();
     console.log(data);
     setSearchResultsData(data);

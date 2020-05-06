@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import css from "./CreateAccount.module.css";
 import NavBar from "../NavBar/NavBar";
 import Link from "next/link";
+import { url } from "../../config";
 
 export default function CreateAccount() {
   function onChange(e) {
@@ -25,18 +26,15 @@ export default function CreateAccount() {
   }
 
   async function createAccount() {
-    const res = await fetch(
-      "https://e9farpt6x0.execute-api.eu-west-1.amazonaws.com/dev/tutors",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          ...details
-        })
-      }
-    );
+    const res = await fetch(`${url}/dev/tutors`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        ...details
+      })
+    });
     const data = await res.json();
     // success - set up what we get back.
     // think about navigation after they have finished.
