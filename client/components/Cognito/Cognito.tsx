@@ -8,7 +8,7 @@ import {
   getServerSideAuth,
 } from "../../auth";
 
-const Home = (props: { initialAuth: AuthTokens }) => {
+const Cognito = (props: { initialAuth: AuthTokens }) => {
   const auth = useAuth(props.initialAuth);
   const { login, logout } = useAuthFunctions();
   console.log(auth);
