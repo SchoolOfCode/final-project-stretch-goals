@@ -10,7 +10,7 @@ import { useAuth } from "../../auth";
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
   const auth = useAuth();
-  console.log("damn daniel", auth ? auth.idToken : null);
+  console.log("damn daaaayyyyniel", auth ? auth.idTokenData.email : null);
   // console.log(
   //   "1) User Attributes",
   //   event.request.userAttributes
