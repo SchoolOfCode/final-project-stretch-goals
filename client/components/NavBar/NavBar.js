@@ -5,6 +5,7 @@ import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
 import Cognito from "../Cognito/Cognito";
 const AWS = require("aws-sdk");
+import useAuth from "../../auth";
 
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
@@ -23,7 +24,10 @@ export default function NavBar() {
   // var identityId = AWS.config.credentials;
   // console.log("id = ", identityId);
 
-  console.log(AWS.CognitoIdentityCredentials);
+  //  console.log(AWS.CognitoIdentityCredentials);
+
+  // var tokenTest = Object(I.useAuth)(e.initialAuth);
+  // console.log("token", tokenTest);
 
   function toggleLogin() {
     setDisplayLogin(!displayLogin);
