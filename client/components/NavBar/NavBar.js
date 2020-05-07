@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
 import Cognito from "../Cognito/Cognito";
+const AWS = require("aws-sdk");
 
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
@@ -19,6 +20,8 @@ export default function NavBar() {
   // console.log("3.5) object.idTokenData.email", object.idTokenData.email);
   // console.log("4)  idTokenData", idTokenData);
   console.log("5)  Object.idTokenData", Object.idTokenData);
+  var identityId = AWS.config.credentials;
+  console.log("id = ", identityId);
   // console.log("6)  object.idTokenData", object.idTokenData);
 
   function toggleLogin() {
