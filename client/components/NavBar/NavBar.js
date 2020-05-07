@@ -5,7 +5,7 @@ import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
 import Cognito from "../Cognito/Cognito";
 const AWS = require("aws-sdk");
-import { useAuth } from "./use-auth.js";
+import { useAuth } from "../../auth";
 
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
