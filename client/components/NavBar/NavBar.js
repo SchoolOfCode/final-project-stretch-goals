@@ -5,7 +5,7 @@ import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
 import Cognito from "../Cognito/Cognito";
 
-export default function NavBar({ toggleLogin }) {
+export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
 
   function toggleLogin() {
@@ -20,14 +20,17 @@ export default function NavBar({ toggleLogin }) {
         </Link>
       </div>
 
-      <Cognito />
-
       <div className={css.loginButton}>
+        <Cognito />
+
+        {/* 
+        OLD LOGIN BUTTON
+        
         <Button
           className={css.actualButton}
           text="Login / Create Account"
           handleClick={toggleLogin}
-        />
+        /> */}
       </div>
       <Link href="/search">
         <div className={css.searchField}>
@@ -39,7 +42,7 @@ export default function NavBar({ toggleLogin }) {
           style={{
             position: "absolute",
             paddingLeft: "25vw",
-            paddingTop: "20vh"
+            paddingTop: "20vh",
           }}
         >
           <LoginWindow setDisplayLogin={setDisplayLogin} />

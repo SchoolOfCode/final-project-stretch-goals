@@ -1,27 +1,36 @@
 import React from "react";
+import Button from "../Button/Button";
 import { GetServerSideProps } from "next";
 import {
   AuthTokens,
   useAuth,
   useAuthFunctions,
-  getServerSideAuth
+  getServerSideAuth,
 } from "../../auth";
 
 const Home = (props: { initialAuth: AuthTokens }) => {
   const auth = useAuth(props.initialAuth);
   const { login, logout } = useAuthFunctions();
-
+  console.log(auth);
   return (
     <React.Fragment>
       {auth ? (
-        <button type="button" onClick={() => logout()}>
-          sign out
-        </button>
+        <Button
+          text="Sign Out"
+          handleClick={() => logout()}
+          className="x"
+          height="35px"
+          width="110px"
+        />
       ) : (
         <React.Fragment>
-          <button type="button" onClick={() => login()}>
-            sign in
-          </button>
+          <Button
+            text="Sign In"
+            handleClick={() => login()}
+            className="x"
+            height="35px"
+            width="110px"
+          />
         </React.Fragment>
       )}
     </React.Fragment>
@@ -30,7 +39,7 @@ const Home = (props: { initialAuth: AuthTokens }) => {
 
 export const getServerSideProps: GetServerSideProps<{
   initialAuth: AuthTokens;
-}> = async context => {
+}> = async (context) => {
   const initialAuth = getServerSideAuth(context.req);
 
   return { props: { initialAuth } };
