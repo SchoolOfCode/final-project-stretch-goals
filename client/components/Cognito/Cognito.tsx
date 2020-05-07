@@ -11,7 +11,7 @@ import {
 const Cognito = (props: { initialAuth: AuthTokens }) => {
   const auth = useAuth(props.initialAuth);
   const { login, logout } = useAuthFunctions();
-  console.log(auth, "bumbaclat string");
+  console.log(auth, "string");
   return (
     <React.Fragment>
       {auth ? (
