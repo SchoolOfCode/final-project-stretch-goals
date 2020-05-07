@@ -9,7 +9,7 @@ export default function Testimonials() {
         <div className={css.imageCircle}></div>
       </div>
       <div className={css.stars}>
-        <StarRating />
+        <StarRating defaultValue="5" size="large" />
       </div>
 
       <div className={css.text}>

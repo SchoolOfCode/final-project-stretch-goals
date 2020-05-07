@@ -12,10 +12,10 @@ function IconContainer(props) {
 }
 
 IconContainer.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired
 };
 
-export default function StarRating({ size }) {
+export default function StarRating({ size, defaultValue }) {
   const [starValue, setStarValue] = useState(0);
 
   function handleClick(e) {
@@ -25,16 +25,16 @@ export default function StarRating({ size }) {
   return (
     <>
       <div>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Rating
-            name="stars"
-            size={size}
-            defaultValue={0}
-            precision={0.5}
-            onChange={handleClick}
-            emptyIcon={<StarBorderIcon fontSize="inherit" />}
-          />
-        </Box>
+        {/* <Box component="fieldset" mb={3} borderColor="transparent"> */}
+        <Rating
+          name="stars"
+          size={size}
+          defaultValue={defaultValue}
+          precision={0.5}
+          onChange={handleClick}
+          emptyIcon={<StarBorderIcon fontSize="inherit" />}
+        />
+        {/* </Box> */}
       </div>
     </>
   );

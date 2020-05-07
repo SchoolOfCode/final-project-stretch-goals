@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   transform: translateY(-25%);
+  z-index: 1;
 }
 .arrowTwo {
   grid-area: arrowtwo;
@@ -75,4 +76,5 @@
 .img {
   height: 70px;
   background-image: src("./StepDisplay/right-arrow.svg");
+  z-index: 1;
 }
