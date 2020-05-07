@@ -8,13 +8,18 @@ import Cognito from "../Cognito/Cognito";
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
 
-  console.log("1) User Attributes", event.request.userAttributes);
-  console.log("2) idTokenData.email", idTokenData.email);
-  console.log("3) Object.idTokenData.email", Object.idTokenData.email);
-  console.log("3.5) object.idTokenData.email", object.idTokenData.email);
-  console.log("4)  idTokenData", idTokenData);
+  // console.log(
+  //   "1) User Attributes",
+  //   event.request.userAttributes
+  //     ? event.request.userAttributes
+  //     : "it's undefined"
+  // );
+  // console.log("2) idTokenData.email", idTokenData.email);
+  // console.log("3) Object.idTokenData.email", Object.idTokenData.email);
+  // console.log("3.5) object.idTokenData.email", object.idTokenData.email);
+  // console.log("4)  idTokenData", idTokenData);
   console.log("5)  Object.idTokenData", Object.idTokenData);
-  console.log("6)  object.idTokenData", object.idTokenData);
+  // console.log("6)  object.idTokenData", object.idTokenData);
 
   function toggleLogin() {
     setDisplayLogin(!displayLogin);
