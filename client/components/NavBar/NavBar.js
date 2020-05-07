@@ -5,11 +5,12 @@ import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
 import Cognito from "../Cognito/Cognito";
 const AWS = require("aws-sdk");
-import useAuth from "../../auth";
+import { useAuth } from "./use-auth.js";
 
 export default function NavBar() {
   const [displayLogin, setDisplayLogin] = useState(false);
-
+  const auth = useAuth();
+  console.log("damn daniel", auth);
   // console.log(
   //   "1) User Attributes",
   //   event.request.userAttributes
@@ -63,7 +64,7 @@ export default function NavBar() {
           style={{
             position: "absolute",
             paddingLeft: "25vw",
-            paddingTop: "20vh"
+            paddingTop: "20vh",
           }}
         >
           <LoginWindow setDisplayLogin={setDisplayLogin} />
