@@ -23,7 +23,7 @@ export default function NavBar() {
   // var identityId = AWS.config.credentials;
   // console.log("id = ", identityId);
 
-  console.log(AWS);
+  console.log(AWS.CognitoIdentityCredentials);
 
   function toggleLogin() {
     setDisplayLogin(!displayLogin);
