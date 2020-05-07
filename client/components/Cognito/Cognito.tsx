@@ -5,7 +5,7 @@ import {
   AuthTokens,
   useAuth,
   useAuthFunctions,
-  getServerSideAuth,
+  getServerSideAuth
 } from "../../auth";
 
 const Cognito = (props: { initialAuth: AuthTokens }) => {
@@ -39,10 +39,10 @@ const Cognito = (props: { initialAuth: AuthTokens }) => {
 
 export const getServerSideProps: GetServerSideProps<{
   initialAuth: AuthTokens;
-}> = async (context) => {
+}> = async context => {
   const initialAuth = getServerSideAuth(context.req);
 
   return { props: { initialAuth } };
 };
 
-export default Home;
+export default Cognito;
