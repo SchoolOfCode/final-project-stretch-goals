@@ -19,10 +19,11 @@ export default function NavBar() {
   // console.log("3) Object.idTokenData.email", Object.idTokenData.email);
   // console.log("3.5) object.idTokenData.email", object.idTokenData.email);
   // console.log("4)  idTokenData", idTokenData);
-  console.log("5)  Object.idTokenData", Object.idTokenData);
-  var identityId = AWS.config.credentials;
-  console.log("id = ", identityId);
-  // console.log("6)  object.idTokenData", object.idTokenData);
+  // console.log("5)  Object.idTokenData", Object.idTokenData);
+  // var identityId = AWS.config.credentials;
+  // console.log("id = ", identityId);
+
+  console.log(AWS);
 
   function toggleLogin() {
     setDisplayLogin(!displayLogin);
