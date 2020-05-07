@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import Link from "next/link";
 import { useState } from "react";
 import LoginWindow from "../LoginWindow/LoginWindow";
+import Cognito from "../Cognito/Cognito";
 
 export default function NavBar({ toggleLogin }) {
   const [displayLogin, setDisplayLogin] = useState(false);
@@ -18,6 +19,8 @@ export default function NavBar({ toggleLogin }) {
           <h1 className={css.doceo}>Doceo</h1>
         </Link>
       </div>
+
+      <Cognito />
 
       <div className={css.loginButton}>
         <Button
@@ -36,7 +39,7 @@ export default function NavBar({ toggleLogin }) {
           style={{
             position: "absolute",
             paddingLeft: "25vw",
-            paddingTop: "20vh",
+            paddingTop: "20vh"
           }}
         >
           <LoginWindow setDisplayLogin={setDisplayLogin} />
