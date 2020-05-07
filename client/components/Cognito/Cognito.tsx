@@ -7,21 +7,23 @@ import {
   getServerSideAuth
 } from "../../auth";
 
-const Cognito = (props: { initialAuth: AuthTokens }) => {
+const Home = (props: { initialAuth: AuthTokens }) => {
   const auth = useAuth(props.initialAuth);
   const { login, logout } = useAuthFunctions();
 
   return (
     <React.Fragment>
-      <button type="button" onClick={() => logout()}>
-        sign out
-      </button>
-
-      <React.Fragment>
-        <button type="button" onClick={() => login()}>
-          sign in
+      {auth ? (
+        <button type="button" onClick={() => logout()}>
+          sign out
         </button>
-      </React.Fragment>
+      ) : (
+        <React.Fragment>
+          <button type="button" onClick={() => login()}>
+            sign in
+          </button>
+        </React.Fragment>
+      )}
     </React.Fragment>
   );
 };
@@ -34,4 +36,4 @@ export const getServerSideProps: GetServerSideProps<{
   return { props: { initialAuth } };
 };
 
-export default Cognito;
+export default Home;
