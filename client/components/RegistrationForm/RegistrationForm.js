@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { url } from "../../config";
 import { useAuth } from "../../auth";
+import MultilineTextFields from "./MultiInputField/MultiInput";
 
 const initialState = {
   firstName: "Mark",
@@ -23,7 +24,7 @@ const initialState = {
 };
 
 export default function RegistrationForm() {
-  const [confirmation, setConfirmation] = useState(false);
+  const [confirmation, setConfirmation] = useState(true);
   const [formData, setFormData] = useState(initialState);
   const [sub, setSub] = useState(false);
 
@@ -38,6 +39,7 @@ export default function RegistrationForm() {
     const newState = e.target.value;
     const name = e.target.name;
     setFormData((oldState) => ({ ...oldState, [name]: newState }));
+    console.log(formData.biography);
   }
 
   function handleSubmit(e) {
@@ -123,12 +125,13 @@ export default function RegistrationForm() {
               />
             </div>
             <div className={css.bio}>
-              <textarea
+              <MultilineTextFields onChange={onChange} name="biography" />
+              {/* <textarea
                 name="biography"
                 onChange={onChange}
                 style={{ height: "100px", width: "450px", marginTop: "15px" }}
                 placeholder="Please write a short bio here, highlighting your specialist subjects and your approach to tutoring"
-              ></textarea>
+              ></textarea> */}
             </div>
             <p className={css.tutorTitle}>Tutoring Details</p>
             <div className={css.price}>
@@ -162,7 +165,7 @@ export default function RegistrationForm() {
             </Link>
             {confirmation && (
               <div className={css.confirm}>
-                <p>Profile settings updated. Thank you</p>
+                <p>Profile settings updated!</p>
               </div>
             )}
           </div>
