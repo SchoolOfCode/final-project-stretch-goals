@@ -8,7 +8,7 @@ export default function SearchTutorsWithFilters({
   searchResultsData,
   subject,
   setSubject,
-  setSearchResultsData
+  setSearchResultsData,
 }) {
   const [priceMin, setPriceMin] = useState(0);
   const [priceMax, setPriceMax] = useState(8);
@@ -21,8 +21,6 @@ export default function SearchTutorsWithFilters({
     const data = await res.json();
     console.log(data);
     setSearchResultsData(data);
-
-    setSubject("");
   }
 
   return (
