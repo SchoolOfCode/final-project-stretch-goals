@@ -1,22 +1,19 @@
 import css from "./NavBar.module.css";
 import Button from "../Button/Button";
 import Link from "next/link";
-import { useState } from "react";
 import Cognito from "../Cognito/Cognito";
 const AWS = require("aws-sdk");
 import { useAuth } from "../../auth";
 
 export default function NavBar() {
   const auth = useAuth();
-
   console.log("Auth: ", auth ? auth.idTokenData.sub : null);
-
 
   return (
     <div className={css.navBarContainer}>
       <div className={css.loggedIn}>
         <p>
-          {auth ? `Logged in as: ${auth.idTokenData.sub}` : "Not logged in"}
+          {auth ? `Logged in as: ${auth.idTokenData.email}` : "Not logged in"}
         </p>
       </div>
       <div className={css.title}>
@@ -28,12 +25,19 @@ export default function NavBar() {
       <div className={css.loginButton}>
         <Cognito />
       </div>
-      <Link href="/search">
-        <div className={css.searchField}>
-          <Button text="Search Tutors" />
-        </div>
-      </Link>
-
+      {auth ? (
+        <Link href="/tutordashpage">
+          <div className={css.searchField}>
+            <Button text="DashBoard" />
+          </div>
+        </Link>
+      ) : (
+        <Link href="/search">
+          <div className={css.searchField}>
+            <Button text="Search Tutors" />
+          </div>
+        </Link>
+      )}
     </div>
   );
 }

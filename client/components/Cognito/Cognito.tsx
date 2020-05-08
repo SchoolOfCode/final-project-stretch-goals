@@ -5,15 +5,12 @@ import {
   AuthTokens,
   useAuth,
   useAuthFunctions,
-  getServerSideAuth
+  getServerSideAuth,
 } from "../../auth";
 
 const Cognito = (props: { initialAuth: AuthTokens }) => {
   const auth = useAuth(props.initialAuth);
   const { login, logout } = useAuthFunctions();
-
-  console.log(auth, "string");
-
   return (
     <React.Fragment>
       {auth ? (
@@ -41,7 +38,7 @@ const Cognito = (props: { initialAuth: AuthTokens }) => {
 
 export const getServerSideProps: GetServerSideProps<{
   initialAuth: AuthTokens;
-}> = async context => {
+}> = async (context) => {
   const initialAuth = getServerSideAuth(context.req);
 
   return { props: { initialAuth } };
