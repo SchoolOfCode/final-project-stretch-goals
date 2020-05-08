@@ -1,10 +1,9 @@
-import TutorAccountSettingsForm from "../TutorSettings/TutorAccountSettingsForm";
-import TutorProfileSettingsForm from "../TutorSettings/TutorProfileSettingsForm";
+import css from "./RegistrationForm.module.css";
 import Button from "../Button/Button";
-import CheckboxSelector from "../Checkbox/Checkbox";
+import NavBar from "../NavBar/NavBar";
 import InputField from "../InputField/InputField";
 import { useState } from "react";
-import { css } from "@material-ui/system";
+// import { css } from "@material-ui/system";
 import Link from "next/link";
 import { url } from "../../config";
 
@@ -60,73 +59,80 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div>
-      <form
-        style={{
-          display: "grid",
-          justifyContent: "center",
-          justifyItems: "center",
-        }}
-      >
-        <h1>Please provide the following details to create your account</h1>
-        <InputField
-          name="firstName"
-          type="text"
-          label="First Name"
-          onChange={onChange}
-        />
-        <InputField
-          name="lastName"
-          type="text"
-          label="Last Name"
-          onChange={onChange}
-        />
-        <InputField
-          name="subjects"
-          type="text"
-          label="Subjects"
-          onChange={onChange}
-        />
-        {/* <p>upload image</p>
+    <>
+      <div className={css.container}>
+        <div className={css.navContainer}>
+          <NavBar />
+        </div>
+        <div className={css.formContainer}>
+          <form
+            style={{
+              display: "grid",
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <h1>Please provide the following details to create your account</h1>
+            <InputField
+              name="firstName"
+              type="text"
+              label="First Name"
+              onChange={onChange}
+            />
+            <InputField
+              name="lastName"
+              type="text"
+              label="Last Name"
+              onChange={onChange}
+            />
+            <InputField
+              name="tutorLocation"
+              type="text"
+              label="Location"
+              onChange={onChange}
+            />
+            <InputField
+              name="subjects"
+              type="text"
+              label="Subjects"
+              onChange={onChange}
+            />
+            {/* <p>upload image</p>
         <input name="img_url" type="file" onChange={onChange}></input>
         <p>upload video url</p>
         <input name="vid_url" type="file" onChange={onChange}></input> */}
-        <textarea
-          name="biography"
-          onChange={onChange}
-          style={{ height: "100px", width: "350px", marginTop: "15px" }}
-          placeholder="Please write a short bio here, hilighting your specialist subjects and your approach to tutoring"
-        ></textarea>
-        <InputField
-          onChange={onChange}
-          name="price"
-          type="text"
-          label="Price per hour"
-        />
-        <InputField
-          onChange={onChange}
-          name="teachingLevel"
-          type="text"
-          label="Level of tutoring"
-        />
-        <InputField
-          name="tutorLocation"
-          type="text"
-          label="Location"
-          onChange={onChange}
-        />
-        <InputField
-          name="experience"
-          type="text"
-          label="Experience"
-          onChange={onChange}
-        />
-        <Link href="/tutorDashPage">
-          <div>
-            <Button handleClick={handleSubmit} text="Submit" />
-          </div>
-        </Link>
-      </form>
-    </div>
+            <textarea
+              name="biography"
+              onChange={onChange}
+              style={{ height: "100px", width: "350px", marginTop: "15px" }}
+              placeholder="Please write a short bio here, hilighting your specialist subjects and your approach to tutoring"
+            ></textarea>
+            <InputField
+              onChange={onChange}
+              name="price"
+              type="text"
+              label="Price per hour"
+            />
+            <InputField
+              onChange={onChange}
+              name="teachingLevel"
+              type="text"
+              label="Level of tutoring"
+            />
+            <InputField
+              name="experience"
+              type="text"
+              label="Experience"
+              onChange={onChange}
+            />
+            <Link href="/tutorDashPage">
+              <div>
+                <Button handleClick={handleSubmit} text="Submit" />
+              </div>
+            </Link>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }

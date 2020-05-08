@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "form";
+}
+
+.navContainer {
+  grid-area: nav;
+}
+
+.formContainer {
+  margin-top: 100px;
+  grid-area: form;
+}
