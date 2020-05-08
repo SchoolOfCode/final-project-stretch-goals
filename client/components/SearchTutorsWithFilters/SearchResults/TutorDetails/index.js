@@ -14,7 +14,7 @@ export default function TutorDetails({
       <div className={css.detailsContainer}>
         <p>Location: {item.tutorLocation}</p>
         <p>Subject: {item.subjects}</p>
-        <p>Level: {item.teachingLevel}</p>
+        <p>Education: {item.teachingLevel}</p>
         <p>Experience: {item.experience}</p>
       </div>
 

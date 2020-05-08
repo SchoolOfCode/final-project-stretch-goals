@@ -55,8 +55,8 @@ export default function TutorAbout({ item }) {
             <iframe width="280" height="200" src={item.videoURL}></iframe>
           </div>
         ) : null}
-        {showContent === 2 ? <p>{item.biography}ABOUT ME</p> : null}
-        {showContent === 3 ? <p>IM A TESTOMONIAL</p> : null}
+        {showContent === 2 ? <p>{item.biography}</p> : null}
+        {showContent === 3 ? <p>Testomonial's here</p> : null}
       </div>
     </>
   );
