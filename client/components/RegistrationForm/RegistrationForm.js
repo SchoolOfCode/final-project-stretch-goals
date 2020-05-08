@@ -1,6 +1,5 @@
 import css from "./RegistrationForm.module.css";
 import Button from "../Button/Button";
-import NavBar from "../NavBar/NavBar";
 import InputField from "../InputField/InputField";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -11,10 +10,11 @@ const initialState = {
   firstName: "Mark",
   lastName: "Young",
   subjects: "Science",
-  imageURL: "../../images/step1.png",
-  videoURL: "12345",
+  imageURL:
+    "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg",
+  videoURL: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   biography: "it's nice to be nice",
-  price: 100,
+  price: 15,
   teachingLevel: "University",
   tutorLocation: "Lichfield",
   experience: 10,
@@ -108,7 +108,7 @@ export default function RegistrationForm() {
             </div>
             <div className={css.image}>
               <InputField
-                name="img_url"
+                name="imageURL"
                 type="text"
                 label="Profile Image URL"
                 onChange={onChange}
@@ -116,7 +116,7 @@ export default function RegistrationForm() {
             </div>
             <div className={css.video}>
               <InputField
-                name="vid_url"
+                name="videoURL"
                 type="text"
                 label="Profile Video URL"
                 onChange={onChange}
