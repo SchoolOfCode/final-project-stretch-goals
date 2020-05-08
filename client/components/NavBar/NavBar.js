@@ -26,7 +26,7 @@ export default function NavBar() {
         <Cognito />
       </div>
       {auth ? (
-        <Link href="/tutordashpage">
+        <Link href="/tutorDashPage">
           <div className={css.searchField}>
             <Button text="DashBoard" />
           </div>
