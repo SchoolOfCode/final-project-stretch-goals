@@ -135,7 +135,7 @@ export default function RegistrationForm() {
               <InputField
                 onChange={onChange}
                 name="price"
-                type="text"
+                type="number"
                 label="Price per hour"
               />
             </div>
@@ -150,7 +150,7 @@ export default function RegistrationForm() {
             <div className={css.experience}>
               <InputField
                 name="experience"
-                type="text"
+                type="number"
                 label="Experience"
                 onChange={onChange}
               />
