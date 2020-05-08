@@ -11,7 +11,6 @@ export default function TutorNav({ setContentShown }) {
           text="Lesson Management"
         />
       </li>
-
       <li className={css.li}>
         <Button
           height="50px"
