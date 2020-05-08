@@ -3,7 +3,7 @@ import css from "./TutorNav.module.css";
 
 export default function TutorNav({ setContentShown }) {
   return (
-    <ul>
+    <ul style={{ listStyle: "none" }}>
       <li className={css.li}>
         <Button
           height="50px"

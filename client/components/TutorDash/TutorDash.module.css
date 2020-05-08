@@ -7,7 +7,7 @@
 
 .navContainer {
   grid-area: nav;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 20px;
   margin-top: 2vh;
   position: fixed;

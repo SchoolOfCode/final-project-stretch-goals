@@ -1,4 +1,6 @@
 .li {
   height: 40px;
   padding: 10px;
+  margin: 10px;
+  font-size: 1.3em;
 }
