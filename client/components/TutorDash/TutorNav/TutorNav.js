@@ -16,27 +16,20 @@ export default function TutorNav({ setContentShown }) {
         <Button
           height="50px"
           handleClick={() => setContentShown(2)}
-          text="Account Settings"
+          text="Edit Profile"
         />
       </li>
       <li className={css.li}>
         <Button
           height="50px"
           handleClick={() => setContentShown(3)}
-          text="Profile Settings"
-        />
-      </li>
-      <li className={css.li}>
-        <Button
-          height="50px"
-          handleClick={() => setContentShown(4)}
           text="Calendar"
         />
       </li>
       <li className={css.li}>
         <Button
           height="50px"
-          handleClick={() => setContentShown(5)}
+          handleClick={() => setContentShown(4)}
           text="Learning Resources"
         />
       </li>
