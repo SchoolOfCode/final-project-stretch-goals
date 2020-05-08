@@ -28,7 +28,7 @@ export default function NavBar() {
       {auth ? (
         <Link href="/tutorDashPage">
           <div className={css.searchField}>
-            <Button text="DashBoard" />
+            <Button text="Your Dashboard" />
           </div>
         </Link>
       ) : (
