@@ -8,7 +8,9 @@ import { useAuth } from "../../auth";
 
 export default function NavBar() {
   const auth = useAuth();
+
   console.log("Auth: ", auth ? auth.idTokenData.sub : null);
+
 
   return (
     <div className={css.navBarContainer}>
@@ -31,6 +33,7 @@ export default function NavBar() {
           <Button text="Search Tutors" />
         </div>
       </Link>
+
     </div>
   );
 }
