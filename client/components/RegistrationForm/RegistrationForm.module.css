@@ -10,6 +10,92 @@
 }
 
 .formContainer {
-  margin-top: 100px;
+  background-color: var(--theme-color-3);
+  margin-top: 120px;
   grid-area: form;
+  width: 800px;
+
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "aboutTitle ."
+    "firstName lastName"
+    "location ."
+    "bio bio"
+    "mediaTitle ."
+    "image video"
+    "tutorTitle ."
+    "subjects price"
+    "education experience"
+    "submit submit";
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+  background-color: var(--theme-color-5);
+  color: var(--font-color-1);
+  border-radius: 10px 10px 0 0;
+}
+.firstName {
+  grid-area: firstName;
+  justify-self: center;
+}
+.lastName {
+  grid-area: lastName;
+  justify-self: center;
+}
+.aboutTitle {
+  grid-area: aboutTitle;
+  padding-left: 10px;
+}
+.location {
+  grid-area: location;
+  justify-self: center;
+}
+.bio {
+  grid-area: bio;
+  text-align: center;
+}
+.mediaTitle {
+  grid-area: mediaTitle;
+  padding-left: 10px;
+}
+.subjects {
+  grid-area: subjects;
+  justify-self: center;
+}
+.price {
+  grid-area: price;
+  justify-self: center;
+}
+.image {
+  grid-area: image;
+  justify-self: center;
+}
+.video {
+  grid-area: video;
+  justify-self: center;
+}
+.experience {
+  grid-area: experience;
+  justify-self: center;
+}
+.education {
+  grid-area: education;
+  justify-self: center;
+}
+
+.tutorTitle {
+  grid-area: tutorTitle;
+  padding-left: 10px;
+}
+.submit {
+  grid-area: submit;
+  width: 200px;
+  justify-self: center;
 }

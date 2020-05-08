@@ -64,74 +64,107 @@ export default function RegistrationForm() {
         <div className={css.navContainer}>
           <NavBar />
         </div>
-        <div className={css.formContainer}>
-          <form
-            style={{
-              display: "grid",
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <h1>Please provide the following details to create your account</h1>
-            <InputField
-              name="firstName"
-              type="text"
-              label="First Name"
-              onChange={onChange}
-            />
-            <InputField
-              name="lastName"
-              type="text"
-              label="Last Name"
-              onChange={onChange}
-            />
-            <InputField
-              name="tutorLocation"
-              type="text"
-              label="Location"
-              onChange={onChange}
-            />
-            <InputField
-              name="subjects"
-              type="text"
-              label="Subjects"
-              onChange={onChange}
-            />
-            {/* <p>upload image</p>
-        <input name="img_url" type="file" onChange={onChange}></input>
-        <p>upload video url</p>
-        <input name="vid_url" type="file" onChange={onChange}></input> */}
-            <textarea
-              name="biography"
-              onChange={onChange}
-              style={{ height: "100px", width: "350px", marginTop: "15px" }}
-              placeholder="Please write a short bio here, hilighting your specialist subjects and your approach to tutoring"
-            ></textarea>
-            <InputField
-              onChange={onChange}
-              name="price"
-              type="text"
-              label="Price per hour"
-            />
-            <InputField
-              onChange={onChange}
-              name="teachingLevel"
-              type="text"
-              label="Level of tutoring"
-            />
-            <InputField
-              name="experience"
-              type="text"
-              label="Experience"
-              onChange={onChange}
-            />
+        <form
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
+          <div className={css.formContainer}>
+            <div className={css.title}>
+              <h1>Profile Details</h1>
+            </div>
+            <p className={css.aboutTitle}> About me</p>
+            <div className={css.firstName}>
+              <InputField
+                name="firstName"
+                type="text"
+                label="First Name"
+                onChange={onChange}
+              />
+            </div>
+            <div className={css.lastName}>
+              <InputField
+                name="lastName"
+                type="text"
+                label="Last Name"
+                onChange={onChange}
+              />
+            </div>
+            <div className={css.location}>
+              <InputField
+                name="tutorLocation"
+                type="text"
+                label="Location"
+                onChange={onChange}
+              />
+            </div>
+            <p className={css.mediaTitle}> Profile Media</p>
+            <div className={css.subjects}>
+              <InputField
+                name="subjects"
+                type="text"
+                label="Subjects"
+                onChange={onChange}
+              />
+            </div>
+            <div className={css.image}>
+              <InputField
+                name="img_url"
+                type="text"
+                label="Profile Image URL"
+                onChange={onChange}
+              />
+            </div>
+            <div className={css.video}>
+              <InputField
+                name="vid_url"
+                type="text"
+                label="Profile Video URL"
+                onChange={onChange}
+              />
+            </div>
+            <div className={css.bio}>
+              <textarea
+                name="biography"
+                onChange={onChange}
+                style={{ height: "100px", width: "450px", marginTop: "15px" }}
+                placeholder="Please write a short bio here, highlighting your specialist subjects and your approach to tutoring"
+              ></textarea>
+            </div>
+            <p className={css.tutorTitle}>Tutoring Details</p>
+            <div className={css.price}>
+              <InputField
+                onChange={onChange}
+                name="price"
+                type="text"
+                label="Price per hour"
+              />
+            </div>
+            <div className={css.education}>
+              <InputField
+                onChange={onChange}
+                name="teachingLevel"
+                type="text"
+                label="Level of tutoring"
+              />
+            </div>
+            <div className={css.experience}>
+              <InputField
+                name="experience"
+                type="text"
+                label="Experience"
+                onChange={onChange}
+              />
+            </div>
             <Link href="/tutorDashPage">
-              <div>
+              <div className={css.submit}>
                 <Button handleClick={handleSubmit} text="Submit" />
               </div>
             </Link>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </>
   );
