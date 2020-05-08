@@ -38,3 +38,10 @@
 .actualButton {
   background-color: var(--theme-color-1);
 }
+
+.loggedIn {
+  color: var(--font-color-1);
+  position: absolute;
+  padding-left: 20px;
+  margin-top: 70px;
+}
