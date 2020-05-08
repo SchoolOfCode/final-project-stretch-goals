@@ -8,10 +8,15 @@ import { useAuth } from "../../auth";
 
 export default function NavBar() {
   const auth = useAuth();
-  console.log("damn daaaayyyyniel", auth ? auth.idTokenData.sub : null);
+  console.log("Auth: ", auth ? auth.idTokenData.sub : null);
 
   return (
     <div className={css.navBarContainer}>
+      <div className={css.loggedIn}>
+        <p>
+          {auth ? `Logged in as: ${auth.idTokenData.sub}` : "Not logged in"}
+        </p>
+      </div>
       <div className={css.title}>
         <Link href="/">
           <h1 className={css.doceo}>Doceo</h1>
