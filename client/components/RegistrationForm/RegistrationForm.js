@@ -46,7 +46,7 @@ export default function RegistrationForm() {
     fetch(
       `https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors/${sub}`,
       {
-        method: "POST",
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
