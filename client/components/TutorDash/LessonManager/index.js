@@ -6,8 +6,8 @@ let dummyData = [
   {
     date: "2020/06/21",
     studentName: "Patrick Young",
-    subject: "English",
-    notes: "I want to learn about The Tempest, becuase i love Caliban"
+    subject: "Maths",
+    notes: "Alegebra and Calculus. Let's do maths. Yay"
   },
   {
     date: "2020/06/21",
