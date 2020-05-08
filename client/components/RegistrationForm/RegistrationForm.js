@@ -19,7 +19,7 @@ const initialState = {
   tutorLocation: "Lichfield",
   experience: 10,
   rating: 0,
-  student: false,
+  student: false
 };
 
 const keys = Object.keys({
@@ -30,20 +30,21 @@ const keys = Object.keys({
   "Account Number": null,
   "Sort Code": null,
   textContact: false,
-  emailContact: false,
+  emailContact: false
 });
 
 const newKeys = keys.slice(0, 6);
 
 export default function RegistrationForm() {
   const [formData, setFormData] = useState(initialState);
+  const [confirmation, setConfirmation] = useState(false);
 
   function onChange(e) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
     //setTutorSetting has an argument which is a function or anything else, containing old state
-    setFormData((oldState) => ({ ...oldState, [name]: newState }));
+    setFormData(oldState => ({ ...oldState, [name]: newState }));
   }
 
   function handleSubmit(e) {
@@ -52,23 +53,21 @@ export default function RegistrationForm() {
     fetch(`${url}/dev/tutors`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     });
+    setConfirmation(!confirmation);
   }
 
   return (
     <>
       <div className={css.container}>
-        <div className={css.navContainer}>
-          <NavBar />
-        </div>
         <form
           style={{
             display: "grid",
             justifyContent: "center",
-            justifyItems: "center",
+            justifyItems: "center"
           }}
         >
           <div className={css.formContainer}>
@@ -163,6 +162,11 @@ export default function RegistrationForm() {
                 <Button handleClick={handleSubmit} text="Submit" />
               </div>
             </Link>
+            {confirmation && (
+              <div className={css.confirm}>
+                <p>Profile settings updated. Thank you</p>
+              </div>
+            )}
           </div>
         </form>
       </div>
