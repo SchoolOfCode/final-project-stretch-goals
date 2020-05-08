@@ -11,7 +11,7 @@ export default function TutorDisplay({ item }) {
         src={item.imageURL}
       />
       <div className={`${css.tutorRating} ${css.itemAlign}`}>
-        <StarRating size="large" />
+        <StarRating size="large" defaultValue={4.5} />
       </div>
     </>
   );
