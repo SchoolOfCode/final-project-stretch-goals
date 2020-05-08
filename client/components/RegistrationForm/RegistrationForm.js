@@ -19,7 +19,7 @@ const initialState = {
   tutorLocation: "Lichfield",
   experience: 10,
   rating: 0,
-  student: false
+  student: false,
 };
 
 export default function RegistrationForm() {
@@ -37,20 +37,23 @@ export default function RegistrationForm() {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormData(oldState => ({ ...oldState, [name]: newState }));
+    setFormData((oldState) => ({ ...oldState, [name]: newState }));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formData);
-    fetch(`${url}/dev/tutors`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+    fetch(
+      `https://gcubq6orwa.execute-api.eu-west-1.amazonaws.com/dev/tutors/${sub}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      body: JSON.stringify(formData, sub)
-    });
+        body: JSON.stringify(formData),
+      }
+    );
     console.log(sub);
     setConfirmation(!confirmation);
   }
@@ -62,7 +65,7 @@ export default function RegistrationForm() {
           style={{
             display: "grid",
             justifyContent: "center",
-            justifyItems: "center"
+            justifyItems: "center",
           }}
         >
           <div className={css.formContainer}>
