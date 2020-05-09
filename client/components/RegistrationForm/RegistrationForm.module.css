@@ -30,8 +30,8 @@
     "tutorTitle ."
     "subjects price"
     "education experience"
-    "submit submit"
-    "confirm confirm";
+    "confirm confirm"
+    "submit submit";
 }
 
 .title {
@@ -102,10 +102,13 @@
 
 .confirm {
   grid-area: confirm;
+  margin-top: 30px;
   justify-self: center;
   width: 300px;
-  background-color: palegreen;
-  color: var(--font-color-5);
+  height: 30px;
+  background-color: rgb(35, 177, 35);
+  color: var(--font-color-1);
   text-align: center;
   border-radius: 20px;
+  border: white 2px solid;
 }
