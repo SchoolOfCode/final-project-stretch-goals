@@ -24,7 +24,7 @@ const initialState = {
 };
 
 export default function RegistrationForm() {
-  const [confirmation, setConfirmation] = useState(true);
+  const [confirmation, setConfirmation] = useState(false);
   const [formData, setFormData] = useState(initialState);
   const [sub, setSub] = useState(false);
 
