@@ -15,7 +15,7 @@ export default function TutorDetails({
         <p>Location: {item.tutorLocation}</p>
         <p>Subject: {item.subjects}</p>
         <p>Education: {item.teachingLevel}</p>
-        <p>Experience: {item.experience}</p>
+        <p>Years of Experience: {item.experience}</p>
       </div>
 
       <div className={css.book}>
