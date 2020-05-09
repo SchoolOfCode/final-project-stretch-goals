@@ -5,10 +5,13 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 module.exports.masterSearch = (event, context, callback) => {
   console.log("***************************");
-  console.log(event.pathParameters.lowPrice);
+  console.log("lowPrice", event.pathParameters.lowPrice);
   console.log("***************************");
-  console.log(event.pathParameters.highPrice);
+  console.log("highPrice", event.pathParameters.highPrice);
   console.log("***************************");
+  console.log("subjects", event.pathParameters.subjects);
+  console.log("***************************");
+  console.log("experience", event.pathParameters.experience);
 
   const SEARCH_KEYWORD = {
     subjects: event.pathParameters.subjects,
@@ -20,6 +23,7 @@ module.exports.masterSearch = (event, context, callback) => {
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
     FilterExpression:
+      // "(#price <= :highPrice and #price >= :lowPrice) AND contains(#subjects, :subjects) AND (#experience > :experience)",
       "(#price <= :highPrice and #price >= :lowPrice) AND contains(#subjects, :subjects) AND (#experience > :experience)",
     ExpressionAttributeNames: {
       "#price": "price",

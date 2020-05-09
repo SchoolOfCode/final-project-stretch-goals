@@ -6,6 +6,9 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 module.exports.update = (event, context, callback) => {
   const data = JSON.parse(event.body);
+  console.log("***********************");
+  console.log("sub", event.pathParameters.id);
+  console.log("***********************");
 
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
@@ -13,7 +16,7 @@ module.exports.update = (event, context, callback) => {
       id: event.pathParameters.id,
     },
     UpdateExpression:
-      "SET #firstName = :firstName, #subjects = :subjects, #biography = :biography, #lastName = :lastName, #experience = :experience, #imageURL = :imageURL, #videoURL = :videoURL, #student = :student, #price = :price, #rating = :rating, #tutorLocation = :tutorLocation, #teachingLevel = :teachingLevel",
+      "SET #firstName = :firstName, #subjects = :subjects, #biography = :biography, #lastName = :lastName, #experience = :experience, #imageURL = :imageURL, #videoURL = :videoURL, #price = :price, #tutorLocation = :tutorLocation, #teachingLevel = :teachingLevel",
     ExpressionAttributeNames: {
       "#firstName": "firstName",
       "#subjects": "subjects",
@@ -22,9 +25,7 @@ module.exports.update = (event, context, callback) => {
       "#experience": "experience",
       "#imageURL": "imageURL",
       "#videoURL": "videoURL",
-      "#student": "student",
       "#price": "price",
-      "#rating": "rating",
       "#tutorLocation": "tutorLocation",
       "#teachingLevel": "teachingLevel",
     },
@@ -33,12 +34,10 @@ module.exports.update = (event, context, callback) => {
       ":subjects": data.subjects,
       ":biography": data.biography,
       ":lastName": data.lastName,
-      ":experience": data.experience,
+      ":experience": Number(data.experience),
       ":imageURL": data.imageURL,
       ":videoURL": data.videoURL,
-      ":student": data.student,
-      ":price": data.price,
-      ":rating": data.rating,
+      ":price": Number(data.price),
       ":tutorLocation": data.tutorLocation,
       ":teachingLevel": data.teachingLevel,
     },
