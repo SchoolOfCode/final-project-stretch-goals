@@ -46,7 +46,7 @@ export default function TutorAbout({ item }) {
           onClick={handleContentClick}
           className={`${testClass} ${css.itemAlign}`}
         >
-          Testomonials
+          Testimonials
         </h3>
       </div>
       <div className={css.aboutContent}>
@@ -56,7 +56,7 @@ export default function TutorAbout({ item }) {
           </div>
         ) : null}
         {showContent === 2 ? <p>{item.biography}</p> : null}
-        {showContent === 3 ? <p>Testomonial's here</p> : null}
+        {showContent === 3 ? <p>Testimonial's here</p> : null}
       </div>
     </>
   );
