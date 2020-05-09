@@ -15,7 +15,7 @@ const Cognito = (props: { initialAuth: AuthTokens }) => {
     <React.Fragment>
       {auth ? (
         <Button
-          text="Sign Out"
+          text="Logout"
           handleClick={() => logout()}
           className="x"
           height="35px"
@@ -24,11 +24,11 @@ const Cognito = (props: { initialAuth: AuthTokens }) => {
       ) : (
         <React.Fragment>
           <Button
-            text="Sign In"
+            text="Login / Create Account"
             handleClick={() => login()}
             className="x"
             height="35px"
-            width="110px"
+            width="190px"
           />
         </React.Fragment>
       )}
