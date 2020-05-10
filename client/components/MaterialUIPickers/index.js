@@ -12,6 +12,8 @@ export default function MaterialUIPickers({
   selectedDate,
   setSelectedDate,
   setConfirmationDisplayed,
+  booked,
+  setBooked,
   confirmationDisplayed,
   formatDate
 }) {
@@ -20,6 +22,7 @@ export default function MaterialUIPickers({
   const handleDateChange = date => {
     setSelectedDate(date);
     setConfirmationDisplayed(true);
+    setBooked(!booked);
     console.log(JSON.stringify(selectedDate));
   };
 

@@ -4,13 +4,20 @@ import css from "./BookLesson.module.css";
 import Button from "../Button/Button";
 
 export default function BookLesson({ setBookLessonDisplay }) {
+  const [booked, setBooked] = useState(false);
   const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
   const [notes, setNotes] = useState("");
-  const [selectedDate, setSelectedDate] = useState(new Date("2020-04-30"));
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   function handleChange(e) {
     setNotes(e.target.value);
     console.log(notes);
+  }
+
+  function onClick() {
+    setBooked(true);
+    console.log("booking confirmed");
+    // postBooking()
   }
 
   //POST request to send booking to server to be stored in the backend.
@@ -46,17 +53,25 @@ export default function BookLesson({ setBookLessonDisplay }) {
           <MaterialUIPickers
             confirmationDisplayed={confirmationDisplayed}
             setConfirmationDisplayed={setConfirmationDisplayed}
+            setBooked={setBooked}
+            booked={booked}
             selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
           />
         </div>
         {confirmationDisplayed && (
           <p className={css.confirmation}>
-            You have selected an appointment with tutorName on
+            You have selected an appointment at
             {` ` +
-              JSON.stringify(selectedDate).split("").slice(1, 11).join("") +
+              JSON.stringify(selectedDate)
+                .split("")
+                .slice(1, 11)
+                .join("") +
               ` at ` +
-              JSON.stringify(selectedDate).split("").slice(12, 21).join("")}
+              JSON.stringify(selectedDate)
+                .split("")
+                .slice(12, 21)
+                .join("")}
           </p>
         )}
         <div className={css.notes}>
@@ -69,8 +84,11 @@ export default function BookLesson({ setBookLessonDisplay }) {
           ></textarea>
         </div>
         <div className={css.button}>
-          <Button text="Confirm Booking" width="35%" />
+          <Button text="Confirm Booking" width="35%" handleClick={onClick} />
         </div>
+        {booked && (
+          <div className={css.booking}>Booking confirmed. Thank you</div>
+        )}
       </div>
     </>
   );
