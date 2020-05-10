@@ -1,0 +1,15 @@
+.imageContainer {
+  border-radius: 20px;
+  background-color: white;
+  justify-content: center;
+  width: 210px;
+  height: 210px;
+  margin: 0;
+  padding: 0;
+}
+
+.imageContainer:hover {
+  background-color: var(--theme-color-2);
+  color: var(--font-color-5);
+  box-sizing: border-box;
+}

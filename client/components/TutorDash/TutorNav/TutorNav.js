@@ -29,7 +29,7 @@ export default function TutorNav({ setContentShown }) {
         <Button
           height="50px"
           handleClick={() => setContentShown(4)}
-          text="Learning Resources"
+          text="Teaching Resources"
         />
       </li>
     </ul>
