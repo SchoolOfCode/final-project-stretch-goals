@@ -5,7 +5,7 @@ import TutorNav from "./TutorNav/TutorNav";
 import LessonManager from "./LessonManager";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
 
-import Calendar from "./Calendar";
+import CalendarDisplay from "./CalendarDisplay";
 import TeachingResources from "./TeachingResources/index";
 
 export default function TutorDash() {
@@ -20,7 +20,7 @@ export default function TutorDash() {
         <div className={css.contentContainer}>
           {contentShown == 1 && <LessonManager />}
           {contentShown == 2 && <RegistrationForm />}
-          {contentShown == 3 && <Calendar />}
+          {contentShown == 3 && <CalendarDisplay />}
           {contentShown == 4 && <TeachingResources />}
         </div>
       </div>
