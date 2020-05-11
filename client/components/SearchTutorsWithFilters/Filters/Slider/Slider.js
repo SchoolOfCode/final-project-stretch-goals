@@ -31,7 +31,7 @@ ValueLabelComponent.propTypes = {
 
 const AirbnbSlider = withStyles({
   root: {
-    color: "#3a8589",
+    color: "#ff7850",
     height: 3,
     padding: "13px 0",
     width: "18vw",
@@ -43,9 +43,9 @@ const AirbnbSlider = withStyles({
     border: "1px solid currentColor",
     marginTop: -12,
     marginLeft: -13,
-    boxShadow: "#ebebeb 0px 2px 2px",
+    boxShadow: "#ff7850 0px 0px 2px",
     "&:focus, &:hover, &$active": {
-      boxShadow: "#ccc 0px 2px 3px 1px",
+      boxShadow: "#ff7850 0px 0px 3px 1px",
     },
     "& .bar": {
       // display: inline-block !important;
