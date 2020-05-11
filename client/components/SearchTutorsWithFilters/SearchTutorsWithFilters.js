@@ -11,7 +11,7 @@ export default function SearchTutorsWithFilters({
   setSearchResultsData,
 }) {
   const [priceMin, setPriceMin] = useState(0);
-  const [priceMax, setPriceMax] = useState(8);
+  const [priceMax, setPriceMax] = useState(25);
   const [experience, setExperience] = useState(0);
   async function handleSubmit() {
     console.log(`${priceMin}/${priceMax}/${experience}/${subject}`);
