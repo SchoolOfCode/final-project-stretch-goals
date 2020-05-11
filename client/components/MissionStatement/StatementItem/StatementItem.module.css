@@ -1,9 +1,14 @@
 .container {
-  margin-top: 50px;
-  margin-right: 100px;
   display: flex;
+  background-color: white;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
   justify-items: center;
+  box-shadow: 0 0 8px var(--shadow-color);
+  height: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }

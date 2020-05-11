@@ -1,19 +1,23 @@
 .imageContainer {
   border-radius: 50%;
-  border: 3px solid var(--theme-color-2);
+  /* border: 3px solid var(--theme-color-2); */
   background-color: white;
   width: 220px;
   height: 220px;
   margin-bottom: 3em;
+  box-shadow: 0 0 8px var(--theme-color-1);
 }
 
 .textDiv {
   width: 100%;
   height: 260px;
+  text-align: center;
 }
 
 .head {
   text-align: center;
+  font-size: 1.5em;
+  color: var(--theme-color-2);
 }
 
 .container {

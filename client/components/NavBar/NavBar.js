@@ -5,7 +5,7 @@ import Cognito from "../Cognito/Cognito";
 const AWS = require("aws-sdk");
 import { useAuth } from "../../auth";
 
-export default function NavBar() {
+export default function NavBar({ setSearchBoolean }) {
   const auth = useAuth();
   console.log("Auth: ", auth ? auth.idTokenData.sub : null);
 
@@ -16,7 +16,12 @@ export default function NavBar() {
           {auth ? `Logged in as: ${auth.idTokenData.email}` : "Not logged in"}
         </p>
       </div>
-      <div className={css.title}>
+      <div
+        onClick={() => {
+          setSearchBoolean(false);
+        }}
+        className={css.title}
+      >
         <Link href="/">
           <h1 className={css.doceo}>Doceo</h1>
         </Link>
@@ -31,13 +36,7 @@ export default function NavBar() {
             <Button text="Your Dashboard" />
           </div>
         </Link>
-      ) : (
-        <Link href="/search">
-          <div className={css.searchField}>
-            <Button text="Search Tutors" />
-          </div>
-        </Link>
-      )}
+      ) : null}
     </div>
   );
 }

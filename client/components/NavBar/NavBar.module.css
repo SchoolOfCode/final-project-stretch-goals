@@ -5,7 +5,7 @@
   position: fixed;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "login title search";
+  grid-template-areas: "search title login";
   z-index: 10;
 }
 
