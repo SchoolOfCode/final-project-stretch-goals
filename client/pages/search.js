@@ -12,12 +12,6 @@ export default function Home() {
 
   return (
     <div className={css.mainContainer}>
-      <Head>
-        <title>Doceo</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-
       <div className={css.gridContainer}>
         {searchBoolean ? (
           <SearchTutorsWithFilters

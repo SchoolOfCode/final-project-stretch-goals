@@ -7,10 +7,10 @@ export default function StatementItem({ text }) {
       <div className={css.container}>
         <img
           className={css.img}
-          style={{ height: "70px", width: "70px", marginRight: "3vw" }}
+          style={{ height: "70px", width: "70px" }}
           src="https://image.flaticon.com/icons/svg/566/566985.svg"
         ></img>
-        <p>{text}</p>
+        <p className={css.text}>{text}</p>
       </div>
     </>
   );

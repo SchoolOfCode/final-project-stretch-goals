@@ -3,15 +3,17 @@
   grid-template-areas:
     "item1 item2 item3"
     "item4 item5 item6";
+
 }
 
 .gridItem {
   border-radius: 5px;
   display: grid;
-  width: 200px;
-  height: 245px;
-  justify-self: left;
-  align-items: center;
+  border: 1px solid black;
+  height: 70%;
+  width: 70%;
+  justify-self: center;
+  align-self: center;
   text-align: center;
   padding-top: 30px;
   padding-left: 30px;

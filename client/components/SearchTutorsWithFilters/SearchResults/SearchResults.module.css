@@ -10,30 +10,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 20px 200px 57px;
   grid-template-areas:
-    "displayTitle aboutTitle details"
-    "image aboutContent details"
-    "rating aboutContent book";
-  row-gap: 15px;
+    "image details aboutTitle"
+    "image  details aboutContent"
+    "image details aboutContent";
   column-gap: 1vw;
-  border-radius: 20px;
-  box-shadow: 0 5px 5px var(--shadow-color);
-}
-
-.tutorProfile {
-  grid-area: profile;
-  display: grid;
-  grid-template-areas: "name" "image" "rating";
-}
-
-.tutorAbout {
-  grid-area: about;
-  display: grid;
-  grid-template-areas: "title" "image" "rating";
-  border-radius: 20px;
-}
-.tutorDetails {
-  grid-area: details;
-  display: grid;
-  grid-template-areas: "detailTitle" "details" "book";
-  border-radius: 20px;
+  box-shadow: 0 0 5px var(--shadow-color);
 }

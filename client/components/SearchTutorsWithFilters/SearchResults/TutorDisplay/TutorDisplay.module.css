@@ -4,8 +4,8 @@
 }
 .tutorImage {
   grid-area: image;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 .tutorRating {
   grid-area: rating;
@@ -16,4 +16,38 @@
   justify-content: center;
   justify-self: center;
   align-items: center;
+}
+
+.container {
+  grid-area: image;
+  display: grid;
+  grid-template-areas:
+    "image"
+    "image"
+    "book";
+}
+
+.book {
+  margin-top: 10px;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  grid-area: book;
+  display: grid;
+  grid-template-areas: "button price";
+  border-radius: 20px;
+  box-shadow: 0 0 3px var(--theme-color-2);
+}
+.price {
+  grid-area: price;
+  text-align: center;
+  color: var(--font-color-5);
+  padding-top: 8px;
+}
+
+.buttonContainer {
+  grid-area: button;
+}
+.buttonContainer:hover {
+  cursor: pointer;
+  grid-area: button;
 }

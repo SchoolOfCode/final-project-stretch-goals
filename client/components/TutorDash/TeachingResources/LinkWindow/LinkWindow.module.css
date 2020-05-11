@@ -1,19 +1,17 @@
 .imageContainer {
   background-color: white;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 70%;
+  height: 70%;
   margin: 0;
-  padding: 0;
-  background: 0% 0% no-repeat padding-box;
-  opacity: 1;
-  border-radius: 10px;
+  padding: 10px;
+
 }
 
 .imageContainer:hover {
+  cursor: pointer;
   background-color: var(--theme-color-2);
   color: var(--font-color-5);
-  box-sizing: border-box;
 }
 
 .text {
