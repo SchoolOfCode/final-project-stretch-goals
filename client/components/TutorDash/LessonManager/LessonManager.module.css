@@ -17,6 +17,7 @@
   width: 100%;
   grid-template-areas:
     "date"
+    "time"
     "name"
     "notes"
     "buttons";
@@ -35,6 +36,12 @@
   /* justify-items: center;
   align-items: center;
   align-content: center; */
+}
+
+.time {
+  display: time;
+  align-items: center;
+  grid-area: buttons;
 }
 
 .name {

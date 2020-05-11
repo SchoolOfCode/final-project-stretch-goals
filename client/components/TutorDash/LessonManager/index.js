@@ -1,48 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import css from "./LessonManager.module.css";
 import Button from "../../Button/Button";
 
-let dummyData = [
-  {
-    date: "2020/06/21",
-    studentName: "Patrick Young",
-    subject: "Maths",
-    notes: "Alegebra and Calculus. Let's do maths. Yay"
-  },
-  {
-    date: "2020/06/21",
-    studentName: "Cat Mayne ",
-    subject: "Russian",
-    notes: "Good evening Comrade"
-  },
-  {
-    date: "2020/05/03",
-    studentName: "Ravi Chahal",
-    subject: "Stocks and Shares",
-    notes: "I am the teacher now"
-  },
-  {
-    date: "2020/05/05",
-    studentName: "Mark Gilligan",
-    subject: "Animal Crossing",
-    notes: "I have a kitchen"
-  }
-];
-
 export default function LessonManager() {
-  const [bookings, setBookings] = useState(dummyData);
+  const [bookings, setBookings] = useState([]);
 
   function deleteBooking(i) {
     setBookings([...bookings.slice(0, i), ...bookings.slice(i + 1)]);
     backendBookingDelete();
   }
 
-  // //function to fetch data from BOOKINGS table. To be displayed in UI
-  // async function getBookings() {
-  //   const res = await fetch(/*"url for our bookings database/id"*/);
-  //   const data = await res.json();
-  //   // setbookings(data)
-  // }
+  //function to fetch data from BOOKINGS table. To be displayed in UI
+  async function getBookings() {
+    const res = await fetch(
+      "https://w8pdncxe7i.execute-api.eu-west-1.amazonaws.com/dev/bookings"
+    );
+    const data = await res.json();
+    setBookings(data);
+    //console.log("data", data);
+  }
+
+  useEffect(() => {
+    getBookings();
+  }, []);
 
   // function to make a DELETE to BOOKINGS table in backend. Will need to delete booking by ID
   // async function backendBookingDelete() {
@@ -62,10 +42,20 @@ export default function LessonManager() {
               <li>
                 <div className={css.bookingCard}>
                   <div className={css.date}>
-                    <div>{item.date}</div>
-                    <div>Subject: {item.subject}</div>
+                    {item.dates
+                      .split("")
+                      .slice(0, 10)
+                      .join("")}
+                  </div>
+                  <div className={css.time}>
+                    {item.dates
+                      .split("")
+                      .slice(11, 16)
+                      .join("")}
                   </div>
                   <div className={css.name}>{item.studentName}</div>
+
+                  <div>Email Contact: {item.emailAddress}</div>
                   <div className={css.notes}>Notes: {item.notes}</div>
                   <div className={css.buttons}>
                     <Button text="Confirm" />

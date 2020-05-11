@@ -14,7 +14,6 @@ export default function CalendarComponent() {
     <div className={css.mainContainer}>
       <div className={css.calendarContainer}>
         <div className={css.title}>Calendar</div>
-
         <Calendar onChange={onChange} value={date} />
       </div>
     </div>
