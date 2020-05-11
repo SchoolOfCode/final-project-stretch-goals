@@ -6,7 +6,7 @@ export default function LinkWindow({ logo, resource, url }) {
       <a href={url}>
         <img src={logo} className={css.imageContainer}></img>
       </a>
-      <p>{resource}</p>
+      <h3>{resource}</h3>
     </div>
   );
 }

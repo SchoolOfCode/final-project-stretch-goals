@@ -8,7 +8,7 @@ export default function SearchTutors({
   searchBoolean,
   subject,
   setSubject,
-  setSearchResultsData
+  setSearchResultsData,
 }) {
   async function handleSubmit() {
     const res = await fetch(`${url}/dev/tutors/search/${subject}`);
@@ -38,23 +38,25 @@ export default function SearchTutors({
   }
 
   return (
-    <div className={css.mainContainer}>
-      <h1 className={css.searchTitle}>Search for a Tutor Here</h1>
-      <div className={css.inputContainer}>
-        <CustomizedInputBase
-          handleClick={handleClick}
-          handleKeyDown={handleKeyDown}
-          handleChange={handleChange}
-        />
+    <div className={css.background}>
+      <div className={css.mainContainer}>
+        <h1 className={css.searchTitle}>Find Your Tutor Today</h1>
+        <div className={css.inputContainer}>
+          <CustomizedInputBase
+            handleClick={handleClick}
+            handleKeyDown={handleKeyDown}
+            handleChange={handleChange}
+          />
+        </div>
+        <span
+          className={css.advancedSearch}
+          onClick={() => {
+            setSearchBoolean(!searchBoolean);
+          }}
+        >
+          advanced search
+        </span>
       </div>
-      <span
-        className={css.advancedSearch}
-        onClick={() => {
-          setSearchBoolean(!searchBoolean);
-        }}
-      >
-        advanced search
-      </span>
     </div>
   );
 }

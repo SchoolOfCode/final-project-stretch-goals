@@ -1,45 +1,30 @@
 .mainContainer {
   display: grid;
   height: auto;
-  padding-top: 70px;
-  height: 90vh;
 
+  height: 410px;
   background-color: var(--theme-color-3);
   color: var(--font-color-4);
-  align-items: left;
-  grid-template-areas:
-    "topLeft topRight"
-    "bottomLeft bottomRight";
+  align-items: center;
+  grid-template-areas: "topLeft topRight bottomLeft bottomRight";
 }
 
 .topLeft {
   grid-area: topLeft;
   display: flex;
-  align-content: center;
-  align-items: center;
-  margin-left: 25px;
 }
 
 .topRight {
   grid-area: topRight;
   display: flex;
-  align-content: center;
-  align-items: center;
-  margin-left: 25px;
 }
 
 .bottomLeft {
   grid-area: bottomLeft;
   display: flex;
-  align-content: center;
-  align-items: center;
-  margin-left: 25px;
 }
 
 .bottomRight {
   grid-area: bottomRight;
   display: flex;
-  align-content: center;
-  align-items: center;
-  margin-left: 25px;
 }
