@@ -35,7 +35,7 @@ export default function LessonManager() {
   return (
     <>
       <div className={css.mainContainer}>
-        <h1 className={css.h1}>Upcoming Bookings:</h1>
+        <h1 className={css.h1}>Upcoming Bookings</h1>
         <ul style={{ listStyleType: "none" }}>
           {bookings.map((item, i) => {
             return (

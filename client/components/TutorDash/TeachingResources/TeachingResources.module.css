@@ -3,20 +3,11 @@
   grid-template-areas:
     "item1 item2 item3"
     "item4 item5 item6";
-  margin-top: 19px;
-  margin-left: 150px;
-  height: 600px;
-  width: 70%;
-  background-color: var(--theme-color-4);
-  color: var(--font-color-5);
-  box-shadow: 0 5px 5px var(--shadow-color);
-  border-radius: 20px;
+
 }
 
 .gridItem {
-  background: var(--theme-color-4);
-  box-shadow: 0 5px 5px var(--shadow-color);
-  border-radius: 20px;
+  border-radius: 5px;
   display: grid;
   border: 1px solid black;
   height: 70%;
@@ -24,4 +15,6 @@
   justify-self: center;
   align-self: center;
   text-align: center;
+  padding-top: 30px;
+  padding-left: 30px;
 }
