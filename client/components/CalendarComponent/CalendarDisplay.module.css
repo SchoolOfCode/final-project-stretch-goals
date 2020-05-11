@@ -1,0 +1,32 @@
+.mainContainer {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  border-radius: 20px;
+  height: 550px;
+  width: 650px;
+  background-color: var(--theme-color-1);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  background-color: var(--theme-color-4);
+  text-align: center;
+  font-size: 1.8em;
+  margin: 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  color: var(--font-color-3);
+}
+
+.calendarContainer {
+  border-radius: 20px;
+  height: 530px;
+  width: 630px;
+  background-color: var(--theme-color-4);
+  box-shadow: 0 5px 5px var(--shadow-color);
+}
