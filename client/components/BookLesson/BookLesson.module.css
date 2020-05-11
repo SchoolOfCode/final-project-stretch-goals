@@ -1,7 +1,7 @@
 .bookingCard {
   position: fixed;
-  top: 25vh;
-  height: 65vh;
+  top: 110px;
+  height: 600px;
   width: 55vw;
   z-index: 10;
   background-color: var(--theme-color-3);
@@ -15,7 +15,8 @@
     "picker"
     "confirmation"
     "notes"
-    "button";
+    "button"
+    "booking";
 }
 
 .header {
@@ -37,6 +38,8 @@
 .confirmation {
   grid-area: confirmation;
   text-align: center;
+  margin: 0;
+  height: 10px;
 }
 
 .notes {
@@ -73,6 +76,19 @@
   text-align: center;
   float: right;
   line-height: 1.8;
+  border: white 2px solid;
+}
+
+.booking {
+  grid-area: booking;
+  margin-top: 30px;
+  justify-self: center;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(35, 177, 35);
+  color: var(--font-color-1);
+  text-align: center;
+  border-radius: 20px;
   border: white 2px solid;
 }
 

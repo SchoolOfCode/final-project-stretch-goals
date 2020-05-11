@@ -48,11 +48,7 @@ export default function TeachingResources() {
         {windows.map(item => {
           return (
             <div className={css.gridItem}>
-              <LinkWindow
-                logo={item.logo}
-                resource={item.resource}
-                url={item.url}
-              />
+              <LinkWindow logo={item.logo} resource={item.resource} />
             </div>
           );
         })}
