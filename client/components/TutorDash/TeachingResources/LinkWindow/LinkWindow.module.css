@@ -1,15 +1,37 @@
 .imageContainer {
-  border-radius: 20px;
   background-color: white;
   justify-content: center;
-  width: 210px;
-  height: 210px;
+  width: 100px;
+  height: 100px;
   margin: 0;
   padding: 0;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 10px;
 }
 
 .imageContainer:hover {
   background-color: var(--theme-color-2);
   color: var(--font-color-5);
   box-sizing: border-box;
+}
+
+.text {
+  text-align: left;
+  width: 200px;
+  height: 51px;
+  font: Regular 11px/21px Baloo Bhai 2;
+  letter-spacing: 0px;
+  color: #777b96;
+  opacity: 1;
+}
+
+.resource {
+  width: 100px;
+  height: 29px;
+  text-align: left;
+  font: Medium 18px/18px Baloo Bhai 2;
+  letter-spacing: 0px;
+  color: #777b96;
+  opacity: 1;
 }

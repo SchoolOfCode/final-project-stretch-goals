@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: grid;
   grid-template-areas:
     "nav"
@@ -9,13 +9,11 @@
   grid-area: nav;
 }
 
-.formContainer {
-  background-color: var(--theme-color-3);
-  grid-area: form;
-  width: 800px;
+*/
 
-  border-radius: 20px;
-  box-shadow: 0 5px 5px var(--shadow-color);
+.formContainer {
+  width: 909px;
+  border-radius: 5px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   display: grid;
@@ -37,9 +35,9 @@
 .title {
   grid-area: title;
   text-align: center;
-  background-color: var(--theme-color-5);
+  /* background-color: var(--theme-color-5);
   color: var(--font-color-1);
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0; */
 }
 .firstName {
   grid-area: firstName;
