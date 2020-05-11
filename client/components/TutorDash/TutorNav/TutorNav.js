@@ -1,11 +1,15 @@
 import TutorButton from "../../TutorButton";
 import css from "./TutorNav.module.css";
+import book from "../../../images/SVG/book.svg";
+import calendar from "../../../images/SVG/calendar.svg";
+import breifcase from "../../../images/SVG/briefcase.svg";
+import person from "../../../images/SVG/person.svg";
 
 export default function TutorNav({ setContentShown }) {
   return (
     <ul style={{ listStyle: "none" }}>
       <li className={css.li}>
-        <img />
+        <img src={book} />
         <TutorButton
           height="26px"
           handleClick={() => setContentShown(1)}
@@ -13,7 +17,7 @@ export default function TutorNav({ setContentShown }) {
         />
       </li>
       <li className={css.li}>
-        <img />
+        <img src={person} />
         <TutorButton
           height="26px"
           handleClick={() => setContentShown(2)}
@@ -21,7 +25,7 @@ export default function TutorNav({ setContentShown }) {
         />
       </li>
       <li className={css.li}>
-        <img />
+        <img src={calendar} />
         <TutorButton
           height="26px"
           handleClick={() => setContentShown(3)}
@@ -29,7 +33,7 @@ export default function TutorNav({ setContentShown }) {
         />
       </li>
       <li className={css.li}>
-        <img />
+        <img src={breifcase} />
         <TutorButton
           height="26px"
           handleClick={() => setContentShown(4)}

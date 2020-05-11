@@ -1,7 +1,15 @@
 .li {
+  padding-left: 12px;
   height: 45px;
   width: 295px;
-  background: #f8f9fd 0% 0% no-repeat padding-box;
-  border-radius: 23px 0px 0px 23px;
   opacity: 1;
+  display: grid;
+  grid-template-areas: "img button";
+  grid-template-columns: 31px 1fr;
+  padding-top: 15px;
+}
+
+.img {
+  grid-area: img;
+  width: 5px;
 }
