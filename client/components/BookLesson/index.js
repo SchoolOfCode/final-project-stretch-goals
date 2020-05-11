@@ -2,38 +2,46 @@ import { useState } from "react";
 import MaterialUIPickers from "../MaterialUIPickers";
 import css from "./BookLesson.module.css";
 import Button from "../Button/Button";
+import Input from "../InputField/InputField";
+
+const initialState = {
+  studentName: "",
+  emailAddress: "",
+  notes: ""
+};
 
 export default function BookLesson({ setBookLessonDisplay }) {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [formState, setFormState] = useState(initialState);
   const [booked, setBooked] = useState(false);
   const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
-  const [notes, setNotes] = useState("");
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
   function handleChange(e) {
-    setNotes(e.target.value);
-    console.log(notes);
+    e.persist();
+    const newState = e.target.value;
+    const name = e.target.name;
+    setFormState(oldState => ({ ...oldState, [name]: newState }));
   }
 
   function onClick() {
     setBooked(true);
-    console.log("booking confirmed");
-    // postBooking()
+    postBooking();
   }
 
   //POST request to send booking to server to be stored in the backend.
-  // async function postBooking() {
-  //   const res = await fetch("this will be a url AWS", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       body: JSON.stringify({
-  //         selectedDate,
-  //         notes
-  //       })
-  //     }
-  //   });
-  //   const data = await res.json();
-  // }
+  async function postBooking() {
+    const res = await fetch(
+      "https://w8pdncxe7i.execute-api.eu-west-1.amazonaws.com/dev/bookings",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formState)
+      }
+    );
+    const data = await res.json();
+  }
 
   return (
     <>
@@ -74,13 +82,29 @@ export default function BookLesson({ setBookLessonDisplay }) {
                 .join("")}
           </p>
         )}
+        <div className={css.name}>
+          <Input
+            label="Name"
+            type="text"
+            name="studentName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={css.email}>
+          <Input
+            label="Contact Email"
+            type="text"
+            name="emailAddress"
+            onChange={handleChange}
+          />
+        </div>
         <div className={css.notes}>
           <h4>Notes for your tutor:</h4>
           <textarea
             placeHolder="Please leave some notes for your tutor here"
             className={css.inputField}
-            value={notes}
             onChange={handleChange}
+            name="notes"
           ></textarea>
         </div>
         <div className={css.button}>
