@@ -154,7 +154,7 @@ export default function RegistrationForm() {
               <InputField
                 name="experience"
                 type="number"
-                label="Experience"
+                label="Years of Experience"
                 onChange={onChange}
               />
             </div>

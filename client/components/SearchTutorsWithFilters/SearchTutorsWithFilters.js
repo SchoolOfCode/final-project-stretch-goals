@@ -26,7 +26,7 @@ export default function SearchTutorsWithFilters({
   return (
     <>
       <div className={css.mainContainer}>
-        <h1 className={css.resultsTitle}>Results</h1>
+        <h1 className={css.resultsTitle}>{searchResultsData.length} Results</h1>
         <SearchResults searchResultsData={searchResultsData} />
       </div>
       <div className={css.filterContainer}>

@@ -20,7 +20,10 @@ export default function SearchResults({ searchResultsData }) {
           return (
             <li key={i}>
               <div className={css.tutorContainer}>
-                <TutorDisplay item={item} />
+                <TutorDisplay
+                  setBookLessonDisplay={setBookLessonDisplay}
+                  item={item}
+                />
 
                 <TutorAbout item={item} />
 

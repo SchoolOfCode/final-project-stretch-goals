@@ -6,6 +6,7 @@
 }
 
 .itemAlign {
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -43,6 +44,10 @@
 }
 .aboutContent {
   grid-area: aboutContent;
-  background-color: var(--theme-color-3);
-  box-shadow: 0 5px 5px var(--shadow-color);
+  /* background-color: var(--theme-color-3);
+  box-shadow: 0 5px 5px var(--shadow-color); */
+  max-width: 350px;
+  width: 350px;
+  text-align: center;
+  margin-top: 15px;
 }

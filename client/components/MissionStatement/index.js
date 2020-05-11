@@ -14,7 +14,7 @@ export default function MissionStatement() {
       classTitle: "topLeft",
       text:
         "We started this project with the aim of making a space for Tutors and Students to be able to connect. We believe that in these trying times, students should access to private tutoring, and it should be available to anyone, anywhere.",
-      imageUrl: "image"
+      imageUrl: "image",
     },
     {
       classTitle: "topRight",
@@ -38,13 +38,9 @@ export default function MissionStatement() {
 
   return (
     <div className={css.mainContainer}>
-      {statements.map(item => {
+      {statements.map((item) => {
         const { classTitle } = item;
-        return (
-          <div className={css[classTitle]}>
-            <StatementItem text={item.text} imageUrl={item.imageUrl} />
-          </div>
-        );
+        return <StatementItem text={item.text} imageUrl={item.imageUrl} />;
       })}
     </div>
   );
