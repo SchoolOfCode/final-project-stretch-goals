@@ -44,7 +44,7 @@ export default function Filters({
         />
       </div>
       <h3 className={css.experienceTitle}> Experience </h3>
-      <h3 className={css.experienceDisplay}>{experience}years</h3>
+      <h3 className={css.experienceDisplay}>{experience}+ years</h3>
       <div className={css.experienceValue}>
         <SliderComponent
           values={experience}
