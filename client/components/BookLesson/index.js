@@ -29,8 +29,6 @@ export default function BookLesson({ setBookLessonDisplay }) {
   }
 
   function onClick() {
-    setFormState("dog");
-    console.log(formState);
     setBooked(true);
     postBooking();
   }
