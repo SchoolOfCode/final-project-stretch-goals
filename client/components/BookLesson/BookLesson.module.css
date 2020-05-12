@@ -1,8 +1,8 @@
 .bookingCard {
   position: fixed;
   top: 110px;
-  height: 600px;
-  width: 55vw;
+
+  width: 40vw;
   z-index: 10;
   background-color: var(--theme-color-3);
   color: var(--theme-color-1);
@@ -17,8 +17,8 @@
     "name"
     "email"
     "notes"
-    "button"
-    "booking";
+    "booking"
+    "button";
 }
 
 .header {
@@ -88,7 +88,7 @@
   background-color: var(--theme-color-5);
   color: var(--font-color-1);
   border-radius: 50px;
-  transform: translate(55vw, -20px);
+  transform: translate(40vw, -20px);
   width: 25px;
   height: 25px;
   text-align: center;

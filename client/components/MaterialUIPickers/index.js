@@ -5,7 +5,7 @@ import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
-  KeyboardDatePicker
+  KeyboardDatePicker,
 } from "@material-ui/pickers";
 
 export default function MaterialUIPickers({
@@ -15,14 +15,13 @@ export default function MaterialUIPickers({
   booked,
   setBooked,
   confirmationDisplayed,
-  formatDate
+  formatDate,
 }) {
   // The first commit of Material-UI
 
-  const handleDateChange = date => {
+  const handleDateChange = (date) => {
     setSelectedDate(date);
     setConfirmationDisplayed(true);
-    setBooked(!booked);
     console.log(JSON.stringify(selectedDate));
   };
 
@@ -38,7 +37,7 @@ export default function MaterialUIPickers({
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              "aria-label": "change date"
+              "aria-label": "change date",
             }}
             selectedDateProp={selectedDate}
           />
@@ -50,7 +49,7 @@ export default function MaterialUIPickers({
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              "aria-label": "change time"
+              "aria-label": "change time",
             }}
             selectedDateProp={selectedDate}
           />

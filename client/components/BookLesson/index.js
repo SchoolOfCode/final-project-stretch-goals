@@ -7,7 +7,7 @@ import Input from "../InputField/InputField";
 const initialState = {
   studentName: "",
   emailAddress: "",
-  notes: ""
+  notes: "",
 };
 
 export default function BookLesson({ setBookLessonDisplay }) {
@@ -20,7 +20,7 @@ export default function BookLesson({ setBookLessonDisplay }) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormState(oldState => ({ ...oldState, [name]: newState }));
+    setFormState((oldState) => ({ ...oldState, [name]: newState }));
   }
 
   function onClick() {
@@ -35,9 +35,9 @@ export default function BookLesson({ setBookLessonDisplay }) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formState)
+        body: JSON.stringify(formState),
       }
     );
     const data = await res.json();
@@ -71,15 +71,9 @@ export default function BookLesson({ setBookLessonDisplay }) {
           <p className={css.confirmation}>
             You have selected an appointment at
             {` ` +
-              JSON.stringify(selectedDate)
-                .split("")
-                .slice(1, 11)
-                .join("") +
+              JSON.stringify(selectedDate).split("").slice(1, 11).join("") +
               ` at ` +
-              JSON.stringify(selectedDate)
-                .split("")
-                .slice(12, 21)
-                .join("")}
+              JSON.stringify(selectedDate).split("").slice(12, 21).join("")}
           </p>
         )}
         <div className={css.name}>
@@ -107,12 +101,12 @@ export default function BookLesson({ setBookLessonDisplay }) {
             name="notes"
           ></textarea>
         </div>
-        <div className={css.button}>
-          <Button text="Confirm Booking" width="35%" handleClick={onClick} />
-        </div>
         {booked && (
           <div className={css.booking}>Booking confirmed. Thank you</div>
         )}
+        <div className={css.button}>
+          <Button text="Confirm Booking" width="35%" handleClick={onClick} />
+        </div>
       </div>
     </>
   );
