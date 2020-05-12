@@ -4,12 +4,6 @@ import css from "./BookLesson.module.css";
 import Button from "../Button/Button";
 import Input from "../InputField/InputField";
 
-const initialState = {
-  studentName: "",
-  emailAddress: "",
-  notes: "",
-};
-
 export default function BookLesson({ setBookLessonDisplay }) {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [formState, setFormState] = useState(initialState);
@@ -20,13 +14,20 @@ export default function BookLesson({ setBookLessonDisplay }) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormState((oldState) => ({ ...oldState, [name]: newState }));
+    setFormState(oldState => ({ ...oldState, [name]: newState }));
   }
 
   function onClick() {
     setBooked(true);
     postBooking();
   }
+
+  const initialState = {
+    studentName: "",
+    emailAddress: "",
+    notes: "",
+    dates: selectedDate
+  };
 
   //POST request to send booking to server to be stored in the backend.
   async function postBooking() {
@@ -35,9 +36,9 @@ export default function BookLesson({ setBookLessonDisplay }) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(formState),
+        body: JSON.stringify(formState)
       }
     );
     const data = await res.json();
@@ -59,21 +60,21 @@ export default function BookLesson({ setBookLessonDisplay }) {
         </div>
         <div className={css.picker}>
           <MaterialUIPickers
+            disablePast={true}
             confirmationDisplayed={confirmationDisplayed}
             setConfirmationDisplayed={setConfirmationDisplayed}
             setBooked={setBooked}
             booked={booked}
             selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
+            format="dd/MM/yyy"
           />
         </div>
         {confirmationDisplayed && (
           <p className={css.confirmation}>
             You have selected an appointment at
-            {` ` +
-              JSON.stringify(selectedDate).split("").slice(1, 11).join("") +
-              ` at ` +
-              JSON.stringify(selectedDate).split("").slice(12, 21).join("")}
+            {selectedDate.toLocaleTimeString()} on
+            {selectedDate.toLocaleDateString()}
           </p>
         )}
         <div className={css.name}>
