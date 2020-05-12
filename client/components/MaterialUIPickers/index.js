@@ -2,10 +2,11 @@ import "date-fns";
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
+
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
-  KeyboardDatePicker,
+  KeyboardDatePicker
 } from "@material-ui/pickers";
 
 export default function MaterialUIPickers({
@@ -16,11 +17,12 @@ export default function MaterialUIPickers({
   booked,
   setBooked,
   confirmationDisplayed,
-  formatDate,
+  format,
+  disablePast
 }) {
   // The first commit of Material-UI
 
-  const handleDateChange = (date) => {
+  const handleDateChange = date => {
     setSelectedDate(date);
     setConfirmationDisplayed(true);
     console.log(JSON.stringify(selectedDate));
@@ -34,13 +36,14 @@ export default function MaterialUIPickers({
             margin="normal"
             id="date-picker"
             label="Date"
-            format="dd/MM/yyyy"
+            format={format}
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              "aria-label": "change date",
+              "aria-label": "change date"
             }}
             selectedDateProp={selectedDate}
+            disablePast={disablePast}
           />
           <KeyboardTimePicker
             margin="normal"
@@ -50,7 +53,7 @@ export default function MaterialUIPickers({
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              "aria-label": "change time",
+              "aria-label": "change time"
             }}
             selectedDateProp={selectedDate}
           />
