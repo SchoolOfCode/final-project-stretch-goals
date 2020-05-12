@@ -9,12 +9,23 @@ export default function BookLesson({ setBookLessonDisplay }) {
   const [formState, setFormState] = useState(initialState);
   const [booked, setBooked] = useState(false);
   const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
+  const initialState = {
+    studentName: "",
+    emailAddress: "",
+    notes: "",
+    dates: selectedDate,
+  };
 
   function handleChange(e) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormState(oldState => ({ ...oldState, [name]: newState }));
+    setFormState((oldState) => ({
+      ...oldState,
+      [name]: newState,
+      dates: selectedDate,
+    }));
+    console.log(formState);
   }
 
   function onClick() {
@@ -31,6 +42,7 @@ export default function BookLesson({ setBookLessonDisplay }) {
 
   //POST request to send booking to server to be stored in the backend.
   async function postBooking() {
+    console.log(formState);
     const res = await fetch(
       "https://w8pdncxe7i.execute-api.eu-west-1.amazonaws.com/dev/bookings",
       {

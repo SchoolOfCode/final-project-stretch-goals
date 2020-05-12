@@ -1,7 +1,6 @@
 .bookingCard {
   position: fixed;
   top: 110px;
-
   width: 40vw;
   z-index: 10;
   background-color: var(--theme-color-3);
@@ -40,7 +39,7 @@
 .confirmation {
   grid-area: confirmation;
   text-align: center;
-  margin: 0;
+  margin: 10px;
   height: 5px;
 }
 
