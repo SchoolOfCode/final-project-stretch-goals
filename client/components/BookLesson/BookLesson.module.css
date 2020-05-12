@@ -39,7 +39,7 @@
 .confirmation {
   grid-area: confirmation;
   text-align: center;
-  margin: 0;
+  margin: 10px;
   height: 5px;
 }
 
