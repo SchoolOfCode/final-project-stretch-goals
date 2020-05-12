@@ -16,12 +16,12 @@
 }
 
 .advancedSearch {
-  color: blue;
+  color: var(--font-color-3);
   text-decoration: underline;
 }
 .advancedSearch:hover {
   cursor: pointer;
-  color: rgb(94, 94, 139);
+  color: rgb(255, 251, 0);
   text-decoration: underline;
 }
 

@@ -16,7 +16,6 @@ export default function Filters({
 }) {
   function handleChange(e) {
     setSubject(e.target.value);
-    console.log(subject, "yoyoyoyoyo");
   }
 
   return (
@@ -25,9 +24,9 @@ export default function Filters({
       <div className={css.subjectValue}>
         <InputField
           width={"90%"}
-          value={subject}
+          value={subject ? subject : null}
           onChange={handleChange}
-          label="Enter Subject to Begin Search"
+          // label="Enter Subject to Begin Search"
         />
       </div>
       <h3 className={css.priceDisplay}>

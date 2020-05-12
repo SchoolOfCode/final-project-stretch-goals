@@ -21,6 +21,7 @@ export default function InputField({
   onKeyPress,
   width,
   height,
+  value,
 }) {
   const classes = useStyles();
 
@@ -36,6 +37,7 @@ export default function InputField({
           style={{ width: width, height: height }}
           name={name}
           onKeyPress={onKeyPress}
+          value={value}
         />
       </div>
     </div>
