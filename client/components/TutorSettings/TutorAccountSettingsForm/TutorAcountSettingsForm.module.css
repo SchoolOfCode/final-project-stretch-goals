@@ -1,0 +1,97 @@
+.accountForm {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "first"
+    "last"
+    "email"
+    "phone"
+    "payment"
+    "acc"
+    "sortcode"
+    "contact";
+  position: absolute;
+  left: 50vw;
+  align-content: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 45vw;
+  background-color: var(--theme-color-4);
+  color: var(--font-color-5);
+  grid-area: filter;
+  box-shadow: 0 5px 5px var(--shadow-color);
+  border-radius: 20px;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.first {
+  grid-area: first;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.last {
+  grid-area: last;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.email {
+  grid-area: email;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.phone {
+  grid-area: phone;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.payment {
+  grid-area: payment;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.acc {
+  grid-area: acc;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.sortcode {
+  grid-area: sortcode;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}

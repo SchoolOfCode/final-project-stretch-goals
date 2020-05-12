@@ -1,0 +1,81 @@
+.mainContainer {
+  display: grid;
+  background-color: lightgrey;
+  height: auto;
+  width: auto;
+  grid-template-rows: 200px;
+  grid-template-columns: 2fr 0.7fr 2fr 0.7fr 2fr 0.7fr 2fr;
+  grid-template-areas:
+    "how how how how how how how"
+    "one arrowone two arrowtwo three arrowthree four";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.arrowOne {
+  grid-area: arrowone;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+  z-index: 1;
+}
+.arrowTwo {
+  grid-area: arrowtwo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+}
+.arrowThree {
+  grid-area: arrowthree;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25%);
+}
+
+.how {
+  margin-top: 20px;
+  font-size: 3em;
+  grid-area: how;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.one {
+  grid-area: one;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.two {
+  grid-area: two;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three {
+  grid-area: three;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.four {
+  grid-area: four;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  height: 70px;
+  background-image: src("./StepDisplay/right-arrow.svg");
+  z-index: 1;
+  opacity: 0.4;
+}

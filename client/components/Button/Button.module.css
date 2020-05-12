@@ -1,0 +1,17 @@
+.buttonTemplate {
+  box-sizing: border-box;
+  background-color: var(--theme-color-2);
+  color: var(--font-color-2);
+  border-radius: 15px;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  margin: 5px;
+}
+.buttonTemplate:hover {
+  background-color: var(--theme-color-3);
+  color: var(--font-color-5);
+  box-sizing: border-box;
+  cursor: pointer;
+}

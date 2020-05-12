@@ -1,27 +1,57 @@
-import Head from 'next/head'
-import {useState} from "react"
-import css from './index.module.css'
-import Navbar from './components/NavBar/NavBar'
-import SearchTutors from './components/SearchTutors/SearchTutors'
-import SearchTutorsWithFilters from './components/SearchTutorsWithFilters/SearchTutorsWithFilters'
+import Navbar from "../components/NavBar/NavBar";
+import MissionStatement from "../components/MissionStatement";
+import Head from "next/head";
+import HowItWorks from "../components/HowItWorks";
+import Testimonial from "../components/Testimonial/index";
+import { useState } from "react";
+import Home from "./search";
+import css from "./index.module.css";
+import SearchTutors from "../components/SearchTutors/SearchTutors";
+import SearchTutorsWithFilters from "../components/SearchTutorsWithFilters/SearchTutorsWithFilters";
 
-
-export default function Home() {
-  const [searchBoolean, setSearchBoolean] = useState(true)
+export default function Homepage() {
+  const [subject, setSubject] = useState(false);
+  const [searchBoolean, setSearchBoolean] = useState(false);
+  const [searchResultsData, setSearchResultsData] = useState([]);
   return (
-    <div className={css.mainContainer}>
+    <>
       <Head>
-        <title>Ducio</title>
+        <title>DOCEO</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-<Navbar/>
-
-<div className={css.gridContainer}>
-{searchBoolean ?   <SearchTutorsWithFilters/> : <SearchTutors setSearchBoolean={setSearchBoolean} searchBoolean={searchBoolean}/>}
-{/* if search has been perform or advanced search button pressed then display this version of the search thing instead!  */}
-</div>
-      
-</div>
-  )
+      <Navbar
+        setSearchBoolean={setSearchBoolean}
+        searchBoolean={searchBoolean}
+      />
+      {searchBoolean ? (
+        <div className={css.mainContainer}>
+          <div className={css.gridContainer}>
+            <SearchTutorsWithFilters
+              searchResultsData={searchResultsData}
+              setSearchResultsData={setSearchResultsData}
+              subject={subject}
+              setSubject={setSubject}
+            />
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className={css.mainContainer}>
+            <div className={css.gridContainer}>
+              <SearchTutors
+                setSearchResultsData={setSearchResultsData}
+                subject={subject}
+                setSubject={setSubject}
+                setSearchBoolean={setSearchBoolean}
+                searchBoolean={searchBoolean}
+              />
+            </div>
+          </div>
+          <MissionStatement />
+          <HowItWorks />
+          {/* <Testimonial /> */}
+        </>
+      )}
+    </>
+  );
 }

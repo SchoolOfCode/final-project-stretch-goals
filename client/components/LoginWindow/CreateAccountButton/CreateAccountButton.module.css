@@ -1,0 +1,16 @@
+.mainContainer {
+  box-sizing: border-box;
+  background-color: var(--theme-color-4);
+  border: var(--theme-color-2) 1px solid;
+  border-radius: 20px;
+  text-align: center;
+  margin: 5px;
+  width: 80%;
+}
+
+.mainContainer:hover {
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: var(--theme-color-1);
+  border: var(--theme-color-1) 1px solid;
+}

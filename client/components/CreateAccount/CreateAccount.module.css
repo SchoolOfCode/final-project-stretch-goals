@@ -1,0 +1,22 @@
+.mainContainer {
+  display: grid;
+  position: absolute;
+  left: 50vw;
+  align-content: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 0;
+  width: 45vw;
+}
+
+.formContainer {
+  padding-top: 20vh;
+  display: grid;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

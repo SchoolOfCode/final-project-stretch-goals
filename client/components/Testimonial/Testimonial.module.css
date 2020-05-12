@@ -1,0 +1,48 @@
+.mainContainer {
+  display: grid;
+  height: 90vh;
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "image"
+    "stars"
+    "text";
+}
+
+.header {
+  margin-top: 10vh;
+  grid-area: header;
+  text-align: center;
+  font-size: 3em;
+}
+
+.imageContainer {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageCircle {
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: url("https://cdn.psychologytoday.com/sites/default/files/styles/image-article_inline_full_caption/public/field_blog_entry_images/0403.sdt-github.png?itok=XRoIbrhx");
+  width: 250px;
+  height: 250px;
+}
+
+.stars {
+  grid-area: stars;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  grid-area: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}

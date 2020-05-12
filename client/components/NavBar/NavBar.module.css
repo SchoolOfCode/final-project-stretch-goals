@@ -1,0 +1,47 @@
+.navBarContainer {
+  background-color: var(--theme-color-1);
+  height: 100px;
+  width: 100vw;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "search title login";
+  z-index: 10;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: login;
+}
+
+.title {
+  color: var(--font-color-1);
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  grid-area: title;
+}
+
+.doceo:hover {
+  cursor: pointer;
+}
+
+.searchField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: search;
+}
+
+.actualButton {
+  background-color: var(--theme-color-1);
+}
+
+.loggedIn {
+  color: var(--font-color-1);
+  position: absolute;
+  padding-left: 20px;
+  margin-top: 70px;
+}

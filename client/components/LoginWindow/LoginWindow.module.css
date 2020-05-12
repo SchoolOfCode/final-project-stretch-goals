@@ -1,0 +1,127 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1vw;
+  justify-content: end;
+  align-content: center;
+  width: 50vw;
+  background-color: var(--theme-color-1);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--shadow-color);
+  z-index: 10;
+}
+
+.loginContainer {
+  margin: 1vw;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "email"
+    "password"
+    "forgot"
+    "button";
+  background-color: var(--theme-color-3);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+}
+
+.loginContainer > {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+
+.email {
+  grid-area: email;
+  display: flex;
+  justify-content: center;
+}
+
+.password {
+  grid-area: password;
+  display: flex;
+  justify-content: center;
+}
+
+.forgot {
+  grid-area: forgot;
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 0.8em;
+}
+
+.forgot:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+
+.createAccountContainer {
+  display: grid;
+  grid-template-areas:
+    "create"
+    "student"
+    "studentText"
+    "tutor"
+    "tutorText";
+  margin: 1vw;
+  background-color: var(--theme-color-3);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+}
+
+.create {
+  grid-area: create;
+  text-align: center;
+}
+
+.student {
+  grid-area: student;
+  display: flex;
+  justify-content: center;
+}
+
+.studentText {
+  grid-area: studentText;
+  display: flex;
+  justify-content: center;
+}
+
+.tutor {
+  grid-area: tutor;
+  display: flex;
+  justify-content: center;
+}
+
+.tutorText {
+  grid-area: tutorText;
+  display: flex;
+  justify-content: center;
+}
+.closeWindow {
+  background-color: var(--theme-color-5);
+  color: var(--font-color-1);
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 1.8;
+  float: right;
+  transform: translateY(-20px);
+  border: white 2px solid;
+}
+.closeWindow:hover {
+  cursor: pointer;
+  border: var(--theme-color-1) 2px solid;
+}

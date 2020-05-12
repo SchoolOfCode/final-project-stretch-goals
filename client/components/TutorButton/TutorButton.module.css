@@ -1,0 +1,13 @@
+.buttonTemplate {
+  width: 180px;
+  height: 26px;
+  text-align: left;
+  font: Medium 16px/18px Baloo Bhai 2;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+.buttonTemplate:hover {
+  color: var(--theme-color-2);
+  box-sizing: border-box;
+  cursor: pointer;
+}

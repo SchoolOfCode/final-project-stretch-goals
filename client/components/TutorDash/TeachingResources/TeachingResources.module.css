@@ -1,0 +1,20 @@
+.mainContainer {
+  display: grid;
+  grid-template-areas:
+    "item1 item2 item3"
+    "item4 item5 item6";
+  grid-row-gap: 30px;
+}
+
+.gridItem {
+  border-radius: 5px;
+  display: grid;
+  height: 70%;
+  width: 70%;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}

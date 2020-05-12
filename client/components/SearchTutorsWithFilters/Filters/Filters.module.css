@@ -1,0 +1,49 @@
+.subjectTitle {
+  padding-left: 1em;
+  grid-area: subject;
+}
+.subjectValue {
+  grid-area: subjectValue;
+  margin-left: 10px;
+}
+.priceTitle {
+  padding-top: 3.5vh;
+  grid-area: price;
+  padding-left: 1em;
+}
+.priceDisplay {
+  padding-top: 3.5vh;
+  grid-area: priceDisplay;
+  padding-right: 1em;
+  text-align: end;
+}
+.priceValue {
+  grid-area: priceValue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.experienceTitle {
+  grid-area: experience;
+  padding-left: 1em;
+  padding-top: 3.5vh;
+}
+.experienceDisplay {
+  padding-top: 3.5vh;
+  padding-right: 1em;
+  grid-area: experienceDisplay;
+  text-align: end;
+}
+.experienceValue {
+  grid-area: experienceValue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filtersButton {
+  padding-left: 0;
+  padding-right: 0;
+  grid-area: filtersButton;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

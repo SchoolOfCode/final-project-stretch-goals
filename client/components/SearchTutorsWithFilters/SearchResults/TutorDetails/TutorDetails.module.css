@@ -1,0 +1,59 @@
+.detailsContainer {
+  grid-area: details;
+  display: grid;
+  height: 100%;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 0 5px var(--shadow-color);
+  box-sizing: border-box;
+  padding: 0.5em;
+  grid-template-rows: 40px;
+  grid-template-areas:
+    "name name"
+    "rating review"
+    "locationTitle EducationTitle"
+    "location education"
+    "subjectTitle experienceTitle"
+    "subject experience";
+}
+
+.name {
+  grid-area: name;
+  font-size: 2em;
+  transform: translate(0, -12px);
+  color: var(--theme-color-2);
+}
+.rating {
+  grid-area: rating;
+}
+.review {
+  grid-area: review;
+  transform: translate(-30px, -3px);
+}
+.locationTitle {
+  align-self: end;
+  grid-area: locationTitle;
+}
+.educationTitle {
+  align-self: end;
+  grid-area: EducationTitle;
+}
+.location {
+  grid-area: location;
+}
+.education {
+  grid-area: education;
+}
+.subjectTitle {
+  align-self: end;
+  grid-area: subjectTitle;
+}
+.subject {
+  grid-area: subject;
+}
+.experienceTitle {
+  align-self: end;
+  grid-area: experienceTitle;
+}
+.experience {
+  grid-area: experience;
+}

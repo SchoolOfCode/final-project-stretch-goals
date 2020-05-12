@@ -1,0 +1,30 @@
+.mainContainer {
+  display: grid;
+  height: auto;
+
+  height: 410px;
+  background-color: var(--theme-color-3);
+  color: var(--font-color-4);
+  align-items: center;
+  grid-template-areas: "topLeft topRight bottomLeft bottomRight";
+}
+
+.topLeft {
+  grid-area: topLeft;
+  display: flex;
+}
+
+.topRight {
+  grid-area: topRight;
+  display: flex;
+}
+
+.bottomLeft {
+  grid-area: bottomLeft;
+  display: flex;
+}
+
+.bottomRight {
+  grid-area: bottomRight;
+  display: flex;
+}
