@@ -24,7 +24,7 @@ export default function NavBar({ setSearchBoolean }) {
         className={css.title}
       >
         <Link href="/">
-          <h1 className={css.doceo}>Doceo</h1>
+          <h1 className={css.doceo}>DOCEO</h1>
         </Link>
       </div>
 

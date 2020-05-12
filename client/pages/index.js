@@ -16,7 +16,7 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <title>Doceo</title>
+        <title>DOCEO</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar
