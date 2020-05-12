@@ -9,6 +9,7 @@ export default function BookLesson({ setBookLessonDisplay }) {
   const [formState, setFormState] = useState(initialState);
   const [booked, setBooked] = useState(false);
   const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
+
   const initialState = {
     studentName: "",
     emailAddress: "",
@@ -33,13 +34,6 @@ export default function BookLesson({ setBookLessonDisplay }) {
     postBooking();
   }
 
-  const initialState = {
-    studentName: "",
-    emailAddress: "",
-    notes: "",
-    dates: selectedDate
-  };
-
   //POST request to send booking to server to be stored in the backend.
   async function postBooking() {
     console.log(formState);
@@ -48,9 +42,9 @@ export default function BookLesson({ setBookLessonDisplay }) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formState)
+        body: JSON.stringify(formState),
       }
     );
     const data = await res.json();
