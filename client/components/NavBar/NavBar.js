@@ -18,6 +18,7 @@ export default function NavBar({ setSearchBoolean }) {
       </div>
       <div
         onClick={() => {
+          window.location.href = "/";
           setSearchBoolean(false);
         }}
         className={css.title}
