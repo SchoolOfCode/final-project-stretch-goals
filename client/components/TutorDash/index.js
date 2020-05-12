@@ -15,7 +15,10 @@ export default function TutorDash() {
       <NavBar />
       <div className={css.mainContainer}>
         <div className={css.navContainer}>
-          <TutorNav setContentShown={setContentShown} />
+          <TutorNav
+            setContentShown={setContentShown}
+            contentShown={contentShown}
+          />
         </div>
         <div className={css.contentContainer}>
           {contentShown == 1 && <LessonManager />}
