@@ -5,11 +5,11 @@ export default function Button({
   handleClick,
   className,
   height,
-  width
+  width,
 }) {
   return (
     <div
-      style={{ height: height, width: width }}
+      style={{ height: height, width: width, color: "green" }}
       className={(className, css.buttonTemplate)}
       onClick={handleClick}
     >

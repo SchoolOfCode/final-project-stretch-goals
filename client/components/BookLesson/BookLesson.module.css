@@ -1,7 +1,6 @@
 .bookingCard {
   position: fixed;
   top: 110px;
-
   width: 40vw;
   z-index: 10;
   background-color: var(--theme-color-3);

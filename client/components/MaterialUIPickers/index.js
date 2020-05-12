@@ -12,6 +12,7 @@ export default function MaterialUIPickers({
   selectedDate,
   setSelectedDate,
   setConfirmationDisplayed,
+  handleChange,
   booked,
   setBooked,
   confirmationDisplayed,
