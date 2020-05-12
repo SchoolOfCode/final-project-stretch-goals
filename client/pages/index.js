@@ -19,7 +19,10 @@ export default function Homepage() {
         <title>Doceo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar setSearchBoolean={setSearchBoolean} />
+      <Navbar
+        setSearchBoolean={setSearchBoolean}
+        searchBoolean={searchBoolean}
+      />
       {searchBoolean ? (
         <div className={css.mainContainer}>
           <div className={css.gridContainer}>
@@ -46,7 +49,7 @@ export default function Homepage() {
           </div>
           <MissionStatement />
           <HowItWorks />
-          <Testimonial />
+          {/* <Testimonial /> */}
         </>
       )}
     </>
