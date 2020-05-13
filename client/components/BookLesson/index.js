@@ -13,17 +13,17 @@ export default function BookLesson({ setBookLessonDisplay }) {
     studentName: "",
     emailAddress: "",
     notes: "",
-    dates: selectedDate,
+    dates: selectedDate
   };
 
   function handleChange(e) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormState((oldState) => ({
+    setFormState(oldState => ({
       ...oldState,
       [name]: newState,
-      dates: selectedDate,
+      dates: selectedDate
     }));
     console.log(formState);
   }
@@ -32,13 +32,6 @@ export default function BookLesson({ setBookLessonDisplay }) {
     setBooked(true);
     postBooking();
   }
-
-  const initialState = {
-    studentName: "",
-    emailAddress: "",
-    notes: "",
-    dates: selectedDate
-  };
 
   //POST request to send booking to server to be stored in the backend.
   async function postBooking() {

@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import Amplify from "@aws-amplify/core";
 import Auth from "@aws-amplify/auth";
 import "react-calendar/dist/Calendar.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 Amplify.configure({
   Auth: {
