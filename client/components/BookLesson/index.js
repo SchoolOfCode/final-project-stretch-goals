@@ -14,17 +14,17 @@ export default function BookLesson({ setBookLessonDisplay }) {
     studentName: "",
     emailAddress: "",
     notes: "",
-    dates: selectedDate,
+    dates: selectedDate
   };
 
   function handleChange(e) {
     e.persist();
     const newState = e.target.value;
     const name = e.target.name;
-    setFormState((oldState) => ({
+    setFormState(oldState => ({
       ...oldState,
       [name]: newState,
-      dates: selectedDate,
+      dates: selectedDate
     }));
     console.log(formState);
   }

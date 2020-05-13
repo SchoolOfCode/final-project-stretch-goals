@@ -5,7 +5,6 @@
     "calendar";
   justify-content: center;
   align-content: center;
-  padding: 38px;
 }
 
 .title {
@@ -24,8 +23,4 @@
   justify-items: center;
   justify-content: center;
   border-radius: 5px;
-  height: 530px;
-  width: 630px;
-  background-color: var(--theme-color-4);
-  box-shadow: 0 5px 5px var(--shadow-color);
 }

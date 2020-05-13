@@ -2,27 +2,10 @@ import { useState, useEffect } from "react";
 import css from "./LessonManager.module.css";
 import Button from "../../Button/Button";
 
-export default function LessonManager() {
-  const [bookings, setBookings] = useState([]);
-
+export default function LessonManager({ setBookings, bookings }) {
   function deleteBooking(i) {
     setBookings([...bookings.slice(0, i), ...bookings.slice(i + 1)]);
-    backendBookingDelete();
   }
-
-  //function to fetch data from BOOKINGS table. To be displayed in UI
-  async function getBookings() {
-    const res = await fetch(
-      "https://w8pdncxe7i.execute-api.eu-west-1.amazonaws.com/dev/bookings"
-    );
-    const data = await res.json();
-    setBookings(data);
-    //console.log("data", data);
-  }
-
-  useEffect(() => {
-    getBookings();
-  }, []);
 
   // function to make a DELETE to BOOKINGS table in backend. Will need to delete booking by ID
   // async function backendBookingDelete() {

@@ -1,9 +1,9 @@
-import CalendarComponent from "../../CalendarComponent";
+import CalendarComponent from "../CalendarComponent";
 
-export default function CalendarDisplay() {
+export default function CalendarDisplay({ bookings }) {
   return (
     <>
-      <CalendarComponent />
+      <CalendarComponent bookings={bookings} />
     </>
   );
 }
